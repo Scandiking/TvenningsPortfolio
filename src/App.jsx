@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Card from './components/Card';
 import Button from './components/Button';
 import Drawer from './components/Drawer';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const location = useLocation(); // Add this line to define location
 
   const openDrawer = () => {
     setIsDrawerOpen(true);
@@ -21,12 +25,39 @@ function App() {
         <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} position="left">
           <div className="flex flex-col space-y-4">
             <h2 className="text-2xl font-bold mb-4">Meny</h2>
-            <a href="#home" className="p-2 hover:bg-gray-100 rounded">Hjem</a>
-            <a href="#about" className="p-2 hover:bg-gray-100 rounded">Om</a>
-            <a href="#projects" className="p-2 hover:bg-gray-100 rounded">Prosjekter</a>
-            <a href="#contact" className="p-2 hover:bg-gray-100 rounded">Contact</a>
+            <Link
+                to="/"
+                className={`p-2 rounded ${location.pathname === '/' ? 'bg-blue-100 text-blue-800' : 'hover:bg-gray-100'}`}
+                onClick={closeDrawer}
+            >
+              Home
+            </Link>
+
+            <Link
+                to="/about"
+                className={`p-2 rounded ${location.pathname === '/about' ? 'bg-blue-100 text-blue-800' : 'hover:bg-gray-100'}`}
+                onClick={closeDrawer}
+            >
+              About
+            </Link>
+            <Link
+                to="/projects"
+                className={`p-2 rounded ${location.pathname === '/projects' ? 'bg-blue-100 text-blue-800' : 'hover:bg-gray-100'}`}
+                onClick={closeDrawer}
+            >
+              Projects
+            </Link>
+            <Link
+                to="/contact"
+                className={`p-2 rounded ${location.pathname === '/contact' ? 'bg-blue-100 text-blue-800' : 'hover:bg-gray-100'}`}
+                onClick={closeDrawer}
+            >
+              Contact
+            </Link>
           </div>
         </Drawer>
+
+
 
         {/* Navigation Bar - z-40 ensures it's below the drawer */}
         <nav className="bg-white shadow-md p-4 relative z-40">
@@ -35,15 +66,27 @@ function App() {
 
             {/* Left side - Menu button */}
             <div className="w-1/3 flex justify-start">
-            <button
-                onClick={openDrawer}
-                className="p-2 rounded-md hover:bg-gray-100"
-                aria-label="Open menu"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+              <Button
+                  variant="secondary"
+                  onClick={openDrawer}
+                  className="p-2"
+                  aria-label="Open menu"
+              >
+
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      className="w-6 h-6">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+              </Button>
             </div>
 
             {/* Center - Portfolio title */}
@@ -59,32 +102,15 @@ function App() {
           </div>
         </nav>
 
+        {/* Main Content with Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<div className="container mx-auto p-8">Projects page coming soon!</div>} />
+          <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
+          <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
+        </Routes>
 
-
-        <div className="container mx-auto px-4 py-8">
-          {/* Hero Section */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">Welcome to My HeroUI React App</h1>
-            <p className="text-gray-600 mb-6">This is a simple React app built with Tailwind CSS.</p>
-            <Button>Get Started</Button>
-          </div>
-
-          {/* Content Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card
-                title="Feature One"
-                description="Description of your first amazing feature."
-            />
-            <Card
-                title="Feature Two"
-                description="Description of your second amazing feature."
-            />
-            <Card
-                title="Feature Three"
-                description="Description of your third amazing feature."
-            />
-          </div>
-        </div>
       </div>
   );
 }
