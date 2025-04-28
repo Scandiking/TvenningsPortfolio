@@ -13,6 +13,10 @@ import PRO1000 from './pages/PRO1000.jsx';
 import SYS1000 from './pages/SYS1000.jsx';
 import PRG1100 from './pages/PRG1100.jsx';
 import APP2000 from './pages/APP2000.jsx';
+import DAT2000 from './pages/DAT2000.jsx';
+import OBJ2000 from './pages/OBJ2000.jsx';
+import ESB1000 from './pages/ESB1000.jsx';
+import MET1020 from './pages/MET1020.jsx';
 import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ORL1000 from "./pages/ORL1000";
@@ -240,6 +244,10 @@ function App() {
           <Route path="/emner/prg1100" element={<PRG1100 />}/>
           <Route path="/emner/orl1000" element={<ORL1000 />}/>
           <Route path="/emner/app2000" element={<APP2000 />}/>
+          <Route path="/emner/dat2000" element={<DAT2000 />}/>
+          <Route path="/emner/obj2000" element={<OBJ2000 />}/>
+          <Route path="/emner/esb1000" element={<ESB1000 />}/>
+          <Route path="/emner/met1020" element={<MET1020 />}/>
 
           {/* Dynamisk genererte ruter for emner */}
 
