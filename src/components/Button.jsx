@@ -43,7 +43,7 @@ function Button({ children, onClick, className = ' ', variant = 'primary', size 
     warning: 'bg-yellow-500 hover:bg-yellow-600 text-white',
     info: 'bg-cyan-500 hover:bg-cyan-600 text-white',
     light: 'bg-gray-100 hover:bg-gray-200 text-gray-800',
-    dark: 'bg-gray-800 hover:bg-gray-900 text-white',
+    dark: 'bg-gray-400 hover:bg-gray-900 text-white',
   };
 
   // Sizes

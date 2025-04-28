@@ -1,7 +1,10 @@
+const {heroui} = require('@heroui/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/@heroui/theme/dist/components/(button|card|divider|tabs|ripple|spinner).js"
   ],
   theme: {
     extend: {
@@ -19,5 +22,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [heroui()],
 }

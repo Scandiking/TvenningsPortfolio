@@ -61,7 +61,7 @@ const Drawer = ({
             <div
                 className={`fixed z-60 ${isHorizontal ? 'h-full' : 'w-full'} ${width} 
           ${positionClasses[position]} ${isOpen ? 'translate-x-0 translate-y-0' : ''} 
-          bg-white shadow-xl transition-transform duration-300 ease-in-out`}
+          bg-white dark:bg-gray-800 shadow-xl transition-transform duration-300 ease-in-out`}
             >
                 {/* Close button */}
                 <button
