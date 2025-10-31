@@ -17,6 +17,7 @@ import DAT2000 from './pages/DAT2000.jsx';
 import OBJ2000 from './pages/OBJ2000.jsx';
 import ESB1000 from './pages/ESB1000.jsx';
 import MET1020 from './pages/MET1020.jsx';
+import AI3000R from './pages/AI3000R.jsx';
 import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ORL1000 from "./pages/ORL1000";
@@ -107,16 +108,16 @@ function App() {
 
   return (
       <ThemeProvider>
-      <div className="bg-gray-100 dark:bg-gray-900 min-h-screen text-gray-900 dark:text-gray-100">
+      <div className="min-h-screen bg-background text-foreground">
 
         {/* Drawer Component */}
         <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} position="left">
-          <div className="flex flex-col space-y-4 p-2 overflow-y-auto max-h-screen bg-white dark:bg-gray-800">
+          <div className="flex flex-col space-y-4 p-2 overflow-y-auto max-h-screen bg-content1">
             <h2 className="text-2xl font-bold mb-4">Meny</h2>
 
             <Link
                 to="/"
-                className={`p-2 rounded flex items-center gap-2 ${location.pathname === '/' ? 'bg-blue-100 text-blue-800' : 'hover:bg-gray-100'}`}
+                className={`p-2 rounded flex items-center gap-2 ${location.pathname === '/' ? 'bg-primary text-primary-foreground' : 'hover:bg-content2'}`}
                 onClick={closeDrawer}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
@@ -125,7 +126,7 @@ function App() {
 
             <Link
                 to="/about"
-                className={`p-2 rounded flex items-center gap-2 ${location.pathname === '/about' ? 'bg-blue-100 text-blue-800' : 'hover:bg-gray-100'}`}
+                className={`p-2 rounded flex items-center gap-2 ${location.pathname === '/about' ? 'bg-primary text-primary-foreground':'hover:bg-content2'}`}
                 onClick={closeDrawer}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -148,12 +149,12 @@ function App() {
               {semesterData.map((semester) => (
                   <div key={semester.id} className="pl-4 flex flex-col">
                     <div
-                        className="p-2 font-thin flex justify-between items-center cursor-pointer hover:bg-gray-50"
+                        className="p-2 font-thin flex justify-between items-center cursor-pointer hover:bg-content2"
                         onClick={() => toggleSemester(semester.id)}
                     >
                       <span>{semester.title}</span>
                       <svg
-                          className={`w-4 h-4 transition-transform ${expandedSemesters[semester.id] ? 'rotate-180' : ''}`}
+                          className={`w-4 h-4 transition-transform ${expandedSemesters[semester.id] ? '-rotate-270' : '-rotate-90'}`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -169,7 +170,7 @@ function App() {
                               <Link
                                   key={course.id}
                                   to={course.path}
-                                  className={`p-2 rounded ${location.pathname === course.path ? 'bg-blue-100 text-blue-800' : 'hover:bg-gray-100'}`}
+                                  className={`p-2 rounded ${location.pathname === course.path ? 'bg-primary text-primary-foreground' : 'hover:bg-content2'}`}
                                   onClick={closeDrawer}
                               >
                                 {course.title}
@@ -189,7 +190,7 @@ function App() {
 
 
         {/* Navigation Bar - z-40 ensures it's below the drawer */}
-        <nav className="bg-white dark:bg-gray-800 shadow-md p-4 relative z-40">
+        <nav className="bg-content1 shadow-md p-4 relative z-40">
           <div className="container mx-auto flex items-center">
 
 
@@ -198,7 +199,7 @@ function App() {
               <Button
                   variant="secondary"
                   onClick={openDrawer}
-                  className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  className="p-2 hover:bg-content2"
                   aria-label="Open menu"
               >
 
@@ -248,6 +249,7 @@ function App() {
           <Route path="/emner/obj2000" element={<OBJ2000 />}/>
           <Route path="/emner/esb1000" element={<ESB1000 />}/>
           <Route path="/emner/met1020" element={<MET1020 />}/>
+          <Route path="/emner/ai3000r" element={<AI3000R />} />
 
           {/* Dynamisk genererte ruter for emner */}
 

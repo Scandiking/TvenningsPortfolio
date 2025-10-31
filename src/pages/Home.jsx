@@ -1,24 +1,26 @@
 import React from 'react';
 import Card from '../components/Card';
 import Button from '../components/Button';
-import { Link } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function Home() {
-    const handleClick = () => {
-        alert('Du klikket!');
-    };
+    const navigate = useNavigate();
+
+    const handleClick = () => alert('E-post: <mailto:km.tvenning@pm.me> / Mob: 41 85 36 42!');
+    const goToProjects = () => navigate('/projects');
+
 
     return (
         <div className="container mx-auto px-4 py-8">
             {/* Hero Section */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+            <div className="bg-content1 rounded-lg shadow-md p-6 mb-6"> {/* ENDRET: bg-white dark:bg-gray-800 → bg-content1 */}
 
-                <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-500 mb-4">Velkommen til min portfolio</h1>
+                <h1 className="text-3xl font-bold text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
 
-                <p className="text-gray-600 dark:text-gray-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p>
+                <p className="text-default-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p> {/* ENDRET: text-gray-600 dark:text-gray-500 → text-default-500 */}
                 <div className="flex flex-wrap gap-4">
-                    <Button onClick={handleClick} variant="primary">Contact Me</Button>
-                    <Button onClick={handleClick} variant="secondary">View Projects</Button>
+                    <Button onClick={handleClick} variant="primary">Kontakt meg</Button>
+                    <Button onClick={goToProjects} variant="secondary">Se prosjekter</Button>
                 </div>
             </div>
 
@@ -86,7 +88,7 @@ function Home() {
 
                 <Link to="/emner/app2000" className="hover:shadow-lg transition-shadow">
                     <Card
-                        title="Applikasjonsutvikling for web 1/2"
+                        title="Applikasjonsutvikling for web"
                         description="Utvikling av webapplikasjoner (som denne siden). Emnet innbefatter alle deler, tjener og klient. Bygger på Web og HCI (WEB1100), Grunnleggende programmering 1 (PRG1000) og Database 1 (DAT1000)."
                     />
                 </Link>
@@ -101,53 +103,55 @@ function Home() {
                 <Link to="/emner/obj2000" className="">
                     <Card
                         title="Objektorientert programmering 1"
-                        description="Beskrivelse kommer."
+                        description="Innføring i objektorientert programmering. Grafiske brukergrensesnitt med objektorientert språk. BYgger på Grunnleggende programmering 1 og Grunnleggende programmering 2."
                     />
                 </Link>
 
                 <Link to="/emner/esb1000" className="">
                     <Card
                         title="Etikk og samfunnsansvar"
-                        description="Beskrivelse kommer."
+                        description="Grunnleggende innføring i etikk, etiske problemstillinger og dilemmaer med relevans for næringslivet. FN's bærekraftsmål. Samspill mellom økonomi, samfunn og miljø."
                     />
                 </Link>
 
+                {/*
                 <Link to="/app2000" className="">
                     <Card
                         title="Applikasjonsutvikling for web 2/2"
                         description="Beskrivelse kommer."
                     />
                 </Link>
+                */}
 
                 <Link to="/emner/obj2100" className="">
                     <Card
                         title="Objektorientert programmering 2"
-                        description="Beskrivelse kommer."
+                        description="Objektorientert programmering gjennom større applikasjoner. Strømmer, tråder, asynkron prosessering."
                     />
                 </Link>
 
                 <Link to="/emner/met1020" className="">
                     <Card
                         title="Samfunnsvitenskapelig metode"
-                        description="Beskrivelse kommer."
+                        description="Innføring i innsamling, bearbeidelse og tolkning av data."
                     />
                 </Link>
 
                 <Link to="/emner/sik2000" className="">
                     <Card
                         title="Informasjonssikkerhet"
-                        description="Beskrivelse kommer."
+                        description="Innføring i relevant lovverk og standarder for informasjonssikkerhet. Læren om trusler mot informasjonssikkerhet i virksomheter og samfunnet generelt. Sårbarhets- og risikoanalyse."
                     />
                 </Link>
 
                 <Link to="/emner/bid3000" className="">
                     <Card
                         title="Business Intelligence og datavarehus"
-                        description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
+                        description="Også kalt forretningsanalyse på norsk. Innsamling og analyse av data for å forbedre kvaliteten på beslutninger. Et datavarehus er en database hvor data er hentet fra andre systemer og klartgjort for analyse i stedet for transaksjoner. Bygger på Database 1."
                     />
                 </Link>
 
-
+                {/*
                 <Card
                     title="Sustainability Marketing and Circular Economy"
                     description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
@@ -160,17 +164,20 @@ function Home() {
                     title="E-commerce"
                     description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
                 />
+                */}
                 <Card
                     title="Bacheloroppgave i IT og informasjonssystemer"
                     description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
                 />
-                <Card
-                    title="Praksisrefleksjon"
-                    description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
-                />
+
                 <Card
                     title="Artificial Intelligence for Business Applications"
-                    description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
+                    description="Kurset fokuserer på KI's innflytelse på organisasjoner og samfunnet generelt. Bli kjenmt med prinsipper og metoder som trengs for å utvikle smarte KI data-avhengige løsninger. Varierte metoder i maskinlæring og dyplæring, så vel som data-mining."
+                />
+
+                <Card
+                    title="Applikasjonsutvikling for mobile enheter"
+                    description="Praktisk erfaring med utvikling av applikasjoner for mobile enheter. Android Studio, Kotlin."
                 />
 
             </div>

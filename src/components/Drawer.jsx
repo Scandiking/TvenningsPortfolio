@@ -61,12 +61,12 @@ const Drawer = ({
             <div
                 className={`fixed z-60 ${isHorizontal ? 'h-full' : 'w-full'} ${width} 
           ${positionClasses[position]} ${isOpen ? 'translate-x-0 translate-y-0' : ''} 
-          bg-white dark:bg-gray-800 shadow-xl transition-transform duration-300 ease-in-out`}
+          bg-content1 shadow-xl transition-transform duration-300 ease-in-out`} // ENDRET: bg-white dark:bg-gray-800 → bg-content1
             >
                 {/* Close button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100"
+                    className="absolute top-4 right-4 p-2 rounded-full hover:bg-content2" // ENDRET: hover:bg-gray-100 → hover:bg-content2
                     aria-label="Close drawer"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
