@@ -2,7 +2,7 @@
 
 ## Hva er dette
 
-Dette er en portfolioside som viser universitetsarbeid og GitHub-repositorier. Den viser oppgaver og besvarelser fra studiet IT og informasjonssystemer på Universitetet i Sørøst-Norge campus Ringerike i Hønefoss. IT og informasjonssystemer er en mangfoldig studieretning og dette repositoryet konkretiserer de ferdighetene jeg har opparbeidet meg på en ren og ryddig måte.
+Dette er repositoriumet for en portfolioside som viser universitetsarbeid og GitHub-repositorier, som skal deployes til scandiking.github.io etterhvert. Den viser oppgaver og besvarelser fra studiet IT og informasjonssystemer på Universitetet i Sørøst-Norge campus Ringerike i Hønefoss. IT og informasjonssystemer er en mangfoldig studieretning og dette repositoryet konkretiserer de ferdighetene jeg har opparbeidet meg på en ren og ryddig måte.
 
 ## Hvem er det for
 
