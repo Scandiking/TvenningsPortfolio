@@ -188,7 +188,7 @@ ON Senter.Senternavn = Hund.HundeID;`
 
                                     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                         <iframe
-                                            src="/pdfs/DAT1000/DAT1000-h2023-Oblig1-Gruppe3.pdf"
+                                            src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/DAT1000-h2023-Oblig1-Gruppe3.pdf`}
                                             width="100%"
                                             height="600px"
                                             title="DAT1000 Arbeidskrav 1"
@@ -224,7 +224,7 @@ ON Senter.Senternavn = Hund.HundeID;`
                                 <p>Oppgave 1</p>
                                 <img
                                     alt="Oppgave 1"
-                                    src="/pdfs/DAT1000/7146-oppgave1.png"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave1.png`}
                                 />
 
                                 <p>Oppgave 2</p>
@@ -247,19 +247,19 @@ ON Senter.Senternavn = Hund.HundeID;`
                                 <p>Oppgave 4a</p>
                                 <img
                                     alt="Oppgave 4"
-                                    src="/pdfs/DAT1000/7146-oppgave4a.png"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave4a.png`}
                                 />
 
                                 <p>Oppgave 4b</p>
                                 <img
                                     alt="Oppgave 4b"
-                                    src="/pdfs/DAT1000/7146-oppgave4b.png"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave4b.png`}
                                 />
 
                                 <p>Oppgave 4c</p>
                                 <img
                                     alt="Oppgave 4c"
-                                    src="/pdfs/DAT1000/7146-opppgave4c.png"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-opppgave4c.png`}
                                 />
                             </CardBody>
                         </Card>
