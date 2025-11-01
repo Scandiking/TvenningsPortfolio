@@ -8,6 +8,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        background: {
+          DEFAULT: '#f5f5f5',
+          dark: '#1a1a1a'
+        }
+      },
       zIndex: {
         '60': '60',
       },
