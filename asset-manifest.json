@@ -1,17 +1,15 @@
 {
   "files": {
     "main.css": "/TvenningsPortfolio/static/css/main.9f2e075b.css",
-    "main.js": "/TvenningsPortfolio/static/js/main.fc09f80d.js",
+    "main.js": "/TvenningsPortfolio/static/js/main.aeba3396.js",
     "static/js/501.f1921862.chunk.js": "/TvenningsPortfolio/static/js/501.f1921862.chunk.js",
-    "static/js/453.1f56929d.chunk.js": "/TvenningsPortfolio/static/js/453.1f56929d.chunk.js",
     "index.html": "/TvenningsPortfolio/index.html",
     "main.9f2e075b.css.map": "/TvenningsPortfolio/static/css/main.9f2e075b.css.map",
-    "main.fc09f80d.js.map": "/TvenningsPortfolio/static/js/main.fc09f80d.js.map",
-    "501.f1921862.chunk.js.map": "/TvenningsPortfolio/static/js/501.f1921862.chunk.js.map",
-    "453.1f56929d.chunk.js.map": "/TvenningsPortfolio/static/js/453.1f56929d.chunk.js.map"
+    "main.aeba3396.js.map": "/TvenningsPortfolio/static/js/main.aeba3396.js.map",
+    "501.f1921862.chunk.js.map": "/TvenningsPortfolio/static/js/501.f1921862.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f2e075b.css",
-    "static/js/main.fc09f80d.js"
+    "static/js/main.aeba3396.js"
   ]
 }
