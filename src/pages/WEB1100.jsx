@@ -33,7 +33,7 @@ const WEB1100 = () => {
 
                                     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                         <iframe
-                                            src="/pdfs/WEB1100/WEB1100-H23-A2-gr12.pdf"
+                                            src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/WEB1100-H23-A2-gr12.pdf`}
                                             width="100%"
                                             height="600px"
                                             title="WEB1100 Arbeidskrav 1"
@@ -57,7 +57,7 @@ const WEB1100 = () => {
 
                                     <img className="overflow-auto-border border-gray-200 dark:border-gray-700 rounded-lg"
                                         alt="Skjermdump av nettside"
-                                        src="/pdfs/WEB1100/Nettside1.png"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside1.png`}
                                         width="100%"
                                     />
 
@@ -65,21 +65,21 @@ const WEB1100 = () => {
                                 <p className="mt-3">Kontakt-side</p>
                                     <img className="overflow-auto-border border-gray-200 dark:border-gray-700 rounded-lg"
                                         alt="Skjermdump av nettside"
-                                        src="/pdfs/WEB1100/Nettside2.png"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside2.png`}
                                         width="100%"
                                     />
 
                                 <p className="mt-3">Anmeldelser-side</p>
                                     <img className="overflow-auto-border border-gray-200 dark:border-gray-700 rounded-lg"
                                         alt="Skjermdump av nettside"
-                                        src="/pdfs/WEB1100/Nettside3.png"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside3.png`}
                                         width="100%"
                                     />
 
                                 <p className="mt-3">Kontakt-side</p>
                                     <img className="overflow-auto-border border-gray-200 dark:border-gray-700 rounded-lg"
                                         alt="Skjermdump av nettside"
-                                        src="/pdfs/WEB1100/Nettside4.png"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside4.png`}
                                         width="100%"
                                     />
 
@@ -99,7 +99,7 @@ const WEB1100 = () => {
                                 </div>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/WEB1100/Web1100-Eksamen.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Web1100-Eksamen.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="WEB1100 Eksamen"
@@ -113,7 +113,7 @@ const WEB1100 = () => {
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <img
                                         alt="Flow-diagram of browser routes"
-                                        src="/pdfs/WEB1100/Question_2-1.png"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Question_2-1.png`}
                                         width="100%"
                                     />
                                 </div>
