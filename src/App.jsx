@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Button from './components/Button';
 import Drawer from './components/Drawer';
 import Home from './pages/Home';
@@ -232,6 +233,7 @@ function App() {
         </nav>
 
         {/* Main Content with Routes */}
+        <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -259,6 +261,7 @@ function App() {
           <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
           <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
         </Routes>
+        </Router>
 
       </div>
       </ThemeProvider>
