@@ -34,7 +34,7 @@ const PRO1000 = () => {
 
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/PRO1000/Prosjektplan%20og%20SWOT-presentasjon.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Prosjektplan%20og%20SWOT-presentasjon.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="Presentasjon av milepæl 1"
@@ -63,7 +63,7 @@ const PRO1000 = () => {
 
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/PRO1000/Metodologi%20og%20gruppe-SWOT.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Metodologi%20og%20gruppe-SWOT.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="Presentasjon av milepæl 1"
@@ -86,7 +86,7 @@ const PRO1000 = () => {
 
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/PRO1000/milepæl3.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/milepæl3.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="Presentasjon av milepæl 1"
@@ -107,7 +107,7 @@ const PRO1000 = () => {
 
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/PRO1000/Milepael_4.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Milepael_4.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="Presentasjon av milepæl 1"
@@ -127,7 +127,7 @@ const PRO1000 = () => {
                                 <p>Denne rapporten teller som eksamen i dette faget. Det er blant annet derfor vi har kandidatnummer i stedet for navnene våre til tross for at det er åpenbart for sensor hvem som er hvem.</p>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/PRO1000/RapportPRO1000.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/RapportPRO1000.pdf`}
                                         width="100%"
                                         height="600px"
                                         title=""
