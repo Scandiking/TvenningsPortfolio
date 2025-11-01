@@ -3,8 +3,10 @@ import { Tabs, Tab } from "@heroui/tabs";
 import {Card, CardBody, CardHeader } from "@heroui/card";
 import CodeBlock from "../components/CodeBlock";
 import {Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
+import {useNavigate} from "react-router-dom";
 
 const PRG1100 = () => {
+    const navigate = useNavigate();
 
     // Arbeidskrav 1 kode
     // Overse de 860 feilene, disse er falske positiver pga newline og escape characters. Fungerer det i nettleseren er det tipp topp tommel opp.
@@ -2735,9 +2737,9 @@ hovedvindu.mainloop()
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/prg1100">Grunnleggende programmering 2</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/prg1100')}>Grunnleggende programmering 2</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

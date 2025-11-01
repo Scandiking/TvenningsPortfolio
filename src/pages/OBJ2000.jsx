@@ -4,8 +4,10 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import {Image} from "@heroui/image";
 import CodeBlock from "../components/CodeBlock";
 import {Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
+import {useNavigate} from "react-router-dom";
 
 const OBJ2000 = () => {
+    const navigate = useNavigate();
 // --- --- --- --- ---
 // oppgave 1A
 // --- --- --- --- ---
@@ -981,9 +983,9 @@ public class Hovedprogram {
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/obj2000">Objektorientert programmering 1</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/obj2000')}>Objektorientert programmering 1</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

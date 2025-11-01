@@ -3,17 +3,19 @@ import {Tabs, Tab } from "@heroui/tabs";
 import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Image} from "@heroui/react";
 import CodeBlock from "../components/CodeBlock";
+import {useNavigate} from "react-router-dom";
 
 const APP2000 = () => {
+    const navigate = useNavigate();
 
     const githubrepo = `gh repo clone Scandiking/GarminConnectMaterialDesignReactFrontend`
     return (
         <div className="container mx-auto px-4 py-8">
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/app2000">Apputvikling for web</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/app2000')}>Apputvikling for web</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

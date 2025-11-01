@@ -23,11 +23,10 @@ import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ORL1000 from "./pages/ORL1000";
 
-
-function App() {
+function AppContent() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [expandedSemesters, setExpandedSemesters] = useState({});
-  const location = useLocation(); // Add this line to define location
+  const location = useLocation();
 
   const openDrawer = () => {
     setIsDrawerOpen(true);
@@ -44,7 +43,6 @@ function App() {
     }));
   };
 
-  // Strukturerte data for emner
   const semesterData = [
     {
       id: 1,
@@ -60,8 +58,8 @@ function App() {
       id: 2,
       title: "2. semester",
       courses: [
-          { id: "pro1000", title: "Praktisk prosjektarbeid", path: "/emner/pro1000" },
-          { id: "sys1000", title: "Systemutvikling", path: "/emner/sys1000" },
+        { id: "pro1000", title: "Praktisk prosjektarbeid", path: "/emner/pro1000" },
+        { id: "sys1000", title: "Systemutvikling", path: "/emner/sys1000" },
         { id: "prg1100", title: "Grunnleggende programmering 2", path: "/emner/prg1100" },
         { id: "orl1000", title: "Organisering og ledelse", path: "/emner/orl1000" },
       ]
@@ -107,11 +105,10 @@ function App() {
     },
   ]
 
-  return (
-      <ThemeProvider>
-      <div className="min-h-screen bg-background text-foreground">
 
-        {/* Drawer Component */}
+
+  return (
+      <div className="min-h-screen bg-background text-foreground">
         <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} position="left">
           <div className="flex flex-col space-y-4 p-2 overflow-y-auto max-h-screen bg-content1">
             <h2 className="text-2xl font-bold mb-4">Meny</h2>
@@ -133,19 +130,14 @@ function App() {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
               </svg>
-
-
               Om
             </Link>
 
-            {/* Emner med undermeny */}
             <div className="flex flex-col">
               <div className="p-2 font-medium flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
                 Emner
               </div>
-
-              {/* Semestre */}
 
               {semesterData.map((semester) => (
                   <div key={semester.id} className="pl-4 flex flex-col">
@@ -164,7 +156,6 @@ function App() {
                       </svg>
                     </div>
 
-                    {/* Kurs for semesteret */}
                     {expandedSemesters[semester.id] && (
                         <div className="pl-4 flex flex-col space-y-2">
                           {semester.courses.map((course) => (
@@ -182,20 +173,11 @@ function App() {
                   </div>
               ))}
             </div>
-
           </div>
         </Drawer>
 
-
-
-
-
-        {/* Navigation Bar - z-40 ensures it's below the drawer */}
         <nav className="bg-content1 shadow-md p-4 relative z-40">
           <div className="container mx-auto flex items-center">
-
-
-            {/* Left side - Menu button */}
             <div className="w-1/3 flex justify-start">
               <Button
                   variant="secondary"
@@ -203,37 +185,32 @@ function App() {
                   className="p-2 hover:bg-content2"
                   aria-label="Open menu"
               >
-
-                  <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      className="w-6 h-6">
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    />
-                  </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6">
+                  <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
               </Button>
             </div>
 
-            {/* Center - Portfolio title */}
             <div className="w-1/3 flex justify-center">
               <Link to="/" className="text-xl font-bold justify-self-center cursor-pointer">Tvennings portfolio</Link>
             </div>
 
-            {/* Right side - Empty or can add other elements. Auto/dark/light // Accessibility settings? */}
             <div className="w-1/3 flex justify-end">
               <ThemeSwitcher />
             </div>
           </div>
         </nav>
 
-        {/* Main Content with Routes */}
-        <Router basename="/TvenningsPortfolio/">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -252,18 +229,20 @@ function App() {
           <Route path="/emner/esb1000" element={<ESB1000 />}/>
           <Route path="/emner/met1020" element={<MET1020 />}/>
           <Route path="/emner/ai3000r" element={<AI3000R />} />
-
-          {/* Dynamisk genererte ruter for emner */}
-
-
-
           <Route path="/projects" element={<div className="container mx-auto p-8">Projects page coming soon!</div>} />
           <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
           <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
         </Routes>
-        </Router>
-
       </div>
+  );
+}
+
+function App() {
+  return (
+      <ThemeProvider>
+        <Router>
+          <AppContent />
+        </Router>
       </ThemeProvider>
   );
 }

@@ -3,16 +3,18 @@ import { Tabs, Tab } from "@heroui/tabs";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import CodeBlock from "../components/CodeBlock";
 import { Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
+import {useNavigate} from "react-router-dom";
 
 const DAT2000 = () => {
+    const navigate = useNavigate;
     return (
         <div className = "container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/dat2000">Database 2</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/dat2000')}>Database 2</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

@@ -5,9 +5,12 @@ import {Card, CardBody, CardHeader} from "@heroui/card";
 // import {Image} from "heroui/react";
 import CodeBlock from "../components/CodeBlock";
 import {Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
+import {useNavigate} from "react-router-dom";
 
 
 const PRG1000 = () => {
+    const navigate = useNavigate();
+
     const arbkrav1code = `# Obligatorisk arbeidskrav, individuell, innlevering 1
 # Strømberegning
 
@@ -644,9 +647,9 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/prg1000">Grunnleggende programmering 1</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/prg1000')}>Grunnleggende programmering 1</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

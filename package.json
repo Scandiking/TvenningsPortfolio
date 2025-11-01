@@ -2,7 +2,7 @@
   "name": "hero-ui-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://scandiking.github.io/TvenningsPortfolio",
+  "homepage": "/TvenningsPortfolio/",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@heroui/breadcrumbs": "^2.2.13",

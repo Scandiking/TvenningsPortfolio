@@ -1,16 +1,18 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
 import {Card, CardHeader, CardBody} from "@heroui/card";
+import {useNavigate} from "react-router-dom";
 
 const ESB1000 = () => {
+    const navigate = useNavigate();
     return (
         <div className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/esb1000">Etikk og samfunnsansvar</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/esb1000')}>Etikk og samfunnsansvar</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

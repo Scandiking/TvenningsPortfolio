@@ -2,16 +2,18 @@ import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
+import {useNavigate} from "react-router-dom";
 
 const PRO1000 = () => {
+    const navigate = useNavigate();
     return (
         <div className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/pro1000">Praktisk prosjektarbeid</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/pro1000')}>Praktisk prosjektarbeid</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 
