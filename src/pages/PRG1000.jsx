@@ -778,7 +778,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
                             <p className="py-2">Oppgave 1 (beklager bildekvaliteten, dette er en begrensning i eksamensprogrammet Wiseflow.</p>
                             <img
                                 alt="Programkart av oppgitt kode"
-                                src="/images/7036-oppgave1.png"
+                                src={`${process.env.PUBLIC_URL}/images/7036-oppgave1.png`}
                                 className="rounded-lg border border-gray-200 dark:border-gray-700"
                             />
 
