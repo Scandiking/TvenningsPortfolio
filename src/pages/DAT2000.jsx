@@ -28,7 +28,7 @@ const DAT2000 = () => {
                             <CardBody>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/DAT2000/Group_7_H24_DAT2000.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/Group_7_H24_DAT2000.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="DAT2000 Arbeidskrav 1"
@@ -45,7 +45,7 @@ const DAT2000 = () => {
                                 <p>Oppgavesettet for eksamen i Database 2</p>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/DAT2000/DAT2000-1%20Database%202%2020.12.2024.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-1%20Database%202%2020.12.2024.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="Examination Information Page"
@@ -55,7 +55,7 @@ const DAT2000 = () => {
                                 <p>Besvarelse på eksamen i Database 2</p>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/DAT2000/DAT2000-Eksamen.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-Eksamen.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="Examination Information Page"
