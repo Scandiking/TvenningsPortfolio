@@ -26,7 +26,7 @@ const ESB1000 = () => {
                             <p>Den første arbeidsoppgaven gikk ut på å ta et kurs innen <a style={{textDecoration:'underline'}} href="https://open.uit.no/courses/course-v1:UiT+iKomp+Norsk-2024/about">kildekritikk</a> som man finner på UIT. Etter å ha bestått kurset, skulle vi laste ned kursbevis og laste dette opp på læringsplattformen Canvas.</p>
                             <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                 <iframe
-                                    src="/pdfs/ESB1000/UiT%20iKomp%20Norsk%20Bokmål%20Certificate%20_%20UiT%20OpenedX.pdf"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/ESB1000/UiT%20iKomp%20Norsk%20Bokmål%20Certificate%20_%20UiT%20OpenedX.pdf`}
                                     width="100%"
                                     height="600px"
                                     title="ESB1000 Arbeidskrav 1"
@@ -66,7 +66,7 @@ const ESB1000 = () => {
 
                             <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                 <iframe
-                                    src="/pdfs/ESB1000/annotated-Oppgave1.pdf"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/ESB1000/annotated-Oppgave1.pdf`}
                                     width="100%"
                                     height="600px"
                                     title="ESB1000 arbeidskrav"
@@ -88,7 +88,7 @@ const ESB1000 = () => {
                             <p>Oppgavesettet for eksamen.</p>
                             <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                 <iframe
-                                    src="/pdfs/ESB1000/ESB1000%20-%20Nynorsk%20og%20Bokmål.pdf"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/ESB1000/ESB1000%20-%20Nynorsk%20og%20Bokmål.pdf`}
                                     width="100%"
                                     height="600px"
                                     title="ESB1000 Eksamen"
@@ -99,7 +99,7 @@ const ESB1000 = () => {
                             <p>Min besvarelse på eksamen, oppgave 2.</p>
                             <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                 <iframe
-                                    src="/pdfs/ESB1000/(7850)-Min%20besvarelse.pdf"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/ESB1000/(7850)-Min%20besvarelse.pdf`}
                                     width="100%"
                                     height="600px"
                                     title="ESB1000 Eksamen"
