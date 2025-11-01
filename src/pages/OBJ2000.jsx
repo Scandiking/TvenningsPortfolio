@@ -999,7 +999,7 @@ public class Hovedprogram {
                             <CardBody>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/OBJ2000/Arbeidskrav_H2024_OBJ2000.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/Arbeidskrav_H2024_OBJ2000.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="OBJ2000 Arbeidskrav 1"
@@ -1056,7 +1056,7 @@ public class Hovedprogram {
                             <CardBody>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/OBJ2000/OBJ2000-1%20Objektorientert%20programmering%201%2017.12.2024.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/OBJ2000-1%20Objektorientert%20programmering%201%2017.12.2024.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="OBJ2000 Eksamen"
@@ -1065,7 +1065,7 @@ public class Hovedprogram {
                                 </div>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/OBJ2000/OBJ2000-Eksamen.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/OBJ2000-Eksamen.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="OBJ2000 Eksamen"
