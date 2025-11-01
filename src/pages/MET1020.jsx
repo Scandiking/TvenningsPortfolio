@@ -25,7 +25,7 @@ const MET1020 = () => {
                                 <p>Obligatorisk arbeidskrav</p>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/MET1020/Arbeidskrav_i_MET1020_gr7.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/MET1020/Arbeidskrav_i_MET1020_gr7.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="MET1020 Obligatorisk arbeidskrav"
