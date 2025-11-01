@@ -26,7 +26,7 @@ const INF1000 = () => {
                                 <CardBody>
                                     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                         <iframe
-                                            src="/pdfs/INF1000/INF1000-Arbeidskrav1-gruppe3.pdf"
+                                            src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Arbeidskrav1-gruppe3.pdf`}
                                             width="100%"
                                             height="600px"
                                             title="INF1000 Arbeidskrav"
@@ -44,7 +44,7 @@ const INF1000 = () => {
                                     <p>Dette er hentet fra WiseFlow og er automatisert. Jeg har ikke kontroll over formateringen utover skriftstørrelse og uthevinger, derfor ser det ut som det gjør.</p>
                                     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                         <iframe
-                                            src="/pdfs/INF1000/INF1000-Eksamen.pdf"
+                                            src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Eksamen.pdf`}
                                             width="100%"
                                             height="600px"
                                             title="INF1000 Eksamen"
