@@ -99,7 +99,7 @@ const WEB1100 = () => {
                                 </div>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Web1100-Eksamen.pdf`}
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/WEB1100-Eksamen.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="WEB1100 Eksamen"
