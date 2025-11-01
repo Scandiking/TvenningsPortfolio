@@ -35,31 +35,31 @@ const APP2000 = () => {
                                     />
                                     <img
                                         alt="Screenshot of home page"
-                                        src="/images/APP2000/Home.png"
+                                        src={`${process.env.PUBLIC_URL}/images/APP2000/Home.png`}
                                         width="100%"
                                     />
 
                                     <img
                                         alt="Screenshot of sidebar page"
-                                        src="/images/APP2000/Sidebar.png"
+                                        src={`${process.env.PUBLIC_URL}/images/APP2000/Sidebar.png`}
                                         width="100%"
                                     />
 
                                     <img
                                         alt="Screenshot of calendar page"
-                                        src="/images/APP2000/Calendar.png"
+                                        src={`${process.env.PUBLIC_URL}/images/APP2000/Calendar.png`}
                                         width="100%"
                                     />
 
                                     <img
                                         alt="Screenshot of popover element"
-                                        src="/images/APP2000/Popover.png"
+                                        src={`${process.env.PUBLIC_URL}/images/APP2000/Popover.png`}
                                         width="100%"
                                     />
 
                                     <img
                                         alt="Screenshot of theme settings page"
-                                        src="/images/APP2000/DarkTheme.png"
+                                        src={`${process.env.PUBLIC_URL}/images/APP2000/DarkTheme.png`}
                                         width="100%"
                                     />
                                 </div>

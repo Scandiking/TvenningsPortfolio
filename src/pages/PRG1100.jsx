@@ -2796,7 +2796,7 @@ hovedvindu.mainloop()
                                 <p>Slik det ser ut når du åpner programmet. Hovedvindu.</p>
                                 <img
                                     alt="Skjermbilde av grafisk brukergrensesnitt"
-                                    src="/images/PRG1100/FinnHund-1.png"
+                                    src={`${process.env.PUBLIC_URL}/images/PRG1100/FinnHund-1.png`}
                                     width="100%"
                                     className="rounded-lg border border-gray-200 dark:border-gray-700"
                                 />
@@ -2804,7 +2804,7 @@ hovedvindu.mainloop()
                                 <p>Man skriver inn hundens identifikasjonsnummer. Dette er i praksis primærnøkkelen.</p>
                                 <img
                                     alt="Skjermbilde av grafisk brukergrensesnitt"
-                                    src="/images/PRG1100/FinnHund-2.png"
+                                    src={`${process.env.PUBLIC_URL}/images/PRG1100/FinnHund-2.png`}
                                     width="100%"
                                     className="rounded-lg border border-gray-200 dark:border-gray-700"
                                 />
@@ -2812,7 +2812,7 @@ hovedvindu.mainloop()
                                 <p>Knappen "Finn hundeopplysninger" kjører def`en som er definert i koden over. Funksjonen leser igjennom filene og returnerer tekststrengene til Entry-widgetene som er satt til read-only.</p>
                                 <img
                                     alt="Skjermbilde av grafisk brukergrensesnitt"
-                                    src="/images/PRG1100/FinnHund-3.png"
+                                    src={`${process.env.PUBLIC_URL}/images/PRG1100/FinnHund-3.png`}
                                     width="100%"
                                     className="rounded-lg border border-gray-200 dark:border-gray-700"
                                 />
@@ -2820,7 +2820,7 @@ hovedvindu.mainloop()
                                 <p>Siden tekstformateringen er "utf-8" kan man skrive alle tegn i utf-8-tegnsettet. Dette er først og fremst tiltenkt tegn som à og æ "å" å, men dette tillater også klassiske Unicode-tegn som ☺ (U+263A)(må ikke forveksles med ☺️(U+FE0F)).</p>
                                 <img
                                     alt="Skjermbilde av grafisk brukergrensesnitt"
-                                    src="/images/PRG1100/FinnHund-4.png"
+                                    src={`${process.env.PUBLIC_URL}/images/PRG1100/FinnHund-4.png`}
                                     width="100%"
                                     className="rounded-lg border border-gray-200 dark:border-gray-700"
                                 />
@@ -2828,7 +2828,7 @@ hovedvindu.mainloop()
                                 <p>Om man taster inn en hunde-ID som ikke finnes i hund.txt får man melding om dette.</p>
                                 <img
                                     alt="Skjermbilde av grafisk brukergrensesnitt"
-                                    src="/images/PRG1100/FinnHund-5.png"
+                                    src={`${process.env.PUBLIC_URL}/images/PRG1100/FinnHund-5.png`}
                                     width="100%"
                                     className="rounded-lg border border-gray-200 dark:border-gray-700"
                                 />
@@ -2870,7 +2870,7 @@ hovedvindu.mainloop()
                                 <div>
                                     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                         <iframe
-                                            src="/pdfs/PRG1100/PRG1100-1%20Grunnleggende%20programmering%202%2024.05.2024.pdf"
+                                            src={`${process.env.PUBLIC_URL}/pdfs/PRG1100/PRG1100-1%20Grunnleggende%20programmering%202%2024.05.2024.pdf`}
                                             width="100%"
                                             height="600px"
                                             title="PRG1100 Eksamen"

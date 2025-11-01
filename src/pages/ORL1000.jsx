@@ -29,7 +29,7 @@ const ORL1000 = () => {
                                     <p>En to tre</p>
                                     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                         <iframe
-                                            src="/pdfs/ORL1000/Gnagende%20gnisninger%20blir%20glemt%20i%20gjennomgått%20gruppedynamikk.pdf"
+                                            src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/Gnagende%20gnisninger%20blir%20glemt%20i%20gjennomgått%20gruppedynamikk.pdf`}
                                             width="100%"
                                             height="600px"
                                             title="ORL1000 Arbeidskrav 1"
@@ -48,7 +48,7 @@ const ORL1000 = () => {
                                 <div className="flex flex-col gap-6">
                                     <p>En to tre</p>
                                     <iframe
-                                        src="/pdfs/ORL1000/annotated-GRUPPEKONTRAKT-gruppe22.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/annotated-GRUPPEKONTRAKT-gruppe22.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="ORL1000 Arbeidskrav 2"
@@ -65,7 +65,7 @@ const ORL1000 = () => {
                                 <div className="flex flex-col gap-6">
                                     <p>En to tre</p>
                                     <iframe
-                                        src="/pdfs/ORL1000/annotated-ORL1000-Oblig3-Gruppe22.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/annotated-ORL1000-Oblig3-Gruppe22.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="ORL1000 Arbeidskrav 3"
@@ -82,7 +82,7 @@ const ORL1000 = () => {
                                 <div className="flex flex-col gap-6">
                                     <p>En to tre</p>
                                     <iframe
-                                        src="/pdfs/ORL1000/ORL1000-Eksamen.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/ORL1000-Eksamen.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="ORL1000 Eksamen"

@@ -43,7 +43,7 @@ const SYS1000 = () => {
 
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
-                                        src="/pdfs/SYS1000/SYS1000Rapport.pdf"
+                                        src={`${process.env.PUBLIC_URL}/pdfs/SYS1000/SYS1000Rapport.pdf`}
                                         width="100%"
                                         height="600px"
                                         title="DAT1000 Arbeidskrav 1"
