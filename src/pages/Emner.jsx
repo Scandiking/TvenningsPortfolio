@@ -4,9 +4,10 @@ import {Card, CardHeader, CardBody } from "@heroui/card";
 import { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, getKeyValue } from "@heroui/react";
 // To sort on table columns:
 import {useAsyncList} from "@react-stately/data";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Emner = () => {
+    const navigate = useNavigate();
 
     // Hardkodet data
     const emneData = [
@@ -93,8 +94,8 @@ const Emner = () => {
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

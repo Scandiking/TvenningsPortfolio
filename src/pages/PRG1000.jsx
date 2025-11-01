@@ -692,7 +692,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
                                         <div className="overflow-auto border border-gray-200 dark:border-gray-700 rounded-lg" >
                                         <img
                                             alt="Programkart for strømstøttekalkulator"
-                                            src="/images/PRG1000-Oblig1-KMT.drawio.png"
+                                            src={`${process.env.PUBLIC_URL}/images/PRG1000-Oblig1-KMT.drawio.png`}
                                             className="rounded-lg border border-gray-200 dark:border-gray-700"
                                             onError={(e) => {
                                                 console.error("Bildet kunne ikke lastes");

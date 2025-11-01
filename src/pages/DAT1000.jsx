@@ -206,8 +206,7 @@ ON Senter.Senternavn = Hund.HundeID;`
                             <CardBody>
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                 <iframe
-                                    src="/pdfs/DAT1000/DAT1000-h2023-Oblig2-Gruppe3.pdf"
-                                    width="100%"
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/DAT1000-h2023-Oblig1-Gruppe3.pdf`}                                    width="100%"
                                     height="600px"
                                     title="DAT1000 Arbeidskrav 2"
                                     className="border-0"
