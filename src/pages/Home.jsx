@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import { Image } from "@heroui/image";
 import {Link, useNavigate} from 'react-router-dom';
 
 function Home() {
@@ -16,6 +17,12 @@ function Home() {
             <div className="bg-content1 rounded-lg shadow-md p-6 mb-6"> {/* ENDRET: bg-white dark:bg-gray-800 → bg-content1 */}
 
                 <h1 className="text-3xl font-bold text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
+
+                <Image
+                    alt="3D render of a desktop with a laptop, rubber duck and coffee cup"
+                    src="/images/LinkedInBanner3.png"
+                    fallbackSrc="https://github.com/Scandiking/TvenningsPortfolio/raw/master/public/images/workstation.png"
+                />
 
                 <p className="text-default-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p> {/* ENDRET: text-gray-600 dark:text-gray-500 → text-default-500 */}
                 <div className="flex flex-wrap gap-4">
