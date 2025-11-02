@@ -1,7 +1,7 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tabs, Tab } from "@heroui/tabs";
 import {Card, CardBody, CardHeader} from "@heroui/card";
-import {Image} from "@heroui/react";
+import {Image, Spacer} from "@heroui/react";
 import CodeBlock from "../components/CodeBlock";
 import {useNavigate} from "react-router-dom";
 
@@ -75,7 +75,33 @@ const APP2000 = () => {
                     <Tab key="arbkrv3" title="Eksamen">
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">Eksamen</h2></CardHeader>
-                            <CardBody>Dette er et emne som strekker seg over to semestre. Eksamen er derfor ennå ikke avholdt.</CardBody>
+                            <CardBody>
+                                <p className="text-md">Mappeinnlevering av valgfri SPA i React. "<a href="https://github.com/Scandiking/N-g/tree/master/backend/src/main/java/com/nag">Næg"</a> er en applikasjon hvor frontend er React og backend er i Java. Det man bruker appen til er å opprette oppgaver. Disse kan man delegere til personer man deler rom med. Twisten fra andre apper er at Næg repeterer notifikasjoner i økende frekens. Standard frekvens er eksponentiell.</p>
+
+                                <Spacer/>
+
+                            <h3 className="text-lg font-semibold">From the <a href="https://github.com/Scandiking/N-g/tree/master">Næg GitHub repository README.md:</a></h3>
+
+                                <CardBody className="shadow-lg">
+                                <h3 className="text-lg font-semibold">What is Næg?</h3>
+                                <p className="text-md">Næg is an app that helps you get others to do what they should do. How do you do that? You add <code>Task</code>s to <code>People</code> in a <code>Room</code>. What sets Næg apart from other task managing apps is the ability to set a <code>Næg frequency</code> for each task. This means you can nag people to do their tasks with varying intensity, from a gentle reminder to an all-out bombardment of notifications.</p>
+                                </CardBody>
+
+                                <Spacer/>
+
+                            <p className="text-lg font-semibold">Prosjektrapport for faget Applikasjonsutvikling for web</p>
+
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                <iframe
+                                    src={`${process.env.PUBLIC_URL}/pdfs/APP2000/Group8ReportAPP2000.pdf`}
+                                    width="100%"
+                                    height="600px"
+                                    title="APP2000 Eksamen"
+                                    className="border-0"
+                                />
+                                </div>
+
+                            </CardBody>
                         </Card>
                     </Tab>
 
