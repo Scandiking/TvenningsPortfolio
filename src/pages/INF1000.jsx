@@ -1,62 +1,94 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import { Card, CardBody, CardHeader } from "@heroui/card";
-import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
-import {useNavigate} from "react-router-dom";
+import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
+import { useNavigate } from "react-router-dom";
+import { Spinner } from "@heroui/react";
 
 const INF1000 = () => {
     const navigate = useNavigate();
+
+    // Lasting-state for hele siden
+    const [loading, setLoading] = useState(true);
+    // Teller hvor mange iframes som har fått onLoad-kall
+    const [loadedCount, setLoadedCount] = useState(0);
+    const totalIframes = 2; // to pdf-er
+
+    const handleLoad = () => {
+        setLoadedCount(n => n + 1);
+    };
+
+    useEffect(() => {
+        if (loadedCount >= totalIframes) setLoading(false);
+        },[loadedCount]);
+
+    useEffect(() => {
+        if (loadedCount >= totalIframes) return setLoading(false);
+        const t = setTimeout(() => setLoading(false), 1); // maks ventetid
+        return () => clearTimeout(t);
+    }, [loadedCount]);
+
     return (
         <div className="container mx-auto px-4 py-8">
 
-            <div className="py-1">
-                <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
-                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
-                    <BreadcrumbItem onPress={() => navigate('/emner/inf1000')}>Informasjonssystemer</BreadcrumbItem>
-                </Breadcrumbs>
-            </div>
+            {loading && (
+                <div className="flex justify-center mb-4">
+                    <Spinner size="md" aria-label="Loading" />
+                </div>
+            )}
 
-<h1 className="text-3xl font-bold mb-6">INF1000 - Digital forretningsforståelse</h1>
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aria-label="Options">
-                    <Tab key="arbkrb1" title="Arbeidskrav">
-                        <Card>
-                            <CardHeader><h2 className="text-lg font-semibold">Arbeidskravet i digital forretningsforståelse</h2></CardHeader>
-                                <CardBody>
-                                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                        <iframe
-                                            src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Arbeidskrav1-gruppe3.pdf`}
-                                            width="100%"
-                                            height="600px"
-                                            title="INF1000 Arbeidskrav"
-                                            className="border-0"
-                                        />
-                                    </div>
-                                </CardBody>
+            {!loading && (
+                <>
+                    <div className="py-1">
+                        <Breadcrumbs key="solid" px-20>
+                            <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                            <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                            <BreadcrumbItem onPress={() => navigate('/emner/inf1000')}>Informasjonssystemer</BreadcrumbItem>
+                        </Breadcrumbs>
+                    </div>
 
-                        </Card>
-                    </Tab>
-                    <Tab key="eksamen" title="Eksamen">
-                        <Card>
-                            <CardHeader><h2 className="text-lg font-semibold">Eksamensbesvarelse i digital forretningsforståelse</h2></CardHeader>
-                                <CardBody>
-                                    <p>Dette er hentet fra WiseFlow og er automatisert. Jeg har ikke kontroll over formateringen utover skriftstørrelse og uthevinger, derfor ser det ut som det gjør.</p>
-                                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                        <iframe
-                                            src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Eksamen.pdf`}
-                                            width="100%"
-                                            height="600px"
-                                            title="INF1000 Eksamen"
-                                            className="border-0"
-                                        />
-                                    </div>
-                                </CardBody>
-
-                        </Card>
-                    </Tab>
-                </Tabs>
-            </div>
+                    <h1 className="text-3xl font-bold mb-6">INF1000 - Digital forretningsforståelse</h1>
+                    <div className="flex w-full flex-col">
+                        <Tabs variant="solid" aria-label="Options">
+                            <Tab key="arbkrb1" title="Arbeidskrav">
+                                <Card>
+                                    <CardHeader><h2 className="text-lg font-semibold">Arbeidskravet i digital forretningsforståelse</h2></CardHeader>
+                                    <CardBody>
+                                        <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                            <iframe
+                                                src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Arbeidskrav1-gruppe3.pdf`}
+                                                width="100%"
+                                                height="600px"
+                                                title="INF1000 Arbeidskrav"
+                                                className="border-0"
+                                                onLoad={handleLoad}
+                                            />
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            </Tab>
+                            <Tab key="eksamen" title="Eksamen">
+                                <Card>
+                                    <CardHeader><h2 className="text-lg font-semibold">Eksamensbesvarelse i digital forretningsforståelse</h2></CardHeader>
+                                    <CardBody>
+                                        <p>Dette er hentet fra WiseFlow og er automatisert. Jeg har ikke kontroll over formateringen utover skriftstørrelse og uthevinger, derfor ser det ut som det gjør.</p>
+                                        <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                            <iframe
+                                                src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Eksamen.pdf`}
+                                                width="100%"
+                                                height="600px"
+                                                title="INF1000 Eksamen"
+                                                className="border-0"
+                                                onLoad={handleLoad}
+                                            />
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            </Tab>
+                        </Tabs>
+                    </div>
+                </>
+            )}
         </div>
     );
 };

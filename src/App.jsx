@@ -22,6 +22,7 @@ import AI3000R from './pages/AI3000R.jsx';
 import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ORL1000 from "./pages/ORL1000";
+import {HeroUIProvider} from "@heroui/system";
 
 function AppContent() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -240,9 +241,11 @@ function AppContent() {
 function App() {
   return (
       <ThemeProvider>
-        <Router>
-          <AppContent />
-        </Router>
+        <HeroUIProvider>
+          <Router>
+            <AppContent />
+          </Router>
+        </HeroUIProvider>
       </ThemeProvider>
   );
 }
