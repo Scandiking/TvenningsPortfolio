@@ -32,13 +32,15 @@ const Emner = () => {
         { emnekode: "SIK2000", emnenavn: "Informasjonssikkerhet", emnebeskrivelse: "Lovverk og standarder for informasjonssikkerhet. Trusler mot informasjonssikkerhet i bedrifter og privat. Hvordan man kan sikre informasjon. Risiko- og sårbarhetsanalyser."},
 
         { emnekode: "BID3000", emnenavn: "Business Intelligence og datavarehus", emnebeskrivelse: ""},
-        { emnekode: "SCE200D", emnenavn: "Sustainability Marketing and Circular Economy", emnebeskrivelse: ""},
-        { emnekode: "DT3000K", emnenavn: "Digital Transformation", emnebeskrivelse: ""},
-        { emnekode: "EHA3000D", emnenavn: "E-commerce", emnebeskrivelse: ""},
+        { emnekode: "MOB3000", emnenavn:"Applikasjonsutvikling for mobile enheter", emnebeskrivelse: ""},
+        { emnekode: "AI3000R", emnenavn:"Artificial Intelligence for Business Applications", emnebeskrivelse: ""},
+        { emnekode: "SEL3000R", emnenavn:"Selvstudie IT og informasjonssystemer", emnebeskrivelse: ""},
 
         {emnekode: "BOP3000", emnenavn:"Bacheloroppgave i IT og Informasjonssystemer", emnebeskrivelse: ""},
-        {emnekode: "PRR3000", emnenavn:"Praksisrefleksjon", emnebeskrivelse: ""},
-        {emnekode: "AI3000R", emnenavn:"Artificial Intelligence for Business Applications", emnebeskrivelse: ""}
+        {emnekode: "INT3002", emnenavn:"Internship", emnebeskrivelse: ""},
+        {emnekode: "SSS3000R", emnenavn:"IoT-teknologi og Mikrokontrollere i Smarte Systemer"},
+        {emnekode:"INF2020", emnenavn:"Operativsystemer"}
+
     ];
 
 
