@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TvenningsPortfolio/static/css/main.9f2e075b.css",
-    "main.js": "/TvenningsPortfolio/static/js/main.f620ef92.js",
+    "main.css": "/TvenningsPortfolio/static/css/main.eb3f7dab.css",
+    "main.js": "/TvenningsPortfolio/static/js/main.61dcfa20.js",
     "static/js/501.f1921862.chunk.js": "/TvenningsPortfolio/static/js/501.f1921862.chunk.js",
     "index.html": "/TvenningsPortfolio/index.html",
-    "main.9f2e075b.css.map": "/TvenningsPortfolio/static/css/main.9f2e075b.css.map",
-    "main.f620ef92.js.map": "/TvenningsPortfolio/static/js/main.f620ef92.js.map",
+    "main.eb3f7dab.css.map": "/TvenningsPortfolio/static/css/main.eb3f7dab.css.map",
+    "main.61dcfa20.js.map": "/TvenningsPortfolio/static/js/main.61dcfa20.js.map",
     "501.f1921862.chunk.js.map": "/TvenningsPortfolio/static/js/501.f1921862.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f2e075b.css",
-    "static/js/main.f620ef92.js"
+    "static/css/main.eb3f7dab.css",
+    "static/js/main.61dcfa20.js"
   ]
 }
