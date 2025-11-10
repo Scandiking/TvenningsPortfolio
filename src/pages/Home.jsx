@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import {Link, useNavigate} from 'react-router-dom';
+import {Skeleton} from "@heroui/react";
 
 function Home() {
     const navigate = useNavigate();
@@ -9,25 +10,40 @@ function Home() {
     const handleClick = () => alert('E-post: <mailto:km.tvenning@pm.me> / Mob: 41 85 36 42!');
     const goToProjects = () => navigate('/projects');
 
+    const [isLoaded, setIsLoaded] = React.useState(false);
+    const toggleLoad = () => {
+        setIsLoaded(!isLoaded);
+    };
+
 
     return (
         <div className="container mx-auto px-4 py-8">
             {/* Hero Section */}
-            <div className="bg-content1 rounded-lg shadow-md p-6 mb-6"> {/* ENDRET: bg-white dark:bg-gray-800 → bg-content1 */}
 
-                <h1 className="text-3xl font-bold text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
+                <div className="bg-content1 rounded-lg shadow-md p-6 mb-6"> {/* ENDRET: bg-white dark:bg-gray-800 → bg-content1 */}
 
-                <img
-                    alt="A 3D render of a desktop with a laptop, a rubber duck, a cup of coffee and a slate that seems like a phone"
-                    src="https://github.com/Scandiking/scandiking/raw/master/LinkedInBanner3.png"
-                />
 
-                <p className="text-default-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p> {/* ENDRET: text-gray-600 dark:text-gray-500 → text-default-500 */}
-                <div className="flex flex-wrap gap-4">
-                    <Button onClick={handleClick} variant="primary">Kontakt meg</Button>
-                    <Button onClick={goToProjects} variant="secondary">Se prosjekter</Button>
+
+                    <h1 className="text-3xl font-bold text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
+                        <Skeleton isLoaded={isLoaded} className="rounded-lg mb-6">
+                            <img
+                                alt="A 3D render of a desktop with a laptop, a rubber duck, a cup of coffee and a slate that seems like a phone"
+                                src="https://github.com/Scandiking/scandiking/raw/master/LinkedInBanner3.png"
+                                className="w-full rounded-lg"
+                                onLoad={()=>setIsLoaded(true)}
+                            />
+                        </Skeleton>
+
+                    <p className="text-default-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p> {/* ENDRET: text-gray-600 dark:text-gray-500 → text-default-500 */}
+
+                    <div className="flex flex-wrap gap-4">
+                        <Button onClick={handleClick} variant="primary">Kontakt meg</Button>
+                        <Button onClick={goToProjects} variant="secondary">Se prosjekter</Button>
+                    </div>
                 </div>
-            </div>
+
+
+
 
 
 

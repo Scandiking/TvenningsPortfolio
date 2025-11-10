@@ -4,7 +4,7 @@ module.exports = {
   darkMode: 'class',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/@heroui/theme/dist/components/(button|card|divider|tabs|ripple|spinner).js"
+    "./node_modules/@heroui/theme/dist/components/**/*.js"
   ],
   theme: {
     extend: {
