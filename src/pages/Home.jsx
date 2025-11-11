@@ -172,29 +172,17 @@ function Home() {
                     />
                 </Link>
 
-                {/*
-                <Card
-                    title="Sustainability Marketing and Circular Economy"
-                    description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
-                />
-                <Card
-                    title="Digital Transformation"
-                    description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
-                />
-                <Card
-                    title="E-commerce"
-                    description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
-                />
-                */}
                 <Card
                     title="Bacheloroppgave i IT og informasjonssystemer"
                     description="Faget har ikke blitt holdt ennå. Beskrivelse kommer."
                 />
 
-                <Card
-                    title="Artificial Intelligence for Business Applications"
-                    description="Kurset fokuserer på KI's innflytelse på organisasjoner og samfunnet generelt. Bli kjenmt med prinsipper og metoder som trengs for å utvikle smarte KI data-avhengige løsninger. Varierte metoder i maskinlæring og dyplæring, så vel som data-mining."
-                />
+                <Link to="/emner/ai3000r" className="">
+                    <Card
+                        title="Artificial Intelligence for Business Applications"
+                        description="Kurset fokuserer på KI's innflytelse på organisasjoner og samfunnet generelt. Bli kjenmt med prinsipper og metoder som trengs for å utvikle smarte KI data-avhengige løsninger. Varierte metoder i maskinlæring og dyplæring, så vel som data-mining."
+                    />
+                </Link>
 
                 <Card
                     title="Applikasjonsutvikling for mobile enheter"
