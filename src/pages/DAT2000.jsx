@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 import {Spacer} from "@heroui/react";
 
 const DAT2000 = () => {
-    const navigate = useNavigate;
+    const navigate = useNavigate();
     return (
         <div className = "container mx-auto px-4 py-8">
 

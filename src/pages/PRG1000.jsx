@@ -648,7 +648,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
                     <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
-                    <BreadcrumbItem onPress={() => navigate('emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
                     <BreadcrumbItem onPress={() => navigate('/emner/prg1000')}>Grunnleggende programmering 1</BreadcrumbItem>
                 </Breadcrumbs>
             </div>

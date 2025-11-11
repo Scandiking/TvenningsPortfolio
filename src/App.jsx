@@ -14,6 +14,7 @@ import PRG1100 from './pages/PRG1100.jsx';
 import APP2000 from './pages/APP2000.jsx';
 import DAT2000 from './pages/DAT2000.jsx';
 import OBJ2000 from './pages/OBJ2000.jsx';
+import OBJ2100 from './pages/OBJ2100.jsx';
 import ESB1000 from './pages/ESB1000.jsx';
 import MET1020 from './pages/MET1020.jsx';
 import AI3000R from './pages/AI3000R.jsx';
@@ -253,6 +254,7 @@ function AppContent() {
           <Route path="/emner/app2000" element={<APP2000 />}/>
           <Route path="/emner/dat2000" element={<DAT2000 />}/>
           <Route path="/emner/obj2000" element={<OBJ2000 />}/>
+          <Route path="/emner/obj2100" element={<OBJ2100 />}/>
           <Route path="/emner/esb1000" element={<ESB1000 />}/>
           <Route path="/emner/met1020" element={<MET1020 />}/>
           <Route path="/emner/ai3000r" element={<AI3000R />} />
