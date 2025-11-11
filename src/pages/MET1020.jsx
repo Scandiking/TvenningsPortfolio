@@ -1,6 +1,6 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
-import { Card, CardHeader, CardBody } from "@heroui/react";
+import {Card, CardHeader, CardBody, Code} from "@heroui/react";
 
 const MET1020 = () => {
     return (
@@ -38,10 +38,81 @@ const MET1020 = () => {
                             </CardBody>
                         </Card>
                     </Tab>
-                    <Tab key="eksamen" title="Eksamen (ikke avholdt ennå)" isDisabled>
+                    <Tab key="eksamen" title="Eksamen">
                         <Card>
-                            <CardHeader></CardHeader>
-                            <CardBody></CardBody>
+                            <CardHeader><h2 className="text-lg font-semibold">Eksamen</h2></CardHeader>
+                            <CardBody>
+                                <p>Eksamen tok form av flervalgsoppgaver og korte setninger, og er ikke tilgjengelig via <Code>.pdf</Code> og presenteres derfor som skjermdumper.</p>
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <img
+                                        src="/images/MET1020/p1.png"
+                                        alt="Multiple Choice Test for samfunnsvitenskapelig metode"
+                                        width="1260"
+                                        height="11821"
+                                        className="border-0"
+                                    />
+                                </div>
+
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <img
+                                        src="/images/MET1020/2A.png"
+                                        alt="Oppgave 2A"
+                                        width="1066"
+                                        height="469"
+                                        className="border-0"
+                                    />
+                                </div>
+
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <img
+                                        src="/images/MET1020/2B.png"
+                                        alt="Oppgave 2B"
+                                        width="1067"
+                                        height="363"
+                                        className="border-0"
+                                    />
+                                </div>
+
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <img
+                                        src="/images/MET1020/2C.png"
+                                        alt="Oppgave 2C"
+                                        width="1066"
+                                        height="570"
+                                        className="border-0"
+                                    />
+                                </div>
+
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <img
+                                        src="/images/MET1020/3A.png"
+                                        alt="Oppgave 3A"
+                                        width="1066"
+                                        height="546"
+                                        className="border-0"
+                                    />
+                                </div>
+
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <img
+                                        src="/images/MET1020/3B.png"
+                                        alt="Oppgave 3B"
+                                        width="1065"
+                                        height="289"
+                                        className="border-0"
+                                    />
+                                </div>
+
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <img
+                                        src="/images/MET1020/3C.png"
+                                        alt="Oppgave 3C"
+                                        width="1065"
+                                        height="556"
+                                        className="border-0"
+                                    />
+                                </div>
+                            </CardBody>
                         </Card>
                     </Tab>
                 </Tabs>
