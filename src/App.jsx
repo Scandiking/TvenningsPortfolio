@@ -23,6 +23,8 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 import ORL1000 from "./pages/ORL1000";
 import {HeroUIProvider} from "@heroui/system";
 import {Accordion, AccordionItem, Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, useDisclosure} from "@heroui/react";
+import logo from "./images/favicon-96x96.png"
+import {Image} from "@heroui/image";
 
 function AppContent() {
   // const [expandedSemesters, setExpandedSemesters] = useState({});
@@ -207,10 +209,10 @@ function AppContent() {
           <div className="container mx-auto flex items-center">
             <div className="w-1/3 flex justify-start">
               <Button
-                  color="primary"
+                  color="bg-content1"
                   onPress={onOpen}
                   isIconOnly
-                  className="p-0.5 bg-content3 dark:bg-content2 dark:hover:bg-content3"
+                  className="p-0.5 bg-content2 hover:bg-content4 dark:bg-content2 dark:hover:bg-content3"
                   aria-label="Open menu"
               >
                 <svg
@@ -230,11 +232,19 @@ function AppContent() {
             </div>
 
             <div className="w-1/3 flex justify-center">
-              <Link to="/" className="text-xl font-bold justify-self-center cursor-pointer">Tvennings portfolio</Link>
+              <Link to="/">
+                <Image
+                    shadow="sm"
+                    radius="sm"
+                    src={logo}
+                    alt="Tvenning Tech Logo"
+                    width={60}
+                />
+              </Link>
             </div>
 
             <div className="w-1/3 flex justify-end">
-              <ThemeSwitcher />
+              <ThemeSwitcher/>
             </div>
           </div>
         </nav>
