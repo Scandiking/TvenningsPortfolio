@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TvenningsPortfolio/static/css/main.2ea4dfd1.css",
-    "main.js": "/TvenningsPortfolio/static/js/main.761365ed.js",
+    "main.js": "/TvenningsPortfolio/static/js/main.bdd73c62.js",
     "static/js/501.665aaf15.chunk.js": "/TvenningsPortfolio/static/js/501.665aaf15.chunk.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/TvenningsPortfolio/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/TvenningsPortfolio/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -65,11 +65,11 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/TvenningsPortfolio/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/TvenningsPortfolio/index.html",
     "main.2ea4dfd1.css.map": "/TvenningsPortfolio/static/css/main.2ea4dfd1.css.map",
-    "main.761365ed.js.map": "/TvenningsPortfolio/static/js/main.761365ed.js.map",
+    "main.bdd73c62.js.map": "/TvenningsPortfolio/static/js/main.bdd73c62.js.map",
     "501.665aaf15.chunk.js.map": "/TvenningsPortfolio/static/js/501.665aaf15.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ea4dfd1.css",
-    "static/js/main.761365ed.js"
+    "static/js/main.bdd73c62.js"
   ]
 }
