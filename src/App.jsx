@@ -20,6 +20,7 @@ import ESB1000 from './pages/ESB1000.jsx';
 import MET1020 from './pages/MET1020.jsx';
 import AI3000R from './pages/AI3000R.jsx';
 import SIK2000 from "./pages/SIK2000.jsx";
+import BID3000 from './pages/BID3000.jsx';
 
 import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
@@ -273,6 +274,7 @@ function AppContent() {
           <Route path="/emner/met1020" element={<MET1020 />}/>
           <Route path="/emner/ai3000r" element={<AI3000R />} />
           <Route path="/emner/sik2000" element={<SIK2000 />} />
+          <Route path="/emner/bid3000" element={<BID3000 />} />
           <Route path="/projects" element={<div className="container mx-auto p-8">Projects page coming soon!</div>} />
           <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
           <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
