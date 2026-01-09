@@ -56,7 +56,18 @@ const SIK2000 = () => {
                                     <CardHeader><h2 className="text-lg font-semibold">Rapport om selvvalgt emne: malvertising</h2></CardHeader>
                                     <CardBody>
                                         <div className="rounded-lg">
-                                            <p> hehe her kommer det en fin pdf</p>
+                                            <p>Arbeidskravet for informasjonssikkerhet var å skrive en rapport. En del av rapporten var fastsatt, mens en annen del var valgfri. I den valgfrie delen valgte jeg å skrive om "<cite>malvertising</cite>".</p>
+
+                                            <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                                <iframe
+                                                    src={`${process.env.PUBLIC_URL}/pdfs/SIK2000/Arbeidskrav_SIK2000.pdf`}
+                                                    width="100%"
+                                                    height="600px"
+                                                    title="SIK1020 Obligatorisk arbeidskrav"
+                                                    className="border-0"
+                                                />
+                                            </div>
+
                                         </div>
                                     </CardBody>
                                 </Card>
@@ -66,6 +77,11 @@ const SIK2000 = () => {
                             <Tab key="eksmn" title="Eksamen">
                                 <Card>
                                     <CardHeader><h2 className="text-lg font-semibold">Eksamen</h2></CardHeader>
+                                    <CardBody>
+
+                                        <p>Eksamen i informasjonssikkerhet var i form av kulepunkter med fire svaralternativer på spørsmål. Disse er dessverre ikke tilgjengelig for nedlasting via Wiseflow, men gikk på stoffet fra læreboken <i>Datasikkerhet</i> av Tom Heine Nätt.</p>
+
+                                    </CardBody>
                                 </Card>
                             </Tab>
 
