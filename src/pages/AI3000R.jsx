@@ -2,16 +2,36 @@ import React, { useEffect, useState } from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
-import { Code } from "@heroui/react";
 import { IpynbRenderer } from 'react-ipynb-renderer';
-
 import 'react-ipynb-renderer/dist/styles/monokai.css';
-import 'katex/dist/katex.min.css';
+
+//import './notebooks/AI3000R/NY-Housing-Prices_Machine_Learning_Model.ipynb';
+
 
 const AI3000R = () => {
     const [notebook, setNotebook] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    // const fixMathBackslashes = (notebook) => {
+    //     return {
+    //         ...notebook,
+    //         cells: notebook.cells.map(cell => {
+    //             if (cell.cell_type === 'markdown') {
+    //                 const source = Array.isArray(cell.source)
+    //                     ? cell.source.join('')
+    //                     : cell.source;
+    //
+    //                 const fixed = source.replace(/\$([^$]*?)\$/g, (match) => {
+    //                     return match.replace(/\\/g, '\\\\');
+    //                 });
+    //
+    //                 return { ...cell, source: fixed };
+    //             }
+    //             return cell;
+    //         })
+    //     };
+    // };
 
     useEffect(() => {
         const url = 'https://raw.githubusercontent.com/Scandiking/NY-Housing-Prices_Machine_Learning_Model/master/NY-Housing-Prices_Machine_Learning_Model.ipynb';
@@ -20,13 +40,11 @@ const AI3000R = () => {
             .then(res => res.json())
             .then(data => {
                 if (!data.cells) throw new Error('Invalid notebook format');
-                setNotebook(data);
+                setNotebook();
             })
             .catch(err => setError(err.message))
             .finally(() => setLoading(false));
     }, []);
-
-
 
 
     return (
@@ -59,6 +77,8 @@ const AI3000R = () => {
                                 </p>
                                 <p>Dette arbeidskravet gikk ut på å lage en maskinlæringsmodell med en nøyaktighet på R²>0.8. Altså en maskinlæringsmodell som kunne forklare over 80% av prisvariansen. Vi gikk for en modell som baserte seg på features fra NY-Housing-datasettet fra Kaggle. Features er antall bad, antall soverom, kvadratfot (dette er data fra USA), location osv. Dette har vi brukt som avhengige variabler, mens den uavhengige er prisestimatet. Modellen vår nådde R² på 0.814 som var innenfor målet på 0.8. </p>
 
+
+
                                 {loading && <p>Loading notebook...</p>}
                                 {error && (
                                     <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
@@ -71,6 +91,10 @@ const AI3000R = () => {
                                         <IpynbRenderer ipynb={notebook} />
                                     </div>
                                 )}
+                                );
+
+
+
                             </CardBody>
                         </Card>
                     </Tab>

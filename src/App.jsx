@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { HashRouter as Router } from 'react-router-dom';
+import { MathJaxContext } from 'better-react-mathjax';
 import Home from './pages/Home';
 import About from './pages/About';
 import Emner from './pages/Emner';
@@ -18,6 +19,8 @@ import OBJ2100 from './pages/OBJ2100.jsx';
 import ESB1000 from './pages/ESB1000.jsx';
 import MET1020 from './pages/MET1020.jsx';
 import AI3000R from './pages/AI3000R.jsx';
+import SIK2000 from "./pages/SIK2000.jsx";
+
 import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ORL1000 from "./pages/ORL1000";
@@ -25,6 +28,7 @@ import {HeroUIProvider} from "@heroui/system";
 import {Accordion, AccordionItem, Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, useDisclosure} from "@heroui/react";
 import logo from "./images/favicon-96x96.png"
 import {Image} from "@heroui/image";
+
 
 function AppContent() {
   // const [expandedSemesters, setExpandedSemesters] = useState({});
@@ -268,6 +272,7 @@ function AppContent() {
           <Route path="/emner/esb1000" element={<ESB1000 />}/>
           <Route path="/emner/met1020" element={<MET1020 />}/>
           <Route path="/emner/ai3000r" element={<AI3000R />} />
+          <Route path="/emner/sik2000" element={<SIK2000 />} />
           <Route path="/projects" element={<div className="container mx-auto p-8">Projects page coming soon!</div>} />
           <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
           <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
@@ -281,7 +286,9 @@ function App() {
       <ThemeProvider>
         <HeroUIProvider>
           <Router>
-            <AppContent />
+            <MathJaxContext>
+              <AppContent />
+            </MathJaxContext>
           </Router>
         </HeroUIProvider>
       </ThemeProvider>

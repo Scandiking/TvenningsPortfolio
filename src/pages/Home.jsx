@@ -23,7 +23,7 @@ function Home() {
 
                     <div>
                         <Image
-                            loading="lazy"
+                            loading="eager"
                             radius="sm"
                             alt="A 3D render of a desktop with a laptop, a rubber duck, a cup of coffee and a slate that seems like a phone"
                             src={duck}
