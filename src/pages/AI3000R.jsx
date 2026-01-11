@@ -4,7 +4,6 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import { IpynbRenderer } from 'react-ipynb-renderer';
 import 'react-ipynb-renderer/dist/styles/monokai.css';
-
 //import './notebooks/AI3000R/NY-Housing-Prices_Machine_Learning_Model.ipynb';
 
 
@@ -12,6 +11,25 @@ const AI3000R = () => {
     const [notebook, setNotebook] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const fixNotebook = (notebook) => {
+        return {
+            ...notebook,
+            cells: notebook.cells.map(cell => {
+                if (cell.cell_type === 'markdown') {
+                    const source = Array.isArray(cell.source)
+                        ? cell.source.join('')
+                        : cell.source;
+
+                    const fixed = source.replace(/\\space/g, '~');
+
+                    return { ...cell, source: fixed };
+                }
+                return cell;
+            })
+        };
+    };
+
 
     // const fixMathBackslashes = (notebook) => {
     //     return {
@@ -40,7 +58,7 @@ const AI3000R = () => {
             .then(res => res.json())
             .then(data => {
                 if (!data.cells) throw new Error('Invalid notebook format');
-                setNotebook();
+                setNotebook(fixNotebook(data));
             })
             .catch(err => setError(err.message))
             .finally(() => setLoading(false));
@@ -91,7 +109,7 @@ const AI3000R = () => {
                                         <IpynbRenderer ipynb={notebook} />
                                     </div>
                                 )}
-                                );
+
 
 
 
@@ -99,12 +117,35 @@ const AI3000R = () => {
                         </Card>
                     </Tab>
 
-                    <Tab key="AI3000REksamen" title="Eksamen" isDisabled={true}>
+                    <Tab key="AI3000REksamen" title="Eksamen">
                         <Card>
                             <CardHeader>
                                 <h2 className="text-lg font-semibold">Eksamen</h2>
                             </CardHeader>
-                            <CardBody></CardBody>
+                            <CardBody>
+
+                                <h2 className="text-md font-semibold">Oppgavesett</h2>
+                                <div>
+                                    <iframe
+                                        src={`${process.env.PUBLIC_URL}/pdfs/AI3000R/AI3000R_Written examination.pdf`}
+                                        width="100%"
+                                        height="600px"
+                                        title="AI3000R Eksamen Oppgavesett"
+                                        className="border-0"
+                                    />
+                                </div>
+
+                                <h2 className="text-md font-semibold">Besvarelse</h2>
+                                <div>
+                                    <iframe
+                                        src={`${process.env.PUBLIC_URL}/pdfs/AI3000R/7066-Min besvarelse.pdf`}
+                                        width="100%"
+                                        height="600px"
+                                        title="AI3000R Eksamen - Studentens besvarelse"
+                                        className="border-0"
+                                    />
+                                </div>
+                            </CardBody>
                         </Card>
                     </Tab>
                 </Tabs>

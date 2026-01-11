@@ -1,11 +1,14 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
+import { Image } from "@heroui/image";
 import {useNavigate} from "react-router-dom";
 import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Code, Spacer} from "@heroui/react";
 import CodeBlock from "../components/CodeBlock";
 import React, {useEffect, useState} from "react";
-import {IpynbRenderer} from "react-ipynb-renderer";
+import { IpynbRenderer } from "react-ipynb-renderer";
+import 'react-ipynb-renderer/dist/styles/monokai.css';
+
 
 const BID3000 = () => {
     const [notebook, setNotebook] = useState(null);
@@ -15,9 +18,9 @@ const BID3000 = () => {
     const navigate = useNavigate();
 
 useEffect(() => {
-    const file_location = '/notebooks/BID3000/BID3000_Exam.json'
+    const url = 'https://raw.githubusercontent.com/Scandiking/BID3000-Business-Intelligence/main/Analytics/BID3000.ipynb'
 
-    fetch(file_location)
+    fetch(url)
         .then(res => {
             console.log('Status:', res.status);
             return res.json(); // See raw response
@@ -802,9 +805,26 @@ conn.close()
                 <Tabs variant="solid" aria-label="Options">
                     <Tab key="arbkrv1" title="Hjemmeeksamen i gruppe">
                         <Card>
-                            <CardHeader><h2 className="text-lg font-semibold">Tittel for arbeidskrav</h2></CardHeader>
+                            <CardHeader><h2 className="text-lg font-semibold">To ukers hjemmeeksamen i gruppe</h2></CardHeader>
                             <CardBody>
-                                <p>I dette faget er det ikke formelle arbeidskrav, men det er obligatorisk å ta Microsoft PowerBI PL-300"-kurset. Det er derimot <em>to eksamener</em>! Den første er en to ukers "hjemmeeksamen". Eksamenssett og besvarelse følger, men da det er en mappeinnlevering vil det vises rapporter, skjermbilder og Jupyter-notebooks. Repositoriumet er også tilgjengelig hos <a href="https://www.linkedin.com/in/kenneth-hansen-383056b7/">Kenneth</a> sitt <a href="https://github.com/Karmaburner/BID3000-Business-Intelligence">GitHub-repo</a>.</p>
+                                <p>I dette faget er det ikke formelle arbeidskrav, men det er obligatorisk å ta
+                                    Microsoft PowerBI PL-300"-kurset. Det er derimot <em>to eksamener</em>! Den første
+                                    er en to ukers "hjemmeeksamen". Eksamenssett og besvarelse følger, men da det er en
+                                    mappeinnlevering vil det vises rapporter, skjermbilder og Jupyter-notebooks.
+                                    Repositoriumet er også tilgjengelig hos <a
+                                        href="https://www.linkedin.com/in/kenneth-hansen-383056b7/">Kenneth</a> sitt <a
+                                        href="https://github.com/Karmaburner/BID3000-Business-Intelligence">GitHub-repo</a>.
+                                    Jeg har forket hans repo og gjort noen få endringer i <Code
+                                        size={"sm"}>README.md</Code>-filen.</p>
+
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                    <p style={{ margin: 0 }}>Du kan se og klone repositoriumet på</p>
+                                    <a href="https://github.com/Scandiking/BID3000-Business-Intelligence">
+                                        <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub" />
+                                    </a>
+                                </div>
+
+
 
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                                     <iframe
@@ -818,7 +838,10 @@ conn.close()
 
                                 </div>
 
-                                <p>Som man ser er det en del filer, og det er en liten nøtt å vise dette på én nettside i stedet for i et operativsystem-miljø. Det går heller ikke an å vise oppgave for oppgave da de henger sammen. Filer vil derfor vises som i <strong>Submission Guidelines</strong> og under <strong>File Organization</strong>.</p>
+                                <p>Som man ser er det en del filer, og det er en liten nøtt å vise dette på én nettside
+                                    i stedet for i et operativsystem-miljø. Det går heller ikke an å vise oppgave for
+                                    oppgave da de henger sammen. Filer vil derfor vises som i <strong>Submission
+                                        Guidelines</strong> og under <strong>File Organization</strong>.</p>
 
                                 <Spacer/>
                                 <h2 className="text-lg font-semibold">BID3000_Final_Report.pdf</h2>
@@ -857,7 +880,9 @@ conn.close()
 
                                 <Spacer/>
                                 <h2 className="text-lg font-semibold">ETL-filer</h2>
-                                <p>Filer for å "Extract, Transform, Load" i en dataprosess. Vi vil ekstrahere rader fra en <code>.csv</code>-fil, sjekke og rengjøre data. Dette gjøres via en Python-fil <code>ETL.py</code></p>
+                                <p>Filer for å "Extract, Transform, Load" i en dataprosess. Vi vil ekstrahere rader fra
+                                    en <code>.csv</code>-fil, sjekke og rengjøre data. Dette gjøres via en
+                                    Python-fil <code>ETL.py</code></p>
 
                                 <CodeBlock
                                     code={etl_py}
@@ -870,34 +895,147 @@ conn.close()
                                 <Spacer/>
                                 <h2 className="text-lg font-semibold">Analytics-script</h2>
                                 <p>Analytics-script kjører faktisk forretningsanalyse basert på populerte tabeller.</p>
-                                {loading && <p>Loading notebook...</p>}
-                                {error && (
-                                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                                        <p className="font-bold">Error: </p>
-                                        <p>{error}</p>
-                                    </div>
-                                )}
-                                {notebook && (
-                                    <div className="overflow-auto max-w-full">
-                                        <IpynbRenderer ipynb={notebook} />
-                                    </div>
-                                )}
-                                );
+
+                                <div>
+
+                                    {loading && <p>Loading notebook...</p>}
+                                    {error && (
+                                        <div
+                                            className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                                            <p className="font-bold">Error:</p>
+                                            <p>{error}</p>
+                                        </div>
+                                    )}
+                                    {notebook && (
+                                        <div className="overflow-auto max-w-full">
+                                            <IpynbRenderer ipynb={notebook}/>
+                                        </div>
+                                    )}
+
+                                </div>
 
 
                                 <Spacer/>
-                                <h2 className="text-lg font-semibold">Dashboard-fil</h2>
-                                <p>Dashboard-filen tetter gapet mellom programmerere og "datafolk" slik at det er forståelig for andre, for eksempel selgere og regnskap.</p>
+                                <h2 className="text-lg font-semibold">PowerBI</h2>
+                                <p>Dashboard-filen tetter gapet mellom programmerere og "datafolk" slik at det er
+                                    forståelig for andre, for eksempel selgere og regnskap.</p>
+
 
                                 <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+
+                                {/*MAIN DASHBOARD */}
+                                <Image
+                                    loading="eager"
+                                    radius="sm"
+                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_dashboard_Main_Page.png"
+                                    width="100%"
+                                />
+                                <h2 className="text-lg font-semibold">Hoved-dashboard</h2>
+                                <p>Oversiktsside med KPI-er og navigasjon.</p>
+
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+
+                                {/*REVENUE ANALYSIS*/}
+                                <Image
+                                    loading="eager"
+                                    radius="sm"
+                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_dashboard_Revenue.png"
+                                    width="100%"
+
+                                />
+                                <h2 className="text-lg font-semibold">Fortjenesteanalyse</h2>
+                                <p>Detaljert oppstykking av fortjeneste etter tid, land og produkt med
+                                    drilldown-muligheter.</p>
+
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+
+                                {/* CANCELLATIONS ANALYSIS */}
+                                <Image
+                                    loading="eager"
+                                    radius="sm"
+                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_Dashboard_Cancellations.png"
+                                    width="100%"
+
+                                />
+                                <h2 className="text-lg font-semibold">Kanselleringsanalyse</h2>
+                                <p>Kanselleringsanalyse, tapt fortjeneste og kanselleringsmønstre.</p>
+
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+
+
+                                {/* DETAILED ANALYSIS */}
+                                <Image
+                                    loading="eager"
+                                    radius="sm"
+                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_dashboard_Detailed_Analysis_Page.png"
+                                    width="100%"
+
+                                />
+                                <h2 className="text-lg font-semibold">Detaljert analyse</h2>
+                                <p>Geografisk distribusjon og inngående forretningsmåling med interaktive filtre.</p>
+
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+
+                                <Image
+                                    loading="eager"
+                                    radius="sm"
+                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_Customer_Segments.png"
+                                    width="100%"
+
+                                />
+                                <h2 className="text-lg font-semibold">Kundesegmentering</h2>
+                                {/* Customer segmentation */}
+                                <p>RFM-baserte kundegruppe-segmenter med forretningsinnsikt man kan handle utifra fra
+                                    gitte anbefalinger.</p>
+
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+                                <Spacer/>
+
                                 <h2 className="text-lg font-semibold">Dokumentasjon</h2>
                                 <h2 className="text-md font-semibold">ERD.pdf</h2>
+
+                                <p>This diagram shows both schemas as the fact tables uses the same dimension tables.</p>
+                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                                    <iframe
+                                        src={`${process.env.PUBLIC_URL}/pdfs/BID3000/ERD_diagram.pdf`}
+                                        width="100%"
+                                        height="600px"
+                                        title="Entity Relation Diagram for a data warehouse in snowflake"
+                                        className="border-0"
+
+                                    />
+
+                                </div>
+
+
                             </CardBody>
                         </Card>
                     </Tab>
                     <Tab key="eksamen" title="Individuell eksamen">
                         <Card>
-                            <CardHeader><h2 className="text-lg font-semibold">Individuell eksamen</h2> </CardHeader>
+                        <CardHeader><h2 className="text-lg font-semibold">Individuell eksamen</h2> </CardHeader>
                             <CardBody><p>Dette er en individuell eksamen. Oppgavesett. Besvarelse følger i egen <code>.pdf</code> under.</p>
 
                                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">

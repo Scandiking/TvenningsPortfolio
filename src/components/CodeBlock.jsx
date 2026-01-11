@@ -1,10 +1,18 @@
 // src/components/CodeBlock.jsx
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Code } from '@heroui/react'; // Juster importen basert på HeroUI's struktur
 
 const CodeBlock = ({ code, language = 'Python', showLineNumbers = true, maxHeight = '500px' }) => {
+
+    const normalizeLanguage = (lang) => {
+        const normalized = lang.toLowerCase();
+        if (['postgres', 'postgresql', 'pgsql'].includes(normalized)) return 'postgresql';
+        if (['mysql'].includes(normalized)) return 'mysql';
+        return normalized;
+    };
+
     return (
         <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
             <div className="flex justify-between items-center px-4 py-2 bg-gray-100 dark:bg-gray-800">
@@ -22,8 +30,8 @@ const CodeBlock = ({ code, language = 'Python', showLineNumbers = true, maxHeigh
 
             <div style={{ maxHeight }} className="overflow-auto">
                 <SyntaxHighlighter
-                    language={language}
-                    style={vscDarkPlus}
+                    language={normalizeLanguage(language)}
+                    style={atomDark}
                     showLineNumbers={showLineNumbers}
                     customStyle={{
                         margin: 0,
