@@ -37,7 +37,7 @@ const Emner = () => {
         { emnekode: "AI3000R", emnenavn: "Artificial Intelligence for Business Applications", emnebeskrivelse: "Innflytelse av AI i organisasjoner og samfunnet generelt. Prinsipper og metoder for å utvikle smarte data-avhengige AI-løsninger. Metoder i maskinlæring, dyplæring og datamining. Grunnleggende Python-kunnskaper trengs."},
         { emnekode: "SEL3000R",emnenavn: "Selvstudie IT og informasjonssystemer", emnebeskrivelse: "Faglig fordypning og spesialisering i selvvalgt tema. Personlig har jeg valg temaet 'enshittification' etter å ha sett mange gode tjenester stadig bli verre."},
         // 6 semester
-        { emnekode: "BOP3000", emnenavn: "Bacheloroppgave i IT og Informasjonssystemer", emnebeskrivelse: ""},
+
         { emnekode: "INT3002", emnenavn: "Internship", emnebeskrivelse: ""},
         { emnekode: "SSS3000R",emnenavn: "IoT-teknologi og Mikrokontrollere i Smarte Systemer"},
         { emnekode: "INF2020", emnenavn: "Operativsystemer"}
