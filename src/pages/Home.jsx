@@ -195,6 +195,15 @@ function Home() {
                     </div>
                 </Link>
 
+                <Link to ="/emner/sel3000r">
+                    <div className="block hover:shadow-lg transition-shadow rounded-lg">
+                        <Card
+                            title="Selvstudie IT og informasjonssystemer"
+                            description="Fordypning og spesialisering i selvvalgt tema innenfor bachelorstudiet. Tema skal avtales med og godkjennes av oppnevnt veileder. Jeg valgte temaet 'enshittification'."
+                        />
+                    </div>
+                </Link>
+
                 <Link to="/emner/bid3000">
                     <div className="block hover:shadow-lg transition-shadow rounded-lg">
                         <Card
@@ -224,7 +233,7 @@ function Home() {
                     </div>
                 </Link>
 
-                <Link to="/emner/ai3000r" className="">
+                <Link to="/emner/mob3000" className="">
                     <div className="block hover:shadow-lg transition-shadow rounded-lg">
                         <Card
                             title="Applikasjonsutvikling for mobile enheter"
