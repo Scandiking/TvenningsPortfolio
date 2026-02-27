@@ -255,7 +255,7 @@ function Home() {
                     <div className="block hover:shadow-lg transition-shadow rounded-lg">
                         <Card
                             title="Operativsystemer"
-                            description"Grunnleggende kurs i Windows/Linux: lærer prosess- og minnehåndtering, filsystemer, nettverk og maskinvare – praktiske ferdigheter for å forstå og jobbe med moderne operativsystemer."
+                            description="Grunnleggende kurs i Windows/Linux: lærer prosess- og minnehåndtering, filsystemer, nettverk og maskinvare – praktiske ferdigheter for å forstå og jobbe med moderne operativsystemer."
                         />
                     </div>
                 </Link>
