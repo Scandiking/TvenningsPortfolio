@@ -101,6 +101,15 @@ const APP2000 = () => {
                                 />
                                 </div>
 
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade A"
+                                    src="https://img.shields.io/badge/Karakter-A-gold"
+                                    width="100"
+                                    height="auto"
+                                />
+
                             </CardBody>
                         </Card>
                     </Tab>

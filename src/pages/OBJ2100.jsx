@@ -5,6 +5,7 @@ import CodeBlock from "../components/CodeBlock";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import { useNavigate } from "react-router-dom";
 import {Code, Spacer} from "@heroui/react";
+import {Image} from "@heroui/image";
 
 const OBJ2100 = () => {
     const navigate = useNavigate();
@@ -132,6 +133,16 @@ const OBJ2100 = () => {
                                 <p>Innhold fra eksamen her...</p>
 
                             </div>
+
+                            <Image
+                                loading="eager"
+                                radius="none"
+                                alt="Little badge that says grade B"
+                                src="https://img.shields.io/badge/Karakter-B-silver"
+                                width="100"
+                                height="auto"
+                            />
+
                         </CardBody>
                     </Card>
                 </Tab>

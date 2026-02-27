@@ -4,6 +4,7 @@ import {Card, CardBody, CardHeader } from "@heroui/card";
 import CodeBlock from "../components/CodeBlock";
 import {Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
+import {Image} from "@heroui/image";
 
 const PRG1100 = () => {
     const navigate = useNavigate();
@@ -2923,6 +2924,15 @@ hovedvindu.mainloop()
                                         />
                                     </div>
                                 </div>
+
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade B"
+                                    src="https://img.shields.io/badge/Karakter-B-silver"
+                                    width="100"
+                                    height="auto"
+                                />
 
 
                             </CardBody>

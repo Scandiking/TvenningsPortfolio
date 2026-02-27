@@ -108,6 +108,15 @@ const MET1020 = () => {
                                         className="border-0"
                                     />
 
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade C"
+                                    src="https://img.shields.io/badge/Karakter-C-rosybrown"
+                                    width="100"
+                                    height="auto"
+                                />
+
                             </CardBody>
                         </Card>
                     </Tab>

@@ -1121,6 +1121,15 @@ public class Hovedprogram {
                                     maxHeight="500px"
                                 />
 
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade C"
+                                    src="https://img.shields.io/badge/Karakter-C-rosybrown"
+                                    width="100"
+                                    height="auto"
+                                />
+
 
                             </CardBody>
                         </Card>

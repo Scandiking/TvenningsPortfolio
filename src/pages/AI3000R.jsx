@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import { IpynbRenderer } from 'react-ipynb-renderer';
 import 'react-ipynb-renderer/dist/styles/monokai.css';
+import {Image} from "@heroui/image";
 //import './notebooks/AI3000R/NY-Housing-Prices_Machine_Learning_Model.ipynb';
 
 
@@ -145,6 +146,16 @@ const AI3000R = () => {
                                         className="border-0"
                                     />
                                 </div>
+
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade B"
+                                    src="https://img.shields.io/badge/Karakter-B-silver"
+                                    width="100"
+                                    height="auto"
+                                />
+
                             </CardBody>
                         </Card>
                     </Tab>

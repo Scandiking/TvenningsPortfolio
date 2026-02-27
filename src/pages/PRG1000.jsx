@@ -6,6 +6,7 @@ import {Card, CardBody, CardHeader} from "@heroui/card";
 import CodeBlock from "../components/CodeBlock";
 import {Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
+import {Image} from "@heroui/image";
 
 
 const PRG1000 = () => {
@@ -822,6 +823,17 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
                                     maxHeight="500px"
                                 />
                             </div>
+
+                                {/* */}
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade A"
+                                    src="https://img.shields.io/badge/Karakter-D-yellow"
+                                    width="100"
+                                    height="auto"
+                                />
+
 
                             </CardBody>
                         </Card>

@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import CodeBlock from "../components/CodeBlock";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
+import {Image} from "@heroui/image";
 
 const WEB1100 = () => {
     const navigate = useNavigate();
@@ -117,6 +118,15 @@ const WEB1100 = () => {
                                         width="100%"
                                     />
                                 </div>
+
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade D"
+                                    src="https://img.shields.io/badge/Karakter-D-yellow"
+                                    width="100"
+                                    height="auto"
+                                />
 
                             </CardBody>
                         </Card>

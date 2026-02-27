@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import { useNavigate } from "react-router-dom";
 import { Spinner } from "@heroui/react";
+import {Image} from "@heroui/image";
 
 const SIK2000 = () => {
     const navigate = useNavigate();
@@ -80,6 +81,15 @@ const SIK2000 = () => {
                                     <CardBody>
 
                                         <p>Eksamen i informasjonssikkerhet var i form av kulepunkter med fire svaralternativer på spørsmål. Disse er dessverre ikke tilgjengelig for nedlasting via Wiseflow, men gikk på stoffet fra læreboken <i>Datasikkerhet</i> av Tom Heine Nätt.</p>
+
+                                        <Image
+                                            loading="eager"
+                                            radius="none"
+                                            alt="Little badge that says grade A"
+                                            src="https://img.shields.io/badge/Karakter-A-gold"
+                                            width="100"
+                                            height="auto"
+                                        />
 
                                     </CardBody>
                                 </Card>

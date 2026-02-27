@@ -3,6 +3,7 @@ import { Tabs, Tab } from "@heroui/tabs";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
+import {Image} from "@heroui/image";
 
 const PRO1000 = () => {
     const navigate = useNavigate();
@@ -134,6 +135,15 @@ const PRO1000 = () => {
                                         className="border-0"
                                     />
                                 </div>
+
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade A"
+                                    src="https://img.shields.io/badge/Karakter-A-gold"
+                                    width="100"
+                                    height="auto"
+                                />
 
                             </CardBody>
                         </Card>

@@ -4,6 +4,7 @@ import {Card, CardBody, CardHeader, Spacer} from "@heroui/react";
 import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Divider} from "@heroui/divider";
+import {Image} from "@heroui/image";
 
 const ORL1000 = () => {
     const navigate = useNavigate();
@@ -196,6 +197,16 @@ const ORL1000 = () => {
                                         classname="border-0"
                                     />
                                 </div>
+
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade B"
+                                    src="https://img.shields.io/badge/Karakter-B-silver"
+                                    width="100"
+                                    height="auto"
+                                />
+
                             </CardBody>
                         </Card>
 

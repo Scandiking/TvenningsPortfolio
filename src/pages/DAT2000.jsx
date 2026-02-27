@@ -5,6 +5,7 @@ import CodeBlock from "../components/CodeBlock";
 import { Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Spacer} from "@heroui/react";
+import {Image} from "@heroui/image";
 
 const DAT2000 = () => {
     const navigate = useNavigate();
@@ -110,6 +111,15 @@ const DAT2000 = () => {
                                         className="border-0"
                                     />
                                 </div>
+
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade E"
+                                    src="https://img.shields.io/badge/Karakter-E-orange"
+                                    width="100"
+                                    height="auto"
+                                />
                             </CardBody>
                         </Card>
                     </Tab>

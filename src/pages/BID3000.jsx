@@ -1029,6 +1029,15 @@ conn.close()
 
                                 </div>
 
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade A"
+                                    src="https://img.shields.io/badge/Karakter-A-gold"
+                                    width="100"
+                                    height="auto"
+                                />
+
 
                             </CardBody>
                         </Card>
@@ -1058,6 +1067,15 @@ conn.close()
                                         className="border-0"
                                     />
                                 </div>
+
+                                <Image
+                                    loading="eager"
+                                    radius="none"
+                                    alt="Little badge that says grade B"
+                                    src="https://img.shields.io/badge/Karakter-B-silver"
+                                    width="100"
+                                    height="auto"
+                                />
 
 
                             </CardBody>
