@@ -4,9 +4,15 @@ import {Tab, Tabs} from "@heroui/tabs";
 import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Image} from "@heroui/image";
 import {Spacer} from "@heroui/react";
+import {useState} from "react";
+import { PDFViewer } from "../components/PDFViewer";
+
 
 const SEL3000R = () => {
     const navigate = useNavigate();
+
+
+
     return (
         <div className="container mx-auto px-4 py-8">
 
@@ -36,8 +42,10 @@ const SEL3000R = () => {
                                     height="600px"
                                     title="SEL3000R Rapport"
                                     className="border-0"
+                                    allowFullScreen
                                 />
                             </div>
+
 
                             <Spacer/>
                             <Spacer/>

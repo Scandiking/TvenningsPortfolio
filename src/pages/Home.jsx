@@ -242,6 +242,24 @@ function Home() {
                     </div>
                 </Link>
 
+                <Link to="/emner/sss3000r" className="">
+                    <div className="block hover:shadow-lg transition-shadow rounded-lg">
+                        <Card
+                            title="IoT-teknologi og Mikrokontrollere i Smarte Systemer"
+                            description="Kurs i IoT hvor man lærer å designe og bygge skalerbare IoT-løsninger med webteknologier, API-er og skybasert datautveksling – med fokus på både teknisk arkitektur og samfunnsmessige utfordringer som sikkerhet og personvern"
+                        />
+                    </div>
+                </Link>
+
+                <Link to="/emner/inf2020" className="">
+                    <div className="block hover:shadow-lg transition-shadow rounded-lg">
+                        <Card
+                            title="Operativsystemer"
+                            description"Grunnleggende kurs i Windows/Linux: lærer prosess- og minnehåndtering, filsystemer, nettverk og maskinvare – praktiske ferdigheter for å forstå og jobbe med moderne operativsystemer."
+                        />
+                    </div>
+                </Link>
+
             </div>
         </div>
     );
