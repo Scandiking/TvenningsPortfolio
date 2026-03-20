@@ -6,8 +6,7 @@ import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Code, Spacer} from "@heroui/react";
 import CodeBlock from "../components/CodeBlock";
 import React, {useEffect, useState} from "react";
-import { IpynbRenderer } from "react-ipynb-renderer";
-import 'react-ipynb-renderer/dist/styles/monokai.css';
+import NotebookViewer from "../components/NotebookViewer";
 
 
 const BID3000 = () => {
@@ -908,7 +907,7 @@ conn.close()
                                     )}
                                     {notebook && (
                                         <div className="overflow-auto max-w-full">
-                                            <IpynbRenderer ipynb={notebook}/>
+                                            <NotebookViewer ipynb={notebook} />
                                         </div>
                                     )}
 
