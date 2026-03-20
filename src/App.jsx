@@ -292,7 +292,7 @@ function App() {
       <ThemeProvider>
         <HeroUIProvider>
           <Router>
-            <MathJaxContext>
+            <MathJaxContext config={{ tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] } }}>
               <AppContent />
             </MathJaxContext>
           </Router>

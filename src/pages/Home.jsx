@@ -4,6 +4,7 @@ import Button from '../components/Button';
 import {Link, useNavigate} from 'react-router-dom';
 import duck from "../images/LinkedInBanner3.png"
 import {Image} from "@heroui/image";
+import { motion } from 'framer-motion';
 
 function Home() {
     const navigate = useNavigate();
@@ -17,7 +18,12 @@ function Home() {
             {/* Hero Section */}
 
 
-                <div className="hover:shadow-lg transition-shadow bg-content1 rounded-lg shadow-md p-6 mb-6"> {/* ENDRET: bg-white dark:bg-gray-800 → bg-content1 */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    className="bg-content1 rounded-xl shadow-md p-6 mb-8 border-l-4 border-primary"
+                >
 
                     <h1 className="text-3xl font-bold text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
 
@@ -42,11 +48,11 @@ function Home() {
                             <Button variant="secondary">GitHub</Button>
                         </a>
                     </div>
-                </div>
+                </motion.div>
 
 
             {/* Content Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="course-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 
                 <Link to="/emner/prg1000">
