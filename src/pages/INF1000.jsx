@@ -5,6 +5,7 @@ import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import { useNavigate } from "react-router-dom";
 import { Spinner } from "@heroui/react";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const INF1000 = () => {
     const navigate = useNavigate();
@@ -55,16 +56,7 @@ const INF1000 = () => {
                                 <Card>
                                     <CardHeader><h2 className="text-lg font-semibold">Arbeidskravet i digital forretningsforståelse</h2></CardHeader>
                                     <CardBody>
-                                        <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                            <iframe
-                                                src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Arbeidskrav1-gruppe3.pdf`}
-                                                width="100%"
-                                                height="600px"
-                                                title="INF1000 Arbeidskrav"
-                                                className="border-0"
-                                                onLoad={handleLoad}
-                                            />
-                                        </div>
+                                        <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Arbeidskrav1-gruppe3.pdf`} title="INF1000 Arbeidskrav" />
                                     </CardBody>
                                 </Card>
                             </Tab>
@@ -73,16 +65,7 @@ const INF1000 = () => {
                                     <CardHeader><h2 className="text-lg font-semibold">Eksamensbesvarelse i digital forretningsforståelse</h2></CardHeader>
                                     <CardBody>
                                         <p>Dette er hentet fra WiseFlow og er automatisert. Jeg har ikke kontroll over formateringen utover skriftstørrelse og uthevinger, derfor ser det ut som det gjør.</p>
-                                        <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                            <iframe
-                                                src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Eksamen.pdf`}
-                                                width="100%"
-                                                height="600px"
-                                                title="INF1000 Eksamen"
-                                                className="border-0"
-                                                onLoad={handleLoad}
-                                            />
-                                        </div>
+                                        <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Eksamen.pdf`} title="INF1000 Eksamen" />
 
                                         <Image
                                             loading="eager"

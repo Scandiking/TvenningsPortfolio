@@ -7,6 +7,7 @@ import {Code, Spacer} from "@heroui/react";
 import CodeBlock from "../components/CodeBlock";
 import React, {useEffect, useState} from "react";
 import NotebookViewer from "../components/NotebookViewer";
+import { PDFViewer } from "../components/PDFViewer";
 
 
 const BID3000 = () => {
@@ -825,17 +826,7 @@ conn.close()
 
 
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/BID3000/BID3000 - Home exam - H25.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="MET1020 Obligatorisk arbeidskrav"
-                                        className="border-0"
-
-                                    />
-
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/BID3000/BID3000 - Home exam - H25.pdf`} title="MET1020 Obligatorisk arbeidskrav" />
 
                                 <p>Som man ser er det en del filer, og det er en liten nøtt å vise dette på én nettside
                                     i stedet for i et operativsystem-miljø. Det går heller ikke an å vise oppgave for
@@ -844,17 +835,7 @@ conn.close()
 
                                 <Spacer/>
                                 <h2 className="text-lg font-semibold">BID3000_Final_Report.pdf</h2>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/BID3000/BID3000_Final_Report.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="MET1020 Obligatorisk arbeidskrav"
-                                        className="border-0"
-
-                                    />
-
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/BID3000/BID3000_Final_Report.pdf`} title="MET1020 Obligatorisk arbeidskrav" />
 
                                 <Spacer/>
                                 <h2 className="text-lg font-semibold">schema_creation.sql</h2>
@@ -1016,17 +997,7 @@ conn.close()
                                 <h2 className="text-md font-semibold">ERD.pdf</h2>
 
                                 <p>This diagram shows both schemas as the fact tables uses the same dimension tables.</p>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/BID3000/ERD_diagram.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Entity Relation Diagram for a data warehouse in snowflake"
-                                        className="border-0"
-
-                                    />
-
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/BID3000/ERD_diagram.pdf`} title="Entity Relation Diagram for a data warehouse in snowflake" />
 
                                 <Image
                                     loading="eager"
@@ -1046,26 +1017,10 @@ conn.close()
                         <CardHeader><h2 className="text-lg font-semibold">Individuell eksamen</h2> </CardHeader>
                             <CardBody><p>Dette er en individuell eksamen. Oppgavesett. Besvarelse følger i egen <code>.pdf</code> under.</p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/BID3000/BID3000-Written examination-H25-H.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="BID3000 Eksamen"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/BID3000/BID3000-Written examination-H25-H.pdf`} title="BID3000 Eksamen" />
 
                                 <p>Besvarelse på oppgavesett.</p>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/BID3000/7214-Min besvarelse.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="BID3000 Eksamen"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/BID3000/7214-Min besvarelse.pdf`} title="BID3000 Eksamen" />
 
                                 <Image
                                     loading="eager"

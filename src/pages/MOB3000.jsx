@@ -3,6 +3,7 @@ import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
 import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const MOB3000 = () => {
     const navigate = useNavigate();
@@ -30,15 +31,7 @@ const MOB3000 = () => {
                             <CardBody>
                                 <p>Ingen formelle arbeidskrav i dette faget. Faget går ut på å utvikle en Android-app for en mobil enhet, hvor vi kunne velge mellom Java og Kotlin som språk. Har du en Android-telefon kan du laste ned appen <a href="https://github.com/JonasELH/DartBud">her</a>. Vi planlegger også å gjøre den tilgjengelig fra Google Play Store på et senere tidspunkt.</p>
 
-                                <div>
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/MOB3000/DartBud_g1.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="MOB3000 Rapport"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/MOB3000/DartBud_g1.pdf`} title="MOB3000 Rapport" />
 
                                 <Image
                                     loading="eager"

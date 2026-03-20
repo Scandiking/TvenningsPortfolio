@@ -5,6 +5,7 @@ import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import { useNavigate } from "react-router-dom";
 import { Spinner } from "@heroui/react";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const SIK2000 = () => {
     const navigate = useNavigate();
@@ -59,15 +60,7 @@ const SIK2000 = () => {
                                         <div className="rounded-lg">
                                             <p>Arbeidskravet for informasjonssikkerhet var å skrive en rapport. En del av rapporten var fastsatt, mens en annen del var valgfri. I den valgfrie delen valgte jeg å skrive om "<cite>malvertising</cite>".</p>
 
-                                            <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                                <iframe
-                                                    src={`${process.env.PUBLIC_URL}/pdfs/SIK2000/Arbeidskrav_SIK2000.pdf`}
-                                                    width="100%"
-                                                    height="600px"
-                                                    title="SIK1020 Obligatorisk arbeidskrav"
-                                                    className="border-0"
-                                                />
-                                            </div>
+                                            <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/SIK2000/Arbeidskrav_SIK2000.pdf`} title="SIK1020 Obligatorisk arbeidskrav" />
 
                                         </div>
                                     </CardBody>

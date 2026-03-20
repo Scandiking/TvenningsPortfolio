@@ -6,6 +6,7 @@ import { Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Spacer} from "@heroui/react";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const DAT2000 = () => {
     const navigate = useNavigate();
@@ -61,29 +62,13 @@ const DAT2000 = () => {
                                 <Spacer/>
                                 <p className="text-lg font-bold">Oppgavesett:</p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-1 Database 2 20.12.2024.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Mandatory Assignment.pdf"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-1 Database 2 20.12.2024.pdf`} title="Mandatory Assignment.pdf" />
 
                                 <Spacer/>
 
                                 <p className="text-lg font-bold">Besvarelse:</p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/Group_7_H24_DAT2000.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="DAT2000 Arbeidskrav 1"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/Group_7_H24_DAT2000.pdf`} title="DAT2000 Arbeidskrav 1" />
                             </CardBody>
                         </Card>
                     </Tab>
@@ -92,25 +77,9 @@ const DAT2000 = () => {
                             <CardHeader><h2 className="text-lg font-semibold">Eksamen</h2></CardHeader>
                             <CardBody>
                                 <p>Oppgavesettet for eksamen i Database 2</p>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-1%20Database%202%2020.12.2024.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Examination Information Page"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-1%20Database%202%2020.12.2024.pdf`} title="Examination Information Page" />
                                 <p>Besvarelse på eksamen i Database 2</p>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-Eksamen.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Examination Information Page"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-Eksamen.pdf`} title="Examination Information Page" />
 
                                 <Image
                                     loading="eager"

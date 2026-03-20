@@ -5,6 +5,7 @@ import CodeBlock from "../components/CodeBlock";
 import {Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const PRG1100 = () => {
     const navigate = useNavigate();
@@ -2869,15 +2870,7 @@ hovedvindu.mainloop()
                             <CardHeader></CardHeader>
                             <CardBody>
                                 <div>
-                                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                        <iframe
-                                            src={`${process.env.PUBLIC_URL}/pdfs/PRG1100/PRG1100-1%20Grunnleggende%20programmering%202%2024.05.2024.pdf`}
-                                            width="100%"
-                                            height="600px"
-                                            title="PRG1100 Eksamen"
-                                            className="border-0"
-                                        />
-                                    </div>
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/PRG1100/PRG1100-1%20Grunnleggende%20programmering%202%2024.05.2024.pdf`} title="PRG1100 Eksamen" />
                                     <div>
                                         <p>Oppgave 1</p>
                                         <CodeBlock

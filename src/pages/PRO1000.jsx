@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const PRO1000 = () => {
     const navigate = useNavigate();
@@ -33,15 +34,7 @@ const PRO1000 = () => {
                                     06.02.2024.
                                 </p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Prosjektplan%20og%20SWOT-presentasjon.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Presentasjon av milepæl 1"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Prosjektplan%20og%20SWOT-presentasjon.pdf`} title="Presentasjon av milepæl 1" />
                             </CardBody>
                         </Card>
                     </Tab>
@@ -62,15 +55,7 @@ const PRO1000 = () => {
                                     testpresentasjon for å luke ut eventuelle feil og for å stille bedre forberedt.
                                 </p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Metodologi%20og%20gruppe-SWOT.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Presentasjon av milepæl 1"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Metodologi%20og%20gruppe-SWOT.pdf`} title="Presentasjon av milepæl 1" />
                             </CardBody>
                         </Card>
                     </Tab>
@@ -85,15 +70,7 @@ const PRO1000 = () => {
                                     oss imellom.
                                 </p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/milepæl3.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Presentasjon av milepæl 1"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/milepæl3.pdf`} title="Presentasjon av milepæl 1" />
                             </CardBody>
                         </Card>
                     </Tab>
@@ -106,15 +83,7 @@ const PRO1000 = () => {
                                     testplan og innføringsstrategi.
                                 </p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Milepael_4.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="Presentasjon av milepæl 1"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/Milepael_4.pdf`} title="Presentasjon av milepæl 1" />
 
 
 
@@ -126,15 +95,7 @@ const PRO1000 = () => {
                             <CardHeader><h2 className="text-lg font-semibold">Rapport</h2></CardHeader>
                             <CardBody>
                                 <p>Denne rapporten teller som eksamen i dette faget. Det er blant annet derfor vi har kandidatnummer i stedet for navnene våre til tross for at det er åpenbart for sensor hvem som er hvem.</p>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/RapportPRO1000.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title=""
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/RapportPRO1000.pdf`} title="" />
 
                                 <Image
                                     loading="eager"

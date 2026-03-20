@@ -5,6 +5,7 @@ import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Divider} from "@heroui/divider";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const ORL1000 = () => {
     const navigate = useNavigate();
@@ -38,15 +39,7 @@ const ORL1000 = () => {
                                     <p>Format: PDF eller Word.</p>
                                     <p>Mer informasjon om oppgaven finner du i <a href="https://usn.instructure.com/courses/30553/files/3294393">Veiledning til arbeidskrav 1.</a>. Det er viktig at du leser denne veiledningen før du  begynner. OBS! Det er en fordel å laste ned dokumentet (ikke på mobil) før du leser det, da det inneholder "Spor endringer" for å fremheve innhold i teksten.</p>
 
-                                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                        <iframe
-                                            src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/Gnagende%20gnisninger%20blir%20glemt%20i%20gjennomgått%20gruppedynamikk.pdf`}
-                                            width="100%"
-                                            height="600px"
-                                            title="ORL1000 Arbeidskrav 1"
-                                            classname="border-0"
-                                        />
-                                    </div>
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/Gnagende%20gnisninger%20blir%20glemt%20i%20gjennomgått%20gruppedynamikk.pdf`} title="ORL1000 Arbeidskrav 1" />
                                 </div>
 
 <Spacer/>
@@ -89,13 +82,7 @@ const ORL1000 = () => {
                             <CardBody>
                                 <div className="flex flex-col gap-6">
                                     <p>Hensikten med denne oppgaven er å få gruppen i gang, lage kontrakt og regler for samarbeid. Les <a href="https://usn.instructure.com/courses/30553/files/3287649?wrap=1">Veileder for arbeidskrav 2</a> før dere lager gruppekontrakten. <a href="https://usn.instructure.com/courses/30553/files/3287650?wrap=1">Mal til gruppekontrakt</a>. Fyll ut kontrakten, signer og lever den her. Det holder at én på gruppen sender inn kontrakten.</p>
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/annotated-GRUPPEKONTRAKT-gruppe22.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="ORL1000 Arbeidskrav 2"
-                                        classname="border-0"
-                                    />
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/annotated-GRUPPEKONTRAKT-gruppe22.pdf`} title="ORL1000 Arbeidskrav 2" />
                                 </div>
                             </CardBody>
                         </Card>
@@ -138,23 +125,11 @@ const ORL1000 = () => {
 
                                     <p className="text-lg font-semibold">Enoka - Case til arbeidskrav 3:</p>
                                     {/* CASE TIL ARBEIDSKRAV 3 */}
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/ORL1000_Arbeidskrav3_2024.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="ORL1000 Enoka - Case til arbeidskrav 3"
-                                        classname="border-0"
-                                    />
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/ORL1000_Arbeidskrav3_2024.pdf`} title="ORL1000 Enoka - Case til arbeidskrav 3" />
 
                                     <p className="text-lg font-semibold">Besvarelse:</p>
                                     {/* BESVARELSE */}
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/annotated-ORL1000-Oblig3-Gruppe22.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="ORL1000 Arbeidskrav 3"
-                                        classname="border-0"
-                                    />
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/annotated-ORL1000-Oblig3-Gruppe22.pdf`} title="ORL1000 Arbeidskrav 3" />
 
                                     <p className="text-xl font-semibold">Tilbakemelding:</p>
 
@@ -189,13 +164,7 @@ const ORL1000 = () => {
                             <CardBody>
                                 <div className="flex flex-col gap-6">
                                     <p>Oppgavesettet for besvarelsen er ikke tilgjengelig, men hovedtemaet var organisasjonskultur i og på tvers av avdelinger, alder og livsforhold. Konflikter oppstår, og vi blir spurt om hva som burde ha foregått i stedet.</p>
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/ORL1000-Eksamen.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="ORL1000 Eksamen"
-                                        classname="border-0"
-                                    />
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/ORL1000/ORL1000-Eksamen.pdf`} title="ORL1000 Eksamen" />
                                 </div>
 
                                 <Image

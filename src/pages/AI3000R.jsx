@@ -6,6 +6,7 @@ import { IpynbRenderer } from 'react-ipynb-renderer';
 import 'react-ipynb-renderer/dist/styles/monokai.css';
 import {Image} from "@heroui/image";
 //import './notebooks/AI3000R/NY-Housing-Prices_Machine_Learning_Model.ipynb';
+import { PDFViewer } from "../components/PDFViewer";
 
 
 const AI3000R = () => {
@@ -126,26 +127,10 @@ const AI3000R = () => {
                             <CardBody>
 
                                 <h2 className="text-md font-semibold">Oppgavesett</h2>
-                                <div>
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/AI3000R/AI3000R_Written examination.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="AI3000R Eksamen Oppgavesett"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/AI3000R/AI3000R_Written examination.pdf`} title="AI3000R Eksamen Oppgavesett" />
 
                                 <h2 className="text-md font-semibold">Besvarelse</h2>
-                                <div>
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/AI3000R/7066-Min besvarelse.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="AI3000R Eksamen - Studentens besvarelse"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/AI3000R/7066-Min besvarelse.pdf`} title="AI3000R Eksamen - Studentens besvarelse" />
 
                                 <Image
                                     loading="eager"

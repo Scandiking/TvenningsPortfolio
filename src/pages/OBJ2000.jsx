@@ -5,6 +5,7 @@ import {Image} from "@heroui/image";
 import CodeBlock from "../components/CodeBlock";
 import {Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
+import { PDFViewer } from "../components/PDFViewer";
 
 const OBJ2000 = () => {
     const navigate = useNavigate();
@@ -997,15 +998,7 @@ public class Hovedprogram {
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">OBJ2000 H24, Arbeidskrav</h2></CardHeader>
                             <CardBody>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/Arbeidskrav_H2024_OBJ2000.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="OBJ2000 Arbeidskrav 1"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/Arbeidskrav_H2024_OBJ2000.pdf`} title="OBJ2000 Arbeidskrav 1" />
 
                                 <h2 className="text-lg font-semibold">Obligatorisk oppgave 1: Diktgenerator</h2>
 
@@ -1054,24 +1047,8 @@ public class Hovedprogram {
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">En to tre</h2></CardHeader>
                             <CardBody>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/OBJ2000-1%20Objektorientert%20programmering%201%2017.12.2024.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="OBJ2000 Eksamen"
-                                        className="border-0"
-                                    />
-                                </div>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/OBJ2000-Eksamen.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="OBJ2000 Eksamen"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/OBJ2000-1%20Objektorientert%20programmering%201%2017.12.2024.pdf`} title="OBJ2000 Eksamen" />
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/OBJ2000/OBJ2000-Eksamen.pdf`} title="OBJ2000 Eksamen" />
 
                                 <p>Oppgave 1a:</p>
                                 <CodeBlock

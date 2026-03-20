@@ -35,16 +35,7 @@ const SEL3000R = () => {
                             <p>Emnet skal gi studenten mulighet for faglig fordypning og spesialisering i et selvvalgt tema innenfor bachelorstudiet. Tema skal avtales med og godkjennes av oppnevnt veileder.</p>
                             <p>Jeg valgte temaet <em>enshittification</em>. Etter å ha brukt ulike systemer fra ulike tidsepoker så merker jeg at mye av det som blir hovedstrøm-programvare ofte er et godt produkt i seg selv, men som ødelegges av mersalg. Et eksempel på dette er hvordan praktisk talt alle spill nå maser på deg om at du må bruke mer penger. Dette skriver jeg om i rapporten. Men enshittification handler også om for eksempel sosiale medier og hvordan de er laget for å få deg til å bruke mest mulig tid på dem så de kan tjene penger på deg, mens du sitter og "doomscroller" i flere timer.</p>
 
-                            <div>
-                                <iframe
-                                    src={`${process.env.PUBLIC_URL}/pdfs/SEL3000R/Selvstudie-Kand_7076.pdf`}
-                                    width="100%"
-                                    height="600px"
-                                    title="SEL3000R Rapport"
-                                    className="border-0"
-                                    allowFullScreen
-                                />
-                            </div>
+                            <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/SEL3000R/Selvstudie-Kand_7076.pdf`} title="SEL3000R Rapport" />
 
 
                             <Spacer/>

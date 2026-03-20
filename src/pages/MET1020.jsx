@@ -2,6 +2,7 @@ import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
 import {Card, CardHeader, CardBody, Code, Spacer} from "@heroui/react";
 import {Image} from "@heroui/react";
+import { PDFViewer } from "../components/PDFViewer";
 
 
 const MET1020 = () => {
@@ -25,17 +26,7 @@ const MET1020 = () => {
                             <CardHeader><h2 className="text-lg font-semibold">Obligatorisk arbeidskrav</h2></CardHeader>
                             <CardBody>
                                 <p>Obligatorisk arbeidskrav</p>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/MET1020/Arbeidskrav_i_MET1020_gr7.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="MET1020 Obligatorisk arbeidskrav"
-                                        className="border-0"
-
-                                    />
-
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/MET1020/Arbeidskrav_i_MET1020_gr7.pdf`} title="MET1020 Obligatorisk arbeidskrav" />
 
                             </CardBody>
                         </Card>

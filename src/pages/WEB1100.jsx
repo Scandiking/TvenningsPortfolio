@@ -5,6 +5,7 @@ import CodeBlock from "../components/CodeBlock";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const WEB1100 = () => {
     const navigate = useNavigate();
@@ -32,15 +33,7 @@ const WEB1100 = () => {
                                 <div className="flex flex-col gap-6">
                                     <p>Den første delen av dette arbeidskravet gjaldt å finne en klient med et problem og løse dette problemet ved nettsiden ved hjelp av PACT-rammeverket og en rekke andre ting. Dette innbefatter å forme nettsiden etter hvem som skal bruke den til hvilke aktiviteter, i hvilken kontekst og med hvilken teknologi. PACT = People, Activities, Context, Technology.</p>
 
-                                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                        <iframe
-                                            src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/WEB1100-H23-A2-gr12.pdf`}
-                                            width="100%"
-                                            height="600px"
-                                            title="WEB1100 Arbeidskrav 1"
-                                            className="border-0"
-                                        />
-                                    </div>
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/WEB1100-H23-A2-gr12.pdf`} title="WEB1100 Arbeidskrav 1" />
 
                                 </div>
                             </CardBody>
@@ -98,15 +91,7 @@ const WEB1100 = () => {
                             <CardBody>
                                 <div className="flex flex-col gap-6">
                                 </div>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/WEB1100-Eksamen.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="WEB1100 Eksamen"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/WEB1100-Eksamen.pdf`} title="WEB1100 Eksamen" />
 
 
                                 <p className="mt-3">Spørsmål 2.1 er laget i SafeExamBrowsers tegneverktøy som er enkelt å bruke. Det som ikke er så enkelt er å få det til å se bra ut.</p>

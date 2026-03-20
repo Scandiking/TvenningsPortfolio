@@ -4,6 +4,7 @@ import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Image, Spacer} from "@heroui/react";
 import CodeBlock from "../components/CodeBlock";
 import {useNavigate} from "react-router-dom";
+import { PDFViewer } from "../components/PDFViewer";
 
 const APP2000 = () => {
     const navigate = useNavigate();
@@ -91,15 +92,7 @@ const APP2000 = () => {
 
                             <p className="text-lg font-semibold">Prosjektrapport for faget Applikasjonsutvikling for web</p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                <iframe
-                                    src={`${process.env.PUBLIC_URL}/pdfs/APP2000/Group8ReportAPP2000.pdf`}
-                                    width="100%"
-                                    height="600px"
-                                    title="APP2000 Eksamen"
-                                    className="border-0"
-                                />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/APP2000/Group8ReportAPP2000.pdf`} title="APP2000 Eksamen" />
 
                                 <Image
                                     loading="eager"

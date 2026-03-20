@@ -4,6 +4,7 @@ import {Card, CardHeader, CardBody } from "@heroui/react";
 import {Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Image} from "@heroui/image";
+import { PDFViewer } from "../components/PDFViewer";
 
 const SYS1000 = () => {
     const navigate = useNavigate();
@@ -42,15 +43,7 @@ const SYS1000 = () => {
 
                                 </p>
 
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={`${process.env.PUBLIC_URL}/pdfs/SYS1000/SYS1000Rapport.pdf`}
-                                        width="100%"
-                                        height="600px"
-                                        title="DAT1000 Arbeidskrav 1"
-                                        className="border-0"
-                                    />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/SYS1000/SYS1000Rapport.pdf`} title="DAT1000 Arbeidskrav 1" />
 
                                 <Image
                                     loading="eager"

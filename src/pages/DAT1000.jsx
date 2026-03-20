@@ -5,6 +5,7 @@ import {Image} from "@heroui/image";
 import CodeBlock from "../components/CodeBlock";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
+import { PDFViewer } from "../components/PDFViewer";
 
 const DAT1000 = () => {
     const navigate = useNavigate();
@@ -186,15 +187,7 @@ ON Senter.Senternavn = Hund.HundeID;`
                                 <div className="flex flex-col gap-6">
                                     <p>Dette arbeidskravet innebærte å designe en databasemodell med entiteter og relasjoner.</p>
 
-                                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                        <iframe
-                                            src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/DAT1000-h2023-Oblig1-Gruppe3.pdf`}
-                                            width="100%"
-                                            height="600px"
-                                            title="DAT1000 Arbeidskrav 1"
-                                            className="border-0"
-                                        />
-                                    </div>
+                                    <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/DAT1000-h2023-Oblig1-Gruppe3.pdf`} title="DAT1000 Arbeidskrav 1" />
 
                                 </div>
                             </CardBody>
@@ -204,14 +197,7 @@ ON Senter.Senternavn = Hund.HundeID;`
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">SQL og databaseimplementasjon</h2></CardHeader>
                             <CardBody>
-                                <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                                <iframe
-                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/DAT1000-h2023-Oblig1-Gruppe3.pdf`}                                    width="100%"
-                                    height="600px"
-                                    title="DAT1000 Arbeidskrav 2"
-                                    className="border-0"
-                                />
-                                </div>
+                                <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/DAT1000-h2023-Oblig1-Gruppe3.pdf`} title="DAT1000 Arbeidskrav 2" />
 
 
                             </CardBody>

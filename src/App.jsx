@@ -212,7 +212,7 @@ function AppContent() {
         </Drawer>
 
 
-        <nav className="bg-content1 shadow-md p-4 relative z-40">
+        <nav className="bg-content1 shadow-md p-4 sticky top-0 z-40">
           <div className="container mx-auto flex items-center">
             <div className="w-1/3 flex justify-start">
               <Button
