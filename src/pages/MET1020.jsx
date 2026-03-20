@@ -1,4 +1,5 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
+import {useNavigate} from "react-router-dom";
 import {Tab, Tabs} from "@heroui/tabs";
 import {Card, CardHeader, CardBody, Code, Spacer} from "@heroui/react";
 import {Image} from "@heroui/react";
@@ -6,14 +7,15 @@ import { PDFViewer } from "../components/PDFViewer";
 
 
 const MET1020 = () => {
+    const navigate = useNavigate();
     return (
         <div className = "container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/met1020">Samfunnsvitenskapelig metode</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/met1020')}>Samfunnsvitenskapelig metode</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

@@ -1,14 +1,16 @@
 import React from 'react';
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
+import {useNavigate} from "react-router-dom";
 
 function About() {
+    const navigate = useNavigate();
     return (
         <div className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/about">Om meg</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/about')}>Om meg</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 

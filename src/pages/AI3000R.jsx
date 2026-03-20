@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Tabs, Tab } from "@heroui/tabs";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
@@ -10,6 +11,7 @@ import { PDFViewer } from "../components/PDFViewer";
 
 
 const AI3000R = () => {
+    const navigate = useNavigate();
     const [notebook, setNotebook] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -71,9 +73,9 @@ const AI3000R = () => {
         <div className="container mx-auto px-4 py-8">
             <div className="py-1">
                 <Breadcrumbs>
-                    <BreadcrumbItem href="/">Hjem</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner">Emner</BreadcrumbItem>
-                    <BreadcrumbItem href="/emner/ai3000r">Artifical Intelligence for Business Applications</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner')}>Emner</BreadcrumbItem>
+                    <BreadcrumbItem onPress={() => navigate('/emner/ai3000r')}>Artifical Intelligence for Business Applications</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 
