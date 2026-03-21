@@ -1,5 +1,7 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tabs, Tab } from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Image, Spacer} from "@heroui/react";
 import CodeBlock from "../components/CodeBlock";
@@ -11,7 +13,7 @@ const APP2000 = () => {
 
     const githubrepo = `gh repo clone Scandiking/GarminConnectMaterialDesignReactFrontend`
     return (
-        <div className="container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
                     <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
@@ -21,8 +23,7 @@ const APP2000 = () => {
             </div>
 
             <h1 className="text-3xl font-bold mb-6">APP2000 - Apputvikling for web</h1>
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aira-label="Options">
+            <AnimatedTabs variant="solid" aira-label="Options">
                     <Tab key="arbkrv1" title="Arbeidskrav 1/2">
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">Arbeidskrav 1/2</h2></CardHeader>
@@ -107,9 +108,8 @@ const APP2000 = () => {
                         </Card>
                     </Tab>
 
-                </Tabs>
-            </div>
-        </div>
+                </AnimatedTabs>
+        </AnimatedPage>
     )
 }
 

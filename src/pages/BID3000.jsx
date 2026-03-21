@@ -1,5 +1,7 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import { Image } from "@heroui/image";
 import {useNavigate} from "react-router-dom";
 import {Card, CardBody, CardHeader} from "@heroui/card";
@@ -789,7 +791,7 @@ conn.close()
 `
 
     return (
-        <div className = "container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
@@ -801,8 +803,7 @@ conn.close()
 
             <h1 className="text-3xl font-bold mb-6">BID3000 - Business Intelligence & Data Warehousing</h1>
 
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                     <Tab key="arbkrv1" title="Hjemmeeksamen i gruppe">
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">To ukers hjemmeeksamen i gruppe</h2></CardHeader>
@@ -1035,9 +1036,8 @@ conn.close()
                             </CardBody>
                         </Card>
                     </Tab>
-                </Tabs>
-            </div>
-        </div>
+                </AnimatedTabs>
+        </AnimatedPage>
     )
 }
 

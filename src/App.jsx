@@ -23,6 +23,7 @@ import SIK2000 from "./pages/SIK2000.jsx";
 import BID3000 from './pages/BID3000.jsx';
 import MOB3000 from './pages/MOB3000.jsx';
 import SEL3000R from './pages/SEL3000R';
+import Projects from './pages/Projects';
 
 import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
@@ -279,7 +280,7 @@ function AppContent() {
           <Route path="/emner/bid3000" element={<BID3000 />} />
           <Route path="/emner/mob3000" element={<MOB3000 />} />
           <Route path="/emner/sel3000r" element={<SEL3000R />} />
-          <Route path="/projects" element={<div className="container mx-auto p-8">Projects page coming soon!</div>} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
           <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
         </Routes>

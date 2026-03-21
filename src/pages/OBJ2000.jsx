@@ -1,5 +1,7 @@
 import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import {Image} from "@heroui/image";
 import CodeBlock from "../components/CodeBlock";
@@ -980,7 +982,7 @@ public class Hovedprogram {
 `
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
@@ -992,8 +994,7 @@ public class Hovedprogram {
 
             <h1 className="text-3xl font-bold mb-6">Objektorientert programmering 1</h1>
 
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                     <Tab key="arbkrv1" title="Arbeidskrav 1">
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">OBJ2000 H24, Arbeidskrav</h2></CardHeader>
@@ -1111,10 +1112,9 @@ public class Hovedprogram {
                             </CardBody>
                         </Card>
                     </Tab>
-                </Tabs>
-            </div>
+                </AnimatedTabs>
 
-        </div>
+        </AnimatedPage>
     );
 };
 

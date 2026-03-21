@@ -1,6 +1,8 @@
 import {useNavigate} from "react-router-dom";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import {Card, CardBody, CardHeader} from "@heroui/card";
 import {Image} from "@heroui/image";
 import { PDFViewer } from "../components/PDFViewer";
@@ -9,7 +11,7 @@ const MOB3000 = () => {
     const navigate = useNavigate();
 
     return (
-        <div className = "container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             {/* BREADCRUMBS */}
             <div className="py-1">
@@ -24,7 +26,7 @@ const MOB3000 = () => {
             <h1 className="text-3xl font-bold mb-6">MOB3000 - Applikasjonsutvikling for mobile enheter</h1>
 
             {/* FANER */}
-            <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                 <Tab key="arbkrv" title="Applikasjonsutvikling">
                     <Card>
                         <CardHeader>
@@ -46,9 +48,9 @@ const MOB3000 = () => {
                         </CardHeader>
                     </Card>
                 </Tab>
-            </Tabs>
+            </AnimatedTabs>
 
-        </div>
+        </AnimatedPage>
     )
 }
 

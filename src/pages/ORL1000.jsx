@@ -1,5 +1,7 @@
 import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import {Card, CardBody, CardHeader, Spacer} from "@heroui/react";
 import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
@@ -10,7 +12,7 @@ import { PDFViewer } from "../components/PDFViewer";
 const ORL1000 = () => {
     const navigate = useNavigate();
     return (
-        <div className="container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
@@ -22,8 +24,7 @@ const ORL1000 = () => {
 
             <h1 className="text-3xl font-bold mb-6">ORL1000 - Organisering og ledelse</h1>
 
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                     <Tab key="arbkrv1" title="Arbeidskrav 1">
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">Arbeidskrav 1 Individuelt refleksjonsnotat</h2></CardHeader>
@@ -181,10 +182,9 @@ const ORL1000 = () => {
 
                     </Tab>
 
-                </Tabs>
-            </div>
+                </AnimatedTabs>
 
-        </div>
+        </AnimatedPage>
     )
 }
 

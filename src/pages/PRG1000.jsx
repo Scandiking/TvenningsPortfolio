@@ -1,5 +1,7 @@
 import React from 'react';
 import {Tabs, Tab} from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import {Card, CardBody, CardHeader} from "@heroui/card";
 // import {Image} from "@heroui/image";
 // import {Image} from "heroui/react";
@@ -644,7 +646,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
 
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
@@ -656,8 +658,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
 
             <h1 className="text-3xl font-bold mb-6">PRG1000 - Grunnleggende programmering</h1>
 
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                     <Tab key="arbkrv1" title="Arbeidskrav 1">
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold mb-2">Strømstøttekalkulator</h2></CardHeader>
@@ -838,9 +839,8 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
                             </CardBody>
                         </Card>
                     </Tab>
-                </Tabs>
-            </div>
-        </div>
+                </AnimatedTabs>
+        </AnimatedPage>
     );
 };
 

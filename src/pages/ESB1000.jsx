@@ -1,5 +1,7 @@
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import {Card, CardHeader, CardBody} from "@heroui/card";
 import {useNavigate} from "react-router-dom";
 import {Image} from "@heroui/image";
@@ -8,7 +10,7 @@ import { PDFViewer } from "../components/PDFViewer";
 const ESB1000 = () => {
     const navigate = useNavigate();
     return (
-        <div className="container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
@@ -20,7 +22,7 @@ const ESB1000 = () => {
 
             <h1 className="text-3xl font-bold mb-6">ESB1000 - Etikk og samfunnsansvar</h1>
 
-            <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                 <Tab key="arbkrv1" title="Arbeidskrav 1">
                     <Card>
                         <CardHeader><h2 className="text-lg font-semibold">Innlevering av iKomp-bevis</h2></CardHeader>
@@ -90,11 +92,11 @@ const ESB1000 = () => {
                     </Card>
 
                 </Tab>
-            </Tabs>
+            </AnimatedTabs>
 
 
 
-        </div>
+        </AnimatedPage>
     )
 }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import CodeBlock from "../components/CodeBlock";
 import { Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
@@ -11,7 +13,7 @@ import { PDFViewer } from "../components/PDFViewer";
 const DAT2000 = () => {
     const navigate = useNavigate();
     return (
-        <div className = "container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             <div className="py-1">
                 <Breadcrumbs key="solid" px-20>
@@ -23,8 +25,7 @@ const DAT2000 = () => {
 
             <h1 className="text-3xl font-bold mb-6">DAT2000 - Database 2</h1>
 
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                     <Tab key="arbkrv1" title="Arbeidskrav 1">
                         <Card>
                             <CardHeader><h2 className="text-lg font-semibold">Mandatory Group Assignment</h2></CardHeader>
@@ -92,10 +93,9 @@ const DAT2000 = () => {
                             </CardBody>
                         </Card>
                     </Tab>
-                </Tabs>
-            </div>
+                </AnimatedTabs>
 
-        </div>
+        </AnimatedPage>
     )
 }
 

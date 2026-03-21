@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Tabs, Tab } from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import { IpynbRenderer } from 'react-ipynb-renderer';
@@ -70,7 +72,7 @@ const AI3000R = () => {
 
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
             <div className="py-1">
                 <Breadcrumbs>
                     <BreadcrumbItem onPress={() => navigate('/')}>Hjem</BreadcrumbItem>
@@ -81,8 +83,7 @@ const AI3000R = () => {
 
             <h1 className="text-3xl font-bold mb-6">AI3000R - Artificial Intelligence for Business Applications</h1>
 
-            <div className="flex w-full flex-col">
-                <Tabs variant="solid" aria-label="Options">
+            <AnimatedTabs variant="solid" aria-label="Options">
                     <Tab key="arbkrv1" title="Arbeidskrav 1">
                         <Card>
                             <CardHeader>
@@ -146,9 +147,8 @@ const AI3000R = () => {
                             </CardBody>
                         </Card>
                     </Tab>
-                </Tabs>
-            </div>
-        </div>
+                </AnimatedTabs>
+        </AnimatedPage>
     );
 };
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
+import AnimatedPage from '../components/AnimatedPage';
+import AnimatedTabs from '../components/AnimatedTabs';
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +33,7 @@ const SIK2000 = () => {
     }, [loadedCount]);
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <AnimatedPage className="container mx-auto px-4 py-8">
 
             {loading && (
                 <div className="flex justify-center mb-4">
@@ -51,8 +53,7 @@ const SIK2000 = () => {
 
                     <h1 className="text-3xl font-bold mb-6">Informasjonssikkerhet</h1>
 
-                    <div className="flex w-full flex-col">
-                        <Tabs variant="solid" aria-label="Options">
+                    <AnimatedTabs variant="solid" aria-label="Options">
                             <Tab key="arbkrv1" title="Arbeidskrav 1">
                                 <Card>
                                     <CardHeader><h2 className="text-lg font-semibold">Rapport om selvvalgt emne: malvertising</h2></CardHeader>
@@ -88,15 +89,14 @@ const SIK2000 = () => {
                                 </Card>
                             </Tab>
 
-                        </Tabs>
-                    </div>
+                        </AnimatedTabs>
 
 
 
 
                 </>
             )}
-        </div>
+        </AnimatedPage>
     );
 };
 
