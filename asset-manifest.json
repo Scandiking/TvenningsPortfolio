@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TvenningsPortfolio/static/css/main.8cf5f15a.css",
-    "main.js": "/TvenningsPortfolio/static/js/main.8ddf30ec.js",
+    "main.css": "/TvenningsPortfolio/static/css/main.28898b59.css",
+    "main.js": "/TvenningsPortfolio/static/js/main.35f930ce.js",
     "static/js/501.c586c093.chunk.js": "/TvenningsPortfolio/static/js/501.c586c093.chunk.js",
     "static/media/LinkedInBanner3.png": "/TvenningsPortfolio/static/media/LinkedInBanner3.816b85a5d29ca61b25c9.png",
     "static/media/KaTeX_AMS-Regular.ttf": "/TvenningsPortfolio/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
@@ -65,12 +65,12 @@
     "static/media/KaTeX_Size3-Regular.woff": "/TvenningsPortfolio/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/TvenningsPortfolio/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/TvenningsPortfolio/index.html",
-    "main.8cf5f15a.css.map": "/TvenningsPortfolio/static/css/main.8cf5f15a.css.map",
-    "main.8ddf30ec.js.map": "/TvenningsPortfolio/static/js/main.8ddf30ec.js.map",
+    "main.28898b59.css.map": "/TvenningsPortfolio/static/css/main.28898b59.css.map",
+    "main.35f930ce.js.map": "/TvenningsPortfolio/static/js/main.35f930ce.js.map",
     "501.c586c093.chunk.js.map": "/TvenningsPortfolio/static/js/501.c586c093.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cf5f15a.css",
-    "static/js/main.8ddf30ec.js"
+    "static/css/main.28898b59.css",
+    "static/js/main.35f930ce.js"
   ]
 }
