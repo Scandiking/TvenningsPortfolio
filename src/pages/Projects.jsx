@@ -13,8 +13,9 @@ function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut' }}
-                    className="bg-content1 rounded-lg shadow-md p-6 border-t-2 border-primary flex flex-col gap-4"
+                    className="bg-gradient-to-br from-[#3461D1] to-[#5B7FE0] p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-[0_0_18px_rgba(52,97,209,0.5)]"
                 >
+                <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
                     <div>
                         <h2 className="text-xl font-semibold text-foreground mb-2">Landlosen</h2>
                         <p className="text-default-500 text-sm">
@@ -47,14 +48,16 @@ function Projects() {
                             GitHub
                         </a>
                     </div>
+                </div>
                 </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
-                    className="bg-content1 rounded-lg shadow-md p-6 border-t-2 border-primary flex flex-col gap-4"
+                    className="bg-gradient-to-br from-[#3461D1] to-[#5B7FE0] p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-[0_0_18px_rgba(52,97,209,0.5)]"
                 >
+                <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
                     <div>
                         <h2 className="text-xl font-semibold text-foreground mb-2">PKDEX</h2>
                         <p className="text-default-500 text-sm">
@@ -87,6 +90,7 @@ function Projects() {
                             GitHub
                         </a>
                     </div>
+                </div>
                 </motion.div>
 
             </div>

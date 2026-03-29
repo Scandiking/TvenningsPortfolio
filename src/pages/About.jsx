@@ -14,7 +14,7 @@ function About() {
                 </Breadcrumbs>
             </div>
 
-            <div className="bg-content1 rounded-lg shadow-md p-6"> {/* ENDRET: bg-white dark:bg-gray-800 → bg-content1 */}
+            <div className="bg-gradient-to-b from-blue-50/80 to-content1/80 dark:from-content1/80 dark:to-content1/80 backdrop-blur-md rounded-lg shadow-md p-6 border border-[#3461D1]">
                 <h1 className="text-3xl font-bold text-foreground mb-4">Om meg</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
                 <p className="text-default-500 mb-4"> {/* ENDRET: text-gray-600 dark:text-gray-500 → text-default-500 */}
                     Hei! Jeg er en 31 år gammel tech-entusiast som har brukt personlige datamaskiner siden jeg var 4 år og fikk lov av pappa å spille Moto Racer (1997) på vår Compaq Presario 5600.

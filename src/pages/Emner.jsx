@@ -12,35 +12,34 @@ const Emner = () => {
     // Hardkodet data
     const emneData = [
         // 1 semester
-        { emnekode: "DAT1000", emnenavn: "Database 1", emnebeskrivelse: "Innføring i database gjennom MySQL. Entiteter, relasjonstyper"},
-        { emnekode: "INF1000", emnenavn: "Informasjonssystemer", emnebeskrivelse: "Teori om informasjonssystemer i praksis."},
-        { emnekode: "PRG1000", emnenavn: "Grunnleggende programmering 1", emnebeskrivelse: "Grunnleggende programmering hvor språket som benyttes er Python. If/else-tester, while/for-løkker."},
-        { emnekode: "WEB1100", emnenavn: "Webutvikling og HCI", emnebeskrivelse: "HTML, CSS og menneske-maskin-interaksjon (HCI)."},
+        { semester: 1, emnekode: "DAT1000", emnenavn: "Database 1", emnebeskrivelse: "Innføring i database gjennom MySQL. Entiteter, relasjonstyper"},
+        { semester: 1, emnekode: "INF1000", emnenavn: "Informasjonssystemer", emnebeskrivelse: "Teori om informasjonssystemer i praksis."},
+        { semester: 1, emnekode: "PRG1000", emnenavn: "Grunnleggende programmering 1", emnebeskrivelse: "Grunnleggende programmering hvor språket som benyttes er Python. If/else-tester, while/for-løkker."},
+        { semester: 1, emnekode: "WEB1100", emnenavn: "Webutvikling og HCI", emnebeskrivelse: "HTML, CSS og menneske-maskin-interaksjon (HCI)."},
         // 2 semester
-        { emnekode: "PRO1000", emnenavn: "Praktisk prosjektarbeid", emnebeskrivelse: "Praktisk håndtering av organisering rundt systemutvikling."},
-        { emnekode: "SYS1000", emnenavn: "Systemutvikling", emnebeskrivelse: "Utvikle et informasjonssystem i samband med kundemøte og \"oversette\" dette til use cases osv."},
-        { emnekode: "PRG1100", emnenavn: "Grunnleggende programmering 2", emnebeskrivelse: "Utvikling av mer robuste applikasjoner ved hjelp av grafiske brukergrensesnitt og feilmeldinger og try/else."},
-        { emnekode: "ORL1000", emnenavn: "Organisering og ledelse", emnebeskrivelse: "Innføring i sentrale organisasjonsmessige fenomener. Verdiskaping, makt, målstyyring, motivasjon, kommunikasjon"},
+        { semester: 2, emnekode: "PRO1000", emnenavn: "Praktisk prosjektarbeid", emnebeskrivelse: "Praktisk håndtering av organisering rundt systemutvikling."},
+        { semester: 2, emnekode: "SYS1000", emnenavn: "Systemutvikling", emnebeskrivelse: "Utvikle et informasjonssystem i samband med kundemøte og \"oversette\" dette til use cases osv."},
+        { semester: 2, emnekode: "PRG1100", emnenavn: "Grunnleggende programmering 2", emnebeskrivelse: "Utvikling av mer robuste applikasjoner ved hjelp av grafiske brukergrensesnitt og feilmeldinger og try/else."},
+        { semester: 2, emnekode: "ORL1000", emnenavn: "Organisering og ledelse", emnebeskrivelse: "Innføring i sentrale organisasjonsmessige fenomener. Verdiskaping, makt, målstyyring, motivasjon, kommunikasjon"},
         // 3 semester
-        { emnekode: "APP2000", emnenavn: "Applikasjonsutvikling for web 1/2", emnebeskrivelse: "Utvikling av webapplikasjoner, tjener- og klientside. Bør ha kompetanse om web, programmering og databaser tilsvarende Webutvikling og HCI, Grunnleggende programmering 1 og Database 1 først."},
-        { emnekode: "DAT2000", emnenavn: "Database 2", emnebeskrivelse: "Avansert kurs i database ang. administrasijon og drift av RDBMS."},
-        { emnekode: "OBJ2000", emnenavn: "Objektorientert programmering 1", emnebeskrivelse: "Innføring i objektorientert programmering. Grafiske brukergrensesnitt med objektorientert språk. Bygger på PRG1000 Grunnleggende programmering 1 og PRG1100 Grunnleggende programmering 2."},
-        { emnekode: "ESB1000", emnenavn: "Etikk og samfunnsansvar", emnebeskrivelse: "Grunnleggende innføring i etikk, etiske problemstillinger, FNs bærekraftsmål og CSR."},
+        { semester: 3, emnekode: "APP2000", emnenavn: "Applikasjonsutvikling for web 1/2", emnebeskrivelse: "Utvikling av webapplikasjoner, tjener- og klientside. Bør ha kompetanse om web, programmering og databaser tilsvarende Webutvikling og HCI, Grunnleggende programmering 1 og Database 1 først."},
+        { semester: 3, emnekode: "DAT2000", emnenavn: "Database 2", emnebeskrivelse: "Avansert kurs i database ang. administrasijon og drift av RDBMS."},
+        { semester: 3, emnekode: "OBJ2000", emnenavn: "Objektorientert programmering 1", emnebeskrivelse: "Innføring i objektorientert programmering. Grafiske brukergrensesnitt med objektorientert språk. Bygger på PRG1000 Grunnleggende programmering 1 og PRG1100 Grunnleggende programmering 2."},
+        { semester: 3, emnekode: "ESB1000", emnenavn: "Etikk og samfunnsansvar", emnebeskrivelse: "Grunnleggende innføring i etikk, etiske problemstillinger, FNs bærekraftsmål og CSR."},
         // 4 semester
-        { emnekode: "APP2000", emnenavn: "Applikasjonsutvikling for web 2/2", emnebeskrivelse: "Emnet går over to semestre, og det finaliserende semestret fokuserer på utvikling av en fungerende webapplikasjon basert på det vi har lært i første halvdel av emnet."},
-        { emnekode: "OBJ2100", emnenavn: "Objektorientert programmering 2", emnebeskrivelse: "Videreutvikling av kunnskap. Strømmer, tråder og asynkron prosessering. Bygger på OBJ2000 Objektorientert programmering."},
-        { emnekode: "MET1020", emnenavn: "Samfunnsvitenskapelig metode", emnebeskrivelse: "Teorio om å samle inn, bearbeidelse og tolking av data. Vitenskapsteori, problemstilling, forskningsdesign, dataanalyse."},
-        { emnekode: "SIK2000", emnenavn: "Informasjonssikkerhet", emnebeskrivelse: "Lovverk og standarder for informasjonssikkerhet. Trusler mot informasjonssikkerhet i bedrifter og privat. Hvordan man kan sikre informasjon. Risiko- og sårbarhetsanalyser."},
+        { semester: 4, emnekode: "APP2000", emnenavn: "Applikasjonsutvikling for web 2/2", emnebeskrivelse: "Emnet går over to semestre, og det finaliserende semestret fokuserer på utvikling av en fungerende webapplikasjon basert på det vi har lært i første halvdel av emnet."},
+        { semester: 4, emnekode: "OBJ2100", emnenavn: "Objektorientert programmering 2", emnebeskrivelse: "Videreutvikling av kunnskap. Strømmer, tråder og asynkron prosessering. Bygger på OBJ2000 Objektorientert programmering."},
+        { semester: 4, emnekode: "MET1020", emnenavn: "Samfunnsvitenskapelig metode", emnebeskrivelse: "Teorio om å samle inn, bearbeidelse og tolking av data. Vitenskapsteori, problemstilling, forskningsdesign, dataanalyse."},
+        { semester: 4, emnekode: "SIK2000", emnenavn: "Informasjonssikkerhet", emnebeskrivelse: "Lovverk og standarder for informasjonssikkerhet. Trusler mot informasjonssikkerhet i bedrifter og privat. Hvordan man kan sikre informasjon. Risiko- og sårbarhetsanalyser."},
         // 5 semester
-        { emnekode: "BID3000", emnenavn: "Business Intelligence og datavarehus", emnebeskrivelse: "På norsk kjent som forretningsanalyse. Samling og analyse av data for å forbedre kvaliteten på avgjørelser. Bruk av ulike utviklingsverktøy er sentralt i kurset. Bygger på database 1. Pentaho (ETL), PowerBI (visualisering og measures), Python (visualisering, ETL)."},
-        { emnekode: "MOB3000", emnenavn: "Applikasjonsutvikling for mobile enheter", emnebeskrivelse: "Praktisk erfaring med utvikling av applikasjoner for mobile enheter. Android som utviklingsplattform, Java/Kotlin som språk."},
-        { emnekode: "AI3000R", emnenavn: "Artificial Intelligence for Business Applications", emnebeskrivelse: "Innflytelse av AI i organisasjoner og samfunnet generelt. Prinsipper og metoder for å utvikle smarte data-avhengige AI-løsninger. Metoder i maskinlæring, dyplæring og datamining. Grunnleggende Python-kunnskaper trengs."},
-        { emnekode: "SEL3000R",emnenavn: "Selvstudie IT og informasjonssystemer", emnebeskrivelse: "Faglig fordypning og spesialisering i selvvalgt tema. Personlig har jeg valg temaet 'enshittification' etter å ha sett mange gode tjenester stadig bli verre."},
+        { semester: 5, emnekode: "BID3000", emnenavn: "Business Intelligence og datavarehus", emnebeskrivelse: "På norsk kjent som forretningsanalyse. Samling og analyse av data for å forbedre kvaliteten på avgjørelser. Bruk av ulike utviklingsverktøy er sentralt i kurset. Bygger på database 1. Pentaho (ETL), PowerBI (visualisering og measures), Python (visualisering, ETL)."},
+        { semester: 5, emnekode: "MOB3000", emnenavn: "Applikasjonsutvikling for mobile enheter", emnebeskrivelse: "Praktisk erfaring med utvikling av applikasjoner for mobile enheter. Android som utviklingsplattform, Java/Kotlin som språk."},
+        { semester: 5, emnekode: "AI3000R", emnenavn: "Artificial Intelligence for Business Applications", emnebeskrivelse: "Innflytelse av AI i organisasjoner og samfunnet generelt. Prinsipper og metoder for å utvikle smarte data-avhengige AI-løsninger. Metoder i maskinlæring, dyplæring og datamining. Grunnleggende Python-kunnskaper trengs."},
+        { semester: 5, emnekode: "SEL3000R",emnenavn: "Selvstudie IT og informasjonssystemer", emnebeskrivelse: "Faglig fordypning og spesialisering i selvvalgt tema. Personlig har jeg valg temaet 'enshittification' etter å ha sett mange gode tjenester stadig bli verre."},
         // 6 semester
-
-        { emnekode: "INT3002", emnenavn: "Internship", emnebeskrivelse: ""},
-        { emnekode: "SSS3000R",emnenavn: "IoT-teknologi og Mikrokontrollere i Smarte Systemer"},
-        { emnekode: "INF2020", emnenavn: "Operativsystemer"}
+        { semester: 6, emnekode: "INT3002", emnenavn: "Internship", emnebeskrivelse: ""},
+        { semester: 6, emnekode: "SSS3000R",emnenavn: "IoT-teknologi og Mikrokontrollere i Smarte Systemer"},
+        { semester: 6, emnekode: "INF2020", emnenavn: "Operativsystemer"}
 
     ];
 
@@ -123,6 +122,9 @@ const Emner = () => {
                             onSortChange={list.sort}
                         >
                             <TableHeader >
+                                <TableColumn key="semester" allowsSorting>
+                                    SEMESTER
+                                </TableColumn>
                                 <TableColumn key="emnekode" allowsSorting>
                                     EMNEKODE
                                 </TableColumn>
@@ -137,7 +139,7 @@ const Emner = () => {
                                 items={list.items}
                             >
                                 {(item) => (
-                                    <TableRow key={item.emnekode}>
+                                    <TableRow key={`${item.emnekode}-${item.emnenavn}`}>
                                         {(columnKey) => (
                                             <TableCell>
                                                 {renderCell(item, columnKey)}

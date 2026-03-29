@@ -90,7 +90,7 @@ function AppContent() {
       courses: [
         { id: "bid3000", title: "Business intelligence og datavarehus", path: "/emner/bid3000" },
         { id: "ai3000r", title: "Artificial Intelligence for Business Applications", path: "/emner/ai3000r" },
-        { id: "sel3000r", title: "Digital transformation", path: "/emner/sel3000r" },
+        { id: "sel3000r", title: "Selvstudie", path: "/emner/sel3000r" },
         { id: "mob3000", title: "Applikasjonsutvikling for mobile enheter", path: "/emner/mob3000" }
       ]
     },
@@ -98,9 +98,9 @@ function AppContent() {
       id: 6,
       title: "6. semester",
       courses: [
-        { id: "bop3000", title: "Placeholder", path: "/emner/pro1000" },
-        { id: "prr3000", title: "Placeholder", path: "/emner/sys1000" },
-        { id: "ai3000r", title: "Placeholder", path: "/emner/prg1100" }
+        { id: "int3002", title: "Internship", path: "/emner/int3002" },
+        { id: "sss3000r", title: "IoT-teknologi og mikrokontrollere i smarte systemer", path: "/emner/sss3000r" },
+        { id: "inf2020", title: "Operativsystemer", path: "/emner/inf2020" }
       ]
     },
   ]
@@ -108,8 +108,14 @@ function AppContent() {
 
 
   return (
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-background text-foreground relative">
 
+        {/* Background blobs for glassmorphism */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+          <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#3461D1]/25 rounded-full blur-3xl" />
+          <div className="absolute top-[35%] right-[-8%] w-[400px] h-[400px] bg-[#5B7FE0]/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-[5%] left-[15%] w-[350px] h-[350px] bg-[#3461D1]/15 rounded-full blur-3xl" />
+        </div>
 
         {/* DRAWER */}
         <Drawer
