@@ -32,6 +32,7 @@ import {HeroUIProvider} from "@heroui/system";
 import {Accordion, AccordionItem, Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, useDisclosure} from "@heroui/react";
 import logo from "./images/favicon-96x96.png"
 import {Image} from "@heroui/image";
+import PCBBackground from "./components/PCBBackground";
 
 
 function AppContent() {
@@ -108,10 +109,11 @@ function AppContent() {
 
 
   return (
-      <div className="min-h-screen bg-background text-foreground relative">
+      <div className="min-h-screen text-foreground relative">
 
-        {/* Background blobs for glassmorphism */}
+        {/* Background: PCB traces + glassmorphism blobs */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+          <PCBBackground />
           <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#3461D1]/25 rounded-full blur-3xl" />
           <div className="absolute top-[35%] right-[-8%] w-[400px] h-[400px] bg-[#5B7FE0]/20 rounded-full blur-3xl" />
           <div className="absolute bottom-[5%] left-[15%] w-[350px] h-[350px] bg-[#3461D1]/15 rounded-full blur-3xl" />
@@ -219,7 +221,7 @@ function AppContent() {
         </Drawer>
 
 
-        <nav className="bg-content1 shadow-md p-4 sticky top-0 z-40">
+        <nav className="bg-content1 shadow-md p-4 sticky top-0 z-40 border-b border-[#93aee8] dark:border-[#3461D1]">
           <div className="container mx-auto flex items-center">
             <div className="w-1/3 flex justify-start">
               <Button
