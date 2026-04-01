@@ -103,7 +103,8 @@ function Projects() {
                     <div>
                         <h2 className="text-xl font-semibold text-foreground mb-2">Vekteren</h2>
                         <p className="text-default-500 text-sm">
-                            En webapplikasjon utviklet som et personlig prosjekt.
+                            En personlig nettside om vektreduksjon gjennom kaloriunderskudd og varige livsstilsendringer —
+                            ikke kortvarige dietter eller jojo-slanking.
                         </p>
                     </div>
 
