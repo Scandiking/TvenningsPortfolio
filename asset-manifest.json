@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/TvenningsPortfolio/static/css/main.5008e22c.css",
-    "main.js": "/TvenningsPortfolio/static/js/main.69a59dc8.js",
-    "static/js/501.c586c093.chunk.js": "/TvenningsPortfolio/static/js/501.c586c093.chunk.js",
+    "main.css": "/TvenningsPortfolio/static/css/main.bbb95173.css",
+    "main.js": "/TvenningsPortfolio/static/js/main.68462e17.js",
+    "static/js/501.0a876ef7.chunk.js": "/TvenningsPortfolio/static/js/501.0a876ef7.chunk.js",
     "static/media/LinkedInBanner3.png": "/TvenningsPortfolio/static/media/LinkedInBanner3.816b85a5d29ca61b25c9.png",
     "static/media/KaTeX_AMS-Regular.ttf": "/TvenningsPortfolio/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/TvenningsPortfolio/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -65,12 +65,12 @@
     "static/media/KaTeX_Size3-Regular.woff": "/TvenningsPortfolio/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/TvenningsPortfolio/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/TvenningsPortfolio/index.html",
-    "main.5008e22c.css.map": "/TvenningsPortfolio/static/css/main.5008e22c.css.map",
-    "main.69a59dc8.js.map": "/TvenningsPortfolio/static/js/main.69a59dc8.js.map",
-    "501.c586c093.chunk.js.map": "/TvenningsPortfolio/static/js/501.c586c093.chunk.js.map"
+    "main.bbb95173.css.map": "/TvenningsPortfolio/static/css/main.bbb95173.css.map",
+    "main.68462e17.js.map": "/TvenningsPortfolio/static/js/main.68462e17.js.map",
+    "501.0a876ef7.chunk.js.map": "/TvenningsPortfolio/static/js/501.0a876ef7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5008e22c.css",
-    "static/js/main.69a59dc8.js"
+    "static/css/main.bbb95173.css",
+    "static/js/main.68462e17.js"
   ]
 }
