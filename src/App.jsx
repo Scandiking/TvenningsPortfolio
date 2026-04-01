@@ -111,12 +111,9 @@ function AppContent() {
   return (
       <div className="min-h-screen text-foreground relative">
 
-        {/* Background: PCB traces + glassmorphism blobs */}
-        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        {/* Background */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-[#f0f8ff] dark:bg-[#060e1e]">
           <PCBBackground />
-          <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#3461D1]/25 rounded-full blur-3xl" />
-          <div className="absolute top-[35%] right-[-8%] w-[400px] h-[400px] bg-[#5B7FE0]/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-[5%] left-[15%] w-[350px] h-[350px] bg-[#3461D1]/15 rounded-full blur-3xl" />
         </div>
 
         {/* DRAWER */}
