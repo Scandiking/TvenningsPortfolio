@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import {useNavigate} from "react-router-dom";
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
@@ -35,14 +36,7 @@ const MOB3000 = () => {
 
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/MOB3000/DartBud_g1.pdf`} title="MOB3000 Rapport" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade A"
-                                    src="https://img.shields.io/badge/Karakter-A-gold"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="A" />
 
                             </CardBody>
                         </CardHeader>

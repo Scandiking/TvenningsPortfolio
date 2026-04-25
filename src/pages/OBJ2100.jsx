@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -135,14 +136,7 @@ const OBJ2100 = () => {
 
                             </div>
 
-                            <Image
-                                loading="eager"
-                                radius="none"
-                                alt="Little badge that says grade B"
-                                src="https://img.shields.io/badge/Karakter-B-silver"
-                                width="100"
-                                height="auto"
-                            />
+                            <GradeBadge grade="B" />
 
                         </CardBody>
                     </Card>

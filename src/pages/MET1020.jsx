@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Tab, Tabs} from "@heroui/tabs";
@@ -102,14 +103,7 @@ const MET1020 = () => {
                                         className="border-0"
                                     />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade C"
-                                    src="https://img.shields.io/badge/Karakter-C-rosybrown"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="C" />
 
                             </CardBody>
                         </Card>

@@ -30,7 +30,6 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 import ORL1000 from "./pages/ORL1000";
 import {HeroUIProvider} from "@heroui/system";
 import {Accordion, AccordionItem, Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, useDisclosure} from "@heroui/react";
-import logo from "./images/favicon-96x96.png"
 import {Image} from "@heroui/image";
 import PCBBackground from "./components/PCBBackground";
 
@@ -112,7 +111,7 @@ function AppContent() {
       <div className="min-h-screen text-foreground relative">
 
         {/* Background */}
-        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-[#f0f8ff] dark:bg-[#060e1e]">
+        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-neutral-50 dark:bg-black">
           <PCBBackground />
         </div>
 
@@ -135,7 +134,7 @@ function AppContent() {
             {(onClose) => (
                 <>
                   <DrawerHeader className="flex flex-col gap-1">
-                    <h2 className="text-2xl font-bold">Meny</h2>
+                    <h2 className="text-2xl font-bold font-heading">Meny</h2>
                   </DrawerHeader>
                   <DrawerBody className="overflow-y-auto">
                     <div className="flex flex-col space-y-4">
@@ -218,7 +217,7 @@ function AppContent() {
         </Drawer>
 
 
-        <nav className="bg-content1 shadow-md p-4 sticky top-0 z-40 border-b border-[#93aee8] dark:border-[#3461D1]">
+        <nav className="bg-content1 shadow-sm p-4 sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-700">
           <div className="container mx-auto flex items-center">
             <div className="w-1/3 flex justify-start">
               <Button
@@ -245,14 +244,13 @@ function AppContent() {
             </div>
 
             <div className="w-1/3 flex justify-center">
-              <Link to="/">
-                <Image
-                    shadow="sm"
-                    radius="sm"
-                    src={logo}
-                    alt="Tvenning Tech Logo"
-                    width={60}
-                />
+              <Link to="/" className="flex items-center gap-2.5">
+                <div className="bg-brand-500 rounded-logo w-8 h-7 flex items-center justify-center">
+                  <img src={`${process.env.PUBLIC_URL}/assets/TvenningLogo-596.png`} alt="" className="w-6" />
+                </div>
+                <span className="font-heading font-bold text-base text-foreground hidden sm:inline">
+                  Tvenning<span className="text-brand-500">-Tech</span>
+                </span>
               </Link>
             </div>
 
@@ -262,6 +260,7 @@ function AppContent() {
           </div>
         </nav>
 
+        <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -289,6 +288,8 @@ function AppContent() {
           <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
           <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
         </Routes>
+        </main>
+
       </div>
   );
 }

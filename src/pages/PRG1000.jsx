@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React from 'react';
 import {Tabs, Tab} from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -826,14 +827,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
                             </div>
 
                                 {/* */}
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade A"
-                                    src="https://img.shields.io/badge/Karakter-D-yellow"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="D" />
 
 
                             </CardBody>

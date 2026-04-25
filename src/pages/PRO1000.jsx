@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -98,14 +99,7 @@ const PRO1000 = () => {
                                 <p>Denne rapporten teller som eksamen i dette faget. Det er blant annet derfor vi har kandidatnummer i stedet for navnene våre til tross for at det er åpenbart for sensor hvem som er hvem.</p>
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/PRO1000/RapportPRO1000.pdf`} title="" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade A"
-                                    src="https://img.shields.io/badge/Karakter-A-gold"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="A" />
 
                             </CardBody>
                         </Card>

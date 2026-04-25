@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React, { useState, useEffect } from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -68,14 +69,7 @@ const INF1000 = () => {
                                         <p>Dette er hentet fra WiseFlow og er automatisert. Jeg har ikke kontroll over formateringen utover skriftstørrelse og uthevinger, derfor ser det ut som det gjør.</p>
                                         <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/INF1000/INF1000-Eksamen.pdf`} title="INF1000 Eksamen" />
 
-                                        <Image
-                                            loading="eager"
-                                            radius="none"
-                                            alt="Little badge that says grade B"
-                                            src="https://img.shields.io/badge/Karakter-B-silver"
-                                            width="100"
-                                            height="auto"
-                                        />
+                                        <GradeBadge grade="B" />
 
                                     </CardBody>
                                 </Card>

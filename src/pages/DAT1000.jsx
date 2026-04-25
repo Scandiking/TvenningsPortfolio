@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -248,14 +249,7 @@ ON Senter.Senternavn = Hund.HundeID;`
                                     alt="Oppgave 4c"
                                     src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-opppgave4c.png`}
                                 />
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade E"
-                                    src="https://img.shields.io/badge/Karakter-E-orange"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="E" />
 
                             </CardBody>
                         </Card>

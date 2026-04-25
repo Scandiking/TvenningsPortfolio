@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -1000,14 +1001,7 @@ conn.close()
                                 <p>This diagram shows both schemas as the fact tables uses the same dimension tables.</p>
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/BID3000/ERD_diagram.pdf`} title="Entity Relation Diagram for a data warehouse in snowflake" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade A"
-                                    src="https://img.shields.io/badge/Karakter-A-gold"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="A" />
 
 
                             </CardBody>
@@ -1023,14 +1017,7 @@ conn.close()
                                 <p>Besvarelse på oppgavesett.</p>
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/BID3000/7214-Min besvarelse.pdf`} title="BID3000 Eksamen" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade B"
-                                    src="https://img.shields.io/badge/Karakter-B-silver"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="B" />
 
 
                             </CardBody>

@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tabs, Tab } from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -95,14 +96,7 @@ const APP2000 = () => {
 
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/APP2000/Group8ReportAPP2000.pdf`} title="APP2000 Eksamen" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade A"
-                                    src="https://img.shields.io/badge/Karakter-A-gold"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="A" />
 
                             </CardBody>
                         </Card>

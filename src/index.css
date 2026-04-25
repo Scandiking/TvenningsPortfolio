@@ -1,6 +1,12 @@
+@import './styles/colors_and_type.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: var(--font-body);
+}
 
 html {
   scroll-behavior: smooth;

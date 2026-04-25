@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -82,14 +83,7 @@ const DAT2000 = () => {
                                 <p>Besvarelse på eksamen i Database 2</p>
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/DAT2000/DAT2000-Eksamen.pdf`} title="Examination Information Page" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade E"
-                                    src="https://img.shields.io/badge/Karakter-E-orange"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="E" />
                             </CardBody>
                         </Card>
                     </Tab>

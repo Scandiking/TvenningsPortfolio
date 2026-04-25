@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Tabs, Tab } from "@heroui/tabs";
@@ -5,11 +6,9 @@ import AnimatedPage from '../components/AnimatedPage';
 import AnimatedTabs from '../components/AnimatedTabs';
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
-import { IpynbRenderer } from 'react-ipynb-renderer';
-import 'react-ipynb-renderer/dist/styles/monokai.css';
 import {Image} from "@heroui/image";
-//import './notebooks/AI3000R/NY-Housing-Prices_Machine_Learning_Model.ipynb';
 import { PDFViewer } from "../components/PDFViewer";
+import NotebookViewer from "../components/NotebookViewer";
 
 
 const AI3000R = () => {
@@ -18,53 +17,14 @@ const AI3000R = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const fixNotebook = (notebook) => {
-        return {
-            ...notebook,
-            cells: notebook.cells.map(cell => {
-                if (cell.cell_type === 'markdown') {
-                    const source = Array.isArray(cell.source)
-                        ? cell.source.join('')
-                        : cell.source;
-
-                    const fixed = source.replace(/\\space/g, '~');
-
-                    return { ...cell, source: fixed };
-                }
-                return cell;
-            })
-        };
-    };
-
-
-    // const fixMathBackslashes = (notebook) => {
-    //     return {
-    //         ...notebook,
-    //         cells: notebook.cells.map(cell => {
-    //             if (cell.cell_type === 'markdown') {
-    //                 const source = Array.isArray(cell.source)
-    //                     ? cell.source.join('')
-    //                     : cell.source;
-    //
-    //                 const fixed = source.replace(/\$([^$]*?)\$/g, (match) => {
-    //                     return match.replace(/\\/g, '\\\\');
-    //                 });
-    //
-    //                 return { ...cell, source: fixed };
-    //             }
-    //             return cell;
-    //         })
-    //     };
-    // };
-
     useEffect(() => {
-        const url = 'https://raw.githubusercontent.com/Scandiking/NY-Housing-Prices_Machine_Learning_Model/master/NY-Housing-Prices_Machine_Learning_Model.ipynb';
+        const url = `${process.env.PUBLIC_URL}/notebooks/AI3000R/NY-Housing-Prices_Machine_Learning_Model.ipynb`;
 
         fetch(url)
             .then(res => res.json())
             .then(data => {
                 if (!data.cells) throw new Error('Invalid notebook format');
-                setNotebook(fixNotebook(data));
+                setNotebook(data);
             })
             .catch(err => setError(err.message))
             .finally(() => setLoading(false));
@@ -111,7 +71,7 @@ const AI3000R = () => {
                                 )}
                                 {notebook && (
                                     <div className="overflow-auto max-w-full">
-                                        <IpynbRenderer ipynb={notebook} />
+                                        <NotebookViewer ipynb={notebook} />
                                     </div>
                                 )}
 
@@ -135,14 +95,7 @@ const AI3000R = () => {
                                 <h2 className="text-md font-semibold">Besvarelse</h2>
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/AI3000R/7066-Min besvarelse.pdf`} title="AI3000R Eksamen - Studentens besvarelse" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade B"
-                                    src="https://img.shields.io/badge/Karakter-B-silver"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="B" />
 
                             </CardBody>
                         </Card>

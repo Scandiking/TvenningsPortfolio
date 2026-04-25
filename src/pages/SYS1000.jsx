@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React from 'react';
 import {Tabs, Tab} from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -46,14 +47,7 @@ const SYS1000 = () => {
 
                                 <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/SYS1000/SYS1000Rapport.pdf`} title="DAT1000 Arbeidskrav 1" />
 
-                                <Image
-                                    loading="eager"
-                                    radius="none"
-                                    alt="Little badge that says grade B"
-                                    src="https://img.shields.io/badge/Karakter-B-silver"
-                                    width="100"
-                                    height="auto"
-                                />
+                                <GradeBadge grade="B" />
 
 
                             </CardBody>

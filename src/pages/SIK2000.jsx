@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import React, { useState, useEffect } from 'react';
 import { Tabs, Tab } from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -76,14 +77,7 @@ const SIK2000 = () => {
 
                                         <p>Eksamen i informasjonssikkerhet var i form av kulepunkter med fire svaralternativer på spørsmål. Disse er dessverre ikke tilgjengelig for nedlasting via Wiseflow, men gikk på stoffet fra læreboken <i>Datasikkerhet</i> av Tom Heine Nätt.</p>
 
-                                        <Image
-                                            loading="eager"
-                                            radius="none"
-                                            alt="Little badge that says grade A"
-                                            src="https://img.shields.io/badge/Karakter-A-gold"
-                                            width="100"
-                                            height="auto"
-                                        />
+                                        <GradeBadge grade="A" />
 
                                     </CardBody>
                                 </Card>

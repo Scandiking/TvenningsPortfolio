@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {Tab, Tabs} from "@heroui/tabs";
 import AnimatedPage from '../components/AnimatedPage';
@@ -79,14 +80,7 @@ const ESB1000 = () => {
                             <p>Min besvarelse på eksamen, oppgave 2.</p>
                             <PDFViewer src={`${process.env.PUBLIC_URL}/pdfs/ESB1000/(7850)-Min%20besvarelse.pdf`} title="ESB1000 Eksamen" />
 
-                            <Image
-                                loading="eager"
-                                radius="none"
-                                alt="Little badge that says grade C"
-                                src="https://img.shields.io/badge/Karakter-C-yellow"
-                                width="100"
-                                height="auto"
-                            />
+                            <GradeBadge grade="C" />
 
                         </CardBody>
                     </Card>

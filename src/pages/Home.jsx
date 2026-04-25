@@ -22,10 +22,10 @@ function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="bg-content1/80 dark:bg-content1/80 backdrop-blur-md rounded-xl p-6 mb-8 shadow-md border border-[#93aee8] dark:border-[#3461D1]"
+                    className="bg-content1/80 dark:bg-content1/80 backdrop-blur-md rounded-xl p-6 mb-8 shadow-md border border-neutral-200 dark:border-neutral-700"
                 >
 
-                    <h1 className="text-3xl font-bold text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
+                    <h1 className="text-3xl font-extrabold font-display tracking-tight text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}
 
                     <div>
                         <Image
@@ -39,7 +39,7 @@ function Home() {
                     </div>
 
 
-                    <p className="text-default-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p> {/* ENDRET: text-gray-600 dark:text-gray-500 → text-default-500 */}
+                    <p className="font-body text-default-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p> {/* ENDRET: text-gray-600 dark:text-gray-500 → text-default-500 */}
 
                     <div className="flex flex-wrap gap-4">
                         <Button onClick={handleClick} variant="primary">Kontakt meg</Button>

@@ -1,3 +1,4 @@
+import GradeBadge from '../components/GradeBadge';
 import {BreadcrumbItem, Breadcrumbs} from "@heroui/breadcrumbs";
 import {useNavigate} from "react-router-dom";
 import {Tab, Tabs} from "@heroui/tabs";
@@ -44,14 +45,7 @@ const SEL3000R = () => {
                             <Spacer/>
                             <Spacer/>
                             <Spacer/>
-                            <Image
-                                loading="eager"
-                                radius="none"
-                                alt="Little badge that says grade A"
-                                src="https://img.shields.io/badge/Karakter-A-gold"
-                                width="100"
-                                height="auto"
-                            />
+                            <GradeBadge grade="A" />
                         </CardBody>
                     </Card>
                 </Tab>

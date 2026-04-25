@@ -34,16 +34,16 @@ function Button({ children, onClick, className = ' ', variant = 'primary', size 
     setRippleArray([...rippleArray, ripple]);
   };
 
-  // Variants
   const variants = {
-    primary: 'bg-blue-500 hover:bg-blue-600 text-white',
-    secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-800',
-    success: 'bg-green-500 hover:bg-green-600 text-white',
-    danger: 'bg-red-500 hover:bg-red-600 text-white',
-    warning: 'bg-yellow-500 hover:bg-yellow-600 text-white',
-    info: 'bg-cyan-500 hover:bg-cyan-600 text-white',
-    light: 'bg-gray-100 hover:bg-gray-200 text-gray-800',
-    dark: 'bg-gray-400 hover:bg-gray-900 text-white',
+    primary:   'bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white',
+    secondary: 'border border-brand-500 text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-900 bg-transparent',
+    ghost:     'text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 bg-transparent',
+    success:   'bg-[#2a9d5c] hover:bg-[#228a4e] text-white',
+    danger:    'bg-[#cc3344] hover:bg-[#b02a38] text-white',
+    warning:   'bg-[#e8901a] hover:bg-[#d07d12] text-white',
+    info:      'bg-fjord-500 hover:bg-fjord-700 text-white',
+    light:     'bg-neutral-100 hover:bg-neutral-200 text-neutral-900',
+    dark:      'bg-neutral-800 hover:bg-neutral-900 text-white',
   };
 
   // Sizes
@@ -62,7 +62,7 @@ function Button({ children, onClick, className = ' ', variant = 'primary', size 
   return (
       <button
           onClick={handleClick}
-          className={`relative overflow-hidden font-semibold rounded transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`}
+          className={`relative overflow-hidden font-body font-semibold rounded-md transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`}
       >
         {/* Ripple effects */}
         {rippleArray.map(ripple => (
