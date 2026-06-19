@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Syne", "Arial Black", "sans-serif"],
+        display: ["Ubuntu", "Arial", "sans-serif"],
         heading: ["Space Grotesk", "Arial", "sans-serif"],
         body:    ["DM Sans", "Helvetica Neue", "sans-serif"],
         mono:    ["JetBrains Mono", "Courier New", "monospace"],

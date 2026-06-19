@@ -4,12 +4,12 @@
  * Core design tokens — import this file everywhere.
  *
  * Google Fonts used (flag: substitute for licensed fonts if supplied):
- *   - Syne        (display / headings)
+ *   - Ubuntu      (display / hero)
  *   - DM Sans     (body / UI)
  *   - JetBrains Mono (code / mono)
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ─────────────────────────────────────────
    BRAND COLORS
@@ -83,7 +83,7 @@
    ───────────────────────────────────────── */
 :root {
   /* Families */
-  --font-display: 'Syne', 'Arial Black', sans-serif;          /* 800 weight only — display / hero */
+  --font-display: 'Ubuntu', 'Arial', sans-serif;              /* 700 weight — display / hero */
   --font-heading: 'Space Grotesk', 'Arial', sans-serif;       /* H1–H3 — readable geometric */
   --font-body:    'DM Sans', 'Helvetica Neue', sans-serif;
   --font-mono:    'JetBrains Mono', 'Courier New', monospace;
