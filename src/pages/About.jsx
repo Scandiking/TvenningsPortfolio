@@ -14,7 +14,7 @@ function About() {
                 </Breadcrumbs>
             </div>
 
-            <div className="bg-content1/80 dark:bg-content1/80 backdrop-blur-md rounded-lg shadow-md p-6 border border-neutral-200 dark:border-neutral-700">
+            <div className="bg-content1/80 dark:bg-content1/80 backdrop-blur-md rounded-lg shadow-md p-6 border border-default-200 dark:border-default-700">
                 <h1 className="text-3xl font-extrabold font-display tracking-tight text-foreground mb-4">Om meg</h1>
                 <p className="font-body text-default-500 mb-4">
                     Hei! Jeg er en 31 år gammel tech-entusiast som har brukt personlige datamaskiner siden jeg var 4 år og fikk lov av pappa å spille Moto Racer (1997) på vår Compaq Presario 5600.
@@ -24,12 +24,12 @@ function About() {
                 </p>
                 <h2 className="text-2xl font-bold font-heading text-foreground mt-6 mb-3">Mine ferdigheter</h2>
                 <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-3 py-1 bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200 rounded-full font-body text-sm font-medium">React</span> {/* ENDRET: bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-500 → bg-primary-100 text-primary-800 */}
-                    <span className="px-3 py-1 bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200 rounded-full font-body text-sm font-medium">JavaScript</span> {/* ENDRET: bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-500 → bg-primary-100 text-primary-800 */}
-                    <span className="px-3 py-1 bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200 rounded-full font-body text-sm font-medium">Tailwind CSS</span> {/* ENDRET: bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-500 → bg-primary-100 text-primary-800 */}
-                    <span className="px-3 py-1 bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200 rounded-full font-body text-sm font-medium">HTML/CSS</span> {/* ENDRET: bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-500 → bg-primary-100 text-primary-800 */}
-                    <span className="px-3 py-1 bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200 rounded-full font-body text-sm font-medium">Responsive Design</span> {/* ENDRET: bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-500 → bg-primary-100 text-primary-800 */}
-                    <span className="px-3 py-1 bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200 rounded-full font-body text-sm font-medium">UI/UX</span> {/* ENDRET: bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-500 → bg-primary-100 text-primary-800 */}
+                    <span className="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200 rounded-full font-body text-sm font-medium">React</span>
+                    <span className="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200 rounded-full font-body text-sm font-medium">JavaScript</span>
+                    <span className="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200 rounded-full font-body text-sm font-medium">Tailwind CSS</span>
+                    <span className="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200 rounded-full font-body text-sm font-medium">HTML/CSS</span>
+                    <span className="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200 rounded-full font-body text-sm font-medium">Responsive Design</span>
+                    <span className="px-3 py-1 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200 rounded-full font-body text-sm font-medium">UI/UX</span>
                 </div>
             </div>
         </div>

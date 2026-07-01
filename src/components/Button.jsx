@@ -35,15 +35,15 @@ function Button({ children, onClick, className = ' ', variant = 'primary', size 
   };
 
   const variants = {
-    primary:   'bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white',
-    secondary: 'border border-brand-500 text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-900 bg-transparent',
-    ghost:     'text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 bg-transparent',
-    success:   'bg-[#2a9d5c] hover:bg-[#228a4e] text-white',
-    danger:    'bg-[#cc3344] hover:bg-[#b02a38] text-white',
-    warning:   'bg-[#e8901a] hover:bg-[#d07d12] text-white',
-    info:      'bg-fjord-500 hover:bg-fjord-700 text-white',
-    light:     'bg-neutral-100 hover:bg-neutral-200 text-neutral-900',
-    dark:      'bg-neutral-800 hover:bg-neutral-900 text-white',
+    primary:   'bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-white',
+    secondary: 'border border-primary-500 text-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900 bg-transparent',
+    ghost:     'text-default-700 dark:text-default-200 hover:bg-default-100 dark:hover:bg-default-800 bg-transparent',
+    success:   'bg-success-500 hover:bg-success-600 text-white',
+    danger:    'bg-danger-500 hover:bg-danger-600 text-white',
+    warning:   'bg-warning-500 hover:bg-warning-600 text-white',
+    info:      'bg-secondary-500 hover:bg-secondary-700 text-white',
+    light:     'bg-default-100 hover:bg-default-200 text-default-900',
+    dark:      'bg-default-800 hover:bg-default-900 text-white',
   };
 
   // Sizes

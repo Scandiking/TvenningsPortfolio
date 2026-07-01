@@ -12,73 +12,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ─────────────────────────────────────────
-   BRAND COLORS
-   ───────────────────────────────────────── */
-:root {
-  /* Primary — brand blue from logo */
-  --color-brand-50:  #eaf0fb;
-  --color-brand-100: #c7d8f5;
-  --color-brand-200: #99b8ed;
-  --color-brand-300: #6699e6;
-  --color-brand-400: #4480db;
-  --color-brand-500: #3366cc;   /* ← logo blue */
-  --color-brand-600: #2554b8;
-  --color-brand-700: #1a4399;
-  --color-brand-800: #112f77;
-  --color-brand-900: #0a1e4f;
-
-  /* Neutral — blue-tinted grays (Nordic sky) */
-  --color-neutral-0:   #ffffff;
-  --color-neutral-50:  #f4f6fc;
-  --color-neutral-100: #e6eaf5;
-  --color-neutral-200: #c8cfdf;
-  --color-neutral-300: #a4aec6;
-  --color-neutral-400: #7a8baa;
-  --color-neutral-500: #56688a;
-  --color-neutral-600: #3d4f6e;
-  --color-neutral-700: #283655;
-  --color-neutral-800: #18243d;
-  --color-neutral-900: #0d1526;
-
-  /* Fjord accent — deep Arctic teal (Meløy fjordwater) */
-  --color-fjord-300: #7acad6;
-  --color-fjord-500: #1a7a8a;
-  --color-fjord-700: #0f4f5a;
-
-  /* Midnight Sun accent — Nordland summer amber */
-  --color-sun-300:  #f5c872;
-  --color-sun-500:  #e8901a;
-  --color-sun-700:  #a05f00;
-
-  /* Semantic aliases */
-  --color-bg:           var(--color-neutral-0);
-  --color-bg-subtle:    var(--color-neutral-50);
-  --color-bg-muted:     var(--color-neutral-100);
-  --color-border:       var(--color-neutral-200);
-  --color-border-strong:var(--color-neutral-300);
-
-  --color-fg:           var(--color-neutral-900);
-  --color-fg-muted:     var(--color-neutral-600);
-  --color-fg-subtle:    var(--color-neutral-400);
-  --color-fg-inverted:  var(--color-neutral-0);
-
-  --color-primary:      var(--color-brand-500);
-  --color-primary-hover:var(--color-brand-600);
-  --color-primary-press:var(--color-brand-700);
-  --color-primary-subtle:var(--color-brand-50);
-
-  --color-accent:       var(--color-fjord-500);
-  --color-accent-warm:  var(--color-sun-500);
-
-  /* Status */
-  --color-success: #2a9d5c;
-  --color-warning: var(--color-sun-500);
-  --color-error:   #cc3344;
-  --color-info:    var(--color-brand-500);
-}
-
-
-/* ─────────────────────────────────────────
    TYPOGRAPHY — SCALE & FAMILIES
    ───────────────────────────────────────── */
 :root {
@@ -184,11 +117,6 @@
   --radius-xl:   16px;
   --radius-pill: 999px;
   --radius-logo: 12px;   /* logo square rounding */
-
-  --border-thin:   1px solid var(--color-border);
-  --border-medium: 2px solid var(--color-border);
-  --border-strong: 1px solid var(--color-border-strong);
-  --border-brand:  2px solid var(--color-primary);
 }
 
 
@@ -201,7 +129,7 @@
   --shadow-md:  0 4px 16px 0 rgba(13,21,38,.10);
   --shadow-lg:  0 8px 32px 0 rgba(13,21,38,.12);
   --shadow-xl:  0 16px 48px 0 rgba(13,21,38,.14);
-  --shadow-brand: 0 4px 20px 0 rgba(51,102,204,.25);
+  --shadow-brand: 0 4px 20px 0 rgba(0,111,238,.25);
 }
 
 

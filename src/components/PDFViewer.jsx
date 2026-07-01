@@ -48,7 +48,7 @@ export function PDFViewer({ src, title = '' }) {
             {/* ── Scrollable page stack ── */}
             <div
                 ref={containerRef}
-                className="overflow-y-auto bg-neutral-200 dark:bg-neutral-800"
+                className="overflow-y-auto bg-default-200 dark:bg-default-800"
                 style={{ maxHeight: '80vh' }}
             >
                 <Document

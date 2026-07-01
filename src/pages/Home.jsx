@@ -22,7 +22,7 @@ function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="bg-content1/80 dark:bg-content1/80 backdrop-blur-md rounded-xl p-6 mb-8 shadow-md border border-neutral-200 dark:border-neutral-700"
+                    className="bg-content1/80 dark:bg-content1/80 backdrop-blur-md rounded-xl p-6 mb-8 shadow-md border border-default-200 dark:border-default-700"
                 >
 
                     <h1 className="text-3xl font-extrabold font-display tracking-tight text-foreground mb-4">Velkommen til min portfolio</h1> {/* ENDRET: text-gray-800 dark:text-gray-500 → text-foreground */}

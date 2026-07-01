@@ -13,7 +13,7 @@ function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut' }}
-                    className="bg-brand-300 dark:bg-gradient-to-br dark:from-brand-600 dark:to-brand-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
+                    className="bg-primary-300 dark:bg-gradient-to-br dark:from-primary-600 dark:to-primary-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
                 >
                 <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
                     <div>
@@ -55,7 +55,7 @@ function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
-                    className="bg-brand-300 dark:bg-gradient-to-br dark:from-brand-600 dark:to-brand-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
+                    className="bg-primary-300 dark:bg-gradient-to-br dark:from-primary-600 dark:to-primary-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
                 >
                 <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
                     <div>
@@ -97,7 +97,7 @@ function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut', delay: 0.2 }}
-                    className="bg-brand-300 dark:bg-gradient-to-br dark:from-brand-600 dark:to-brand-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
+                    className="bg-primary-300 dark:bg-gradient-to-br dark:from-primary-600 dark:to-primary-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
                 >
                 <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
                     <div>

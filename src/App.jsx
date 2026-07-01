@@ -111,7 +111,7 @@ function AppContent() {
       <div className="min-h-screen text-foreground relative">
 
         {/* Background */}
-        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-neutral-50 dark:bg-black">
+        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-default-50 dark:bg-black">
           <PCBBackground />
         </div>
 
@@ -217,7 +217,7 @@ function AppContent() {
         </Drawer>
 
 
-        <nav className="bg-content1 shadow-sm p-4 sticky top-0 z-40 border-b border-neutral-200 dark:border-neutral-700">
+        <nav className="bg-content1 shadow-sm p-4 sticky top-0 z-40 border-b border-default-200 dark:border-default-700">
           <div className="container mx-auto flex items-center">
             <div className="w-1/3 flex justify-start">
               <Button
@@ -245,11 +245,11 @@ function AppContent() {
 
             <div className="w-1/3 flex justify-center">
               <Link to="/" className="flex items-center gap-2.5">
-                <div className="bg-brand-500 rounded-logo w-8 h-7 flex items-center justify-center">
+                <div className="bg-primary rounded-logo w-8 h-7 flex items-center justify-center">
                   <img src={`${process.env.PUBLIC_URL}/assets/TvenningLogo-596.png`} alt="" className="w-6" />
                 </div>
                 <span className="font-heading font-bold text-base text-foreground hidden sm:inline">
-                  Tvenning<span className="text-brand-500">-Tech</span>
+                  Tvenning<span className="text-primary">-Tech</span>
                 </span>
               </Link>
             </div>
