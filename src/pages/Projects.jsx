@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 function Projects() {
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-extrabold font-display tracking-tight text-foreground mb-2">Prosjekter</h1>
-            <p className="font-body text-default-500 mb-8">Ekstra prosjekter utenfor studieplanens emner.</p>
+            <h1 className="text-3xl font-medium text-foreground mb-2">Prosjekter</h1>
+            <p className="text-default-500 mb-8">Ekstra prosjekter utenfor studieplanens emner.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -13,9 +13,9 @@ function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut' }}
-                    className="bg-primary-300 dark:bg-gradient-to-br dark:from-primary-600 dark:to-primary-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
+                    className="bg-content1 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
-                <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
+                <div className="p-6 flex flex-col gap-4 h-full">
                     <div>
                         <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Landlosen</h2>
                         <p className="text-default-500 text-sm">
@@ -55,9 +55,9 @@ function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
-                    className="bg-primary-300 dark:bg-gradient-to-br dark:from-primary-600 dark:to-primary-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
+                    className="bg-content1 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
-                <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
+                <div className="p-6 flex flex-col gap-4 h-full">
                     <div>
                         <h2 className="text-xl font-semibold font-heading text-foreground mb-2">PKDEX</h2>
                         <p className="text-default-500 text-sm">
@@ -97,9 +97,9 @@ function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut', delay: 0.2 }}
-                    className="bg-primary-300 dark:bg-gradient-to-br dark:from-primary-600 dark:to-primary-400 p-[1px] rounded-lg shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-brand"
+                    className="bg-content1 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
-                <div className="bg-content1 rounded-lg p-6 flex flex-col gap-4 h-full">
+                <div className="p-6 flex flex-col gap-4 h-full">
                     <div>
                         <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Vekteren</h2>
                         <p className="text-default-500 text-sm">

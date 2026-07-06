@@ -62,7 +62,7 @@ function Button({ children, onClick, className = ' ', variant = 'primary', size 
   return (
       <button
           onClick={handleClick}
-          className={`relative overflow-hidden font-body font-semibold rounded-md transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`}
+          className={`relative overflow-hidden font-medium rounded-full transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`}
       >
         {/* Ripple effects */}
         {rippleArray.map(ripple => (

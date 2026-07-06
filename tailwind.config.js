@@ -10,29 +10,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Ubuntu", "Arial", "sans-serif"],
-        heading: ["Space Grotesk", "Arial", "sans-serif"],
-        body:    ["DM Sans", "Helvetica Neue", "sans-serif"],
-        mono:    ["JetBrains Mono", "Courier New", "monospace"],
-      },
-      borderRadius: {
-        sm:   "3px",
-        md:   "6px",
-        lg:   "10px",
-        xl:   "16px",
-        logo: "12px",
-      },
-      boxShadow: {
-        xs:    "0 1px 2px 0 rgba(13,21,38,.06)",
-        sm:    "0 2px 6px 0 rgba(13,21,38,.08)",
-        md:    "0 4px 16px 0 rgba(13,21,38,.10)",
-        lg:    "0 8px 32px 0 rgba(13,21,38,.12)",
-        xl:    "0 16px 48px 0 rgba(13,21,38,.14)",
-        brand: "0 4px 20px 0 rgba(0,111,238,.25)",
-      },
-      transitionTimingFunction: {
-        "out-snap": "cubic-bezier(0.22, 1, 0.36, 1)",
-        "spring":   "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        // Material Design 3: Roboto everywhere. The role-named families are
+        // kept as aliases so existing font-display/heading/body classes
+        // resolve to the same face without touching every page.
+        sans:    ["Roboto", "system-ui", "sans-serif"],
+        display: ["Roboto", "system-ui", "sans-serif"],
+        heading: ["Roboto", "system-ui", "sans-serif"],
+        body:    ["Roboto", "system-ui", "sans-serif"],
+        mono:    ["Roboto Mono", "Courier New", "monospace"],
       },
       zIndex: {
         '60': '60',
@@ -48,5 +33,22 @@ module.exports = {
       },
     },
   },
-  plugins: [heroui()],
+  plugins: [heroui({
+    themes: {
+      // MD3 paper: white cards need a dim ground in light mode;
+      // dark mode uses the classic Material #121212 / #1E1E1E pair.
+      light: {
+        colors: {
+          background: "#F6F7F9",
+          content1: "#FFFFFF",
+        },
+      },
+      dark: {
+        colors: {
+          background: "#121212",
+          content1: "#1E1E1E",
+        },
+      },
+    },
+  })],
 }

@@ -33,7 +33,6 @@ import ORL1000 from "./pages/ORL1000";
 import {HeroUIProvider} from "@heroui/system";
 import {Accordion, AccordionItem, Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, useDisclosure} from "@heroui/react";
 import {Image} from "@heroui/image";
-import PCBBackground from "./components/PCBBackground";
 
 
 function AppContent() {
@@ -110,12 +109,7 @@ function AppContent() {
 
 
   return (
-      <div className="min-h-screen text-foreground relative">
-
-        {/* Background */}
-        <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-default-50 dark:bg-black">
-          <PCBBackground />
-        </div>
+      <div className="min-h-screen text-foreground relative bg-background">
 
         {/* DRAWER */}
         <Drawer
@@ -123,7 +117,7 @@ function AppContent() {
             onOpenChange={onOpenChange}
             placement="left"
             size="sm"
-            backdrop="blur"
+            backdrop="opaque"
             portalContainer={document.body}
             classNames={{
               wrapper: "z-[9999]",
@@ -219,7 +213,7 @@ function AppContent() {
         </Drawer>
 
 
-        <nav className="bg-content1 shadow-sm p-4 sticky top-0 z-40 border-b border-default-200 dark:border-default-700">
+        <nav className="bg-content1 shadow-sm p-4 sticky top-0 z-40">
           <div className="container mx-auto flex items-center">
             <div className="w-1/3 flex justify-start">
               <Button
@@ -247,7 +241,7 @@ function AppContent() {
 
             <div className="w-1/3 flex justify-center">
               <Link to="/" className="flex items-center gap-2.5">
-                <div className="bg-primary rounded-logo w-8 h-7 flex items-center justify-center">
+                <div className="bg-primary rounded-lg w-8 h-7 flex items-center justify-center">
                   <img src={`${process.env.PUBLIC_URL}/assets/TvenningLogo-596.png`} alt="" className="w-6" />
                 </div>
                 <span className="font-heading font-bold text-base text-foreground hidden sm:inline">
