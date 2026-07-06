@@ -51,13 +51,26 @@ const mdComponents = {
     },
 };
 
+const normalizeLatex = (source) => {
+    // Convert \(...\) inline math to $...$
+    source = source.replace(/\\\((.+?)\\\)/gs, (_, inner) => `$${inner}$`);
+    // Convert \[...\] block math to $$...$$
+    source = source.replace(/\\\[(.+?)\\\]/gs, (_, inner) => `$$${inner}$$`);
+    // Fix \text without braces: \text word → \text{word} (KaTeX requires braces)
+    source = source.replace(/\\text\s+(\w+)/g, (_, word) => `\\text{${word}}`);
+    // Escape currency-style dollar signs that are not math delimiters ($622,093 → \$622,093)
+    source = source.replace(/\$(\d{1,3}(?:,\d{3})+)/g, (_, num) => `\\$${num}`);
+    return source;
+};
+
 const NotebookViewer = ({ ipynb }) => {
     if (!ipynb) return null;
 
     return (
         <div className="flex flex-col gap-4 text-foreground">
             {ipynb.cells.map((cell, i) => {
-                const source = Array.isArray(cell.source) ? cell.source.join('') : cell.source;
+                const raw = Array.isArray(cell.source) ? cell.source.join('') : cell.source;
+                const source = cell.cell_type === 'markdown' ? normalizeLatex(raw) : raw;
 
                 if (cell.cell_type === 'markdown') {
                     return (
