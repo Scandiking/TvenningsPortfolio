@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--color-neutral-50); padding: 16px; font-family: var(--font-body); display: flex; flex-direction: column; gap: 6px; }
+  .row { display: flex; gap: 6px; align-items: center; }
+  .chip { height: 32px; border-radius: 4px; flex: 0 0 120px; }
+  .info { display: flex; flex-direction: column; gap: 1px; }
+  .token { font-size: 10px; font-family: var(--font-mono); font-weight: 600; color: var(--color-fg); }
+  .desc { font-size: 10px; color: var(--color-fg-muted); }
+  .divider { height: 1px; background: var(--color-border); margin: 2px 0; }
+</style></head><body>
+<div class="row">
+  <div class="chip" style="background:var(--color-bg); border: 1px solid var(--color-border)"></div>
+  <div class="info"><span class="token">--color-bg</span><span class="desc">Page background · #ffffff</span></div>
+</div>
+<div class="row">
+  <div class="chip" style="background:var(--color-bg-subtle)"></div>
+  <div class="info"><span class="token">--color-bg-subtle</span><span class="desc">Section bg · #f4f6fc</span></div>
+</div>
+<div class="row">
+  <div class="chip" style="background:var(--color-bg-muted)"></div>
+  <div class="info"><span class="token">--color-bg-muted</span><span class="desc">Input bg, sidebar · #e6eaf5</span></div>
+</div>
+<div class="divider"></div>
+<div class="row">
+  <div class="chip" style="background:var(--color-fg)"></div>
+  <div class="info"><span class="token">--color-fg</span><span class="desc">Primary text · #0d1526</span></div>
+</div>
+<div class="row">
+  <div class="chip" style="background:var(--color-fg-muted)"></div>
+  <div class="info"><span class="token">--color-fg-muted</span><span class="desc">Secondary text · #3d4f6e</span></div>
+</div>
+<div class="row">
+  <div class="chip" style="background:var(--color-fg-subtle)"></div>
+  <div class="info"><span class="token">--color-fg-subtle</span><span class="desc">Placeholder, disabled · #7a8baa</span></div>
+</div>
+<div class="divider"></div>
+<div class="row">
+  <div class="chip" style="background:var(--color-primary)"></div>
+  <div class="info"><span class="token">--color-primary</span><span class="desc">Brand blue · #3366cc</span></div>
+</div>
+<div class="row">
+  <div class="chip" style="background:var(--color-primary-subtle)"></div>
+  <div class="info"><span class="token">--color-primary-subtle</span><span class="desc">Tinted bg · #eaf0fb</span></div>
+</div>
+</body></html>

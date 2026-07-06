@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tvenning-Tech — Website UI Kit</title>
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--color-bg); font-family: var(--font-body); color: var(--color-fg); }
+
+    /* About section */
+    .about-section {
+      background: #fff;
+      padding: 96px 32px;
+    }
+    .about-inner {
+      maxWidth: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 64px;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+    }
+    .about-photo {
+      width: 240px; height: 280px; flex-shrink: 0;
+      background: var(--color-neutral-100);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .about-photo::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      border: 3px solid #3366cc;
+      border-radius: 10px;
+      transform: translate(8px, 8px);
+      z-index: -1;
+    }
+    .about-text { flex: 1; min-width: 280px; }
+    .about-text h2 {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      color: var(--color-fg); letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .about-text p {
+      font-family: 'DM Sans', sans-serif; font-size: 16px;
+      color: var(--color-fg-muted); line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .fact-row { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+    .fact { display: flex; flex-direction: column; gap: 2px; }
+    .fact-num {
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2rem;
+      color: #3366cc; letter-spacing: -0.03em; line-height: 1;
+    }
+    .fact-label {
+      font-family: 'DM Sans', sans-serif; font-size: 12px;
+      color: var(--color-fg-muted); font-weight: 500;
+    }
+
+    /* Contact page */
+    .contact-section {
+      min-height: 80vh;
+      background: var(--color-neutral-50);
+      padding: 120px 32px 80px;
+      display: flex; align-items: flex-start; justify-content: center;
+    }
+    .contact-inner {
+      max-width: 540px; width: 100%;
+    }
+    .contact-inner h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--color-fg); letter-spacing: -0.03em; margin-bottom: 12px;
+    }
+    .contact-inner p {
+      font-family: 'DM Sans', sans-serif; font-size: 16px;
+      color: var(--color-fg-muted); line-height: 1.65; margin-bottom: 36px;
+    }
+    .form-field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
+    .form-label { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 13px; color: var(--color-fg-muted); }
+    .form-input {
+      font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--color-fg);
+      background: #fff; border: 1.5px solid var(--color-border);
+      border-radius: 6px; padding: 10px 12px; outline: none;
+      transition: border-color 200ms ease, box-shadow 200ms ease;
+    }
+    .form-input:focus {
+      border-color: #3366cc;
+      box-shadow: 0 0 0 3px rgba(51,102,204,.15);
+    }
+
+    /* Work page */
+    .work-section {
+      min-height: 80vh;
+      background: #fff;
+      padding: 120px 32px 80px;
+    }
+    .work-inner { max-width: 900px; margin: 0 auto; }
+    .work-inner h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3rem); color: var(--color-fg);
+      letter-spacing: -0.03em; margin-bottom: 8px;
+    }
+    .work-inner .sub {
+      font-family: 'DM Sans', sans-serif; font-size: 16px;
+      color: var(--color-fg-muted); margin-bottom: 48px;
+    }
+    .work-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .work-card {
+      background: var(--color-neutral-50); border-radius: 10px;
+      border: 1px solid var(--color-neutral-100); overflow: hidden;
+      transition: box-shadow 200ms ease, transform 200ms ease;
+      cursor: pointer;
+    }
+    .work-card:hover { box-shadow: 0 8px 32px rgba(13,21,38,.12); transform: translateY(-3px); }
+    .work-card-img { height: 140px; background: var(--color-neutral-200); }
+    .work-card-body { padding: 16px; }
+    .work-card-year { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--color-fg-subtle); margin-bottom: 4px; }
+    .work-card-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: var(--color-fg); margin-bottom: 6px; }
+    .work-card-desc { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--color-fg-muted); line-height: 1.5; }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="Header.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="Services.jsx"></script>
+  <script type="text/babel" src="Footer.jsx"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const AboutSection = () => (
+  <section className="about-section">
+    <div className="about-inner">
+      <div className="about-photo">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-300)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <div className="about-text">
+        <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 600, fontSize: 11, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--color-fg-muted)', marginBottom: 10 }}>About</div>
+        <h2>Based in Meløy,<br />building for the world.</h2>
+        <p>I'm a developer and designer working from Nordland county, Norway. I take on projects where quality matters — sites and apps that are fast, maintainable, and actually pleasant to use.</p>
+        <p>No subcontractors. No account managers. You work directly with me.</p>
+        <div className="fact-row">
+          <div className="fact"><span className="fact-num">8+</span><span className="fact-label">Years experience</span></div>
+          <div className="fact"><span className="fact-num">40+</span><span className="fact-label">Projects delivered</span></div>
+          <div className="fact"><span className="fact-num">1</span><span className="fact-label">Person you deal with</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const ContactPage = () => {
+  const [form, setForm] = React.useState({ name: '', email: '', message: '' });
+  const [sent, setSent] = React.useState(false);
+  const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }));
+  const submit = e => { e.preventDefault(); setSent(true); };
+  return (
+    <section className="contact-section">
+      <div className="contact-inner">
+        <h1>Get in touch</h1>
+        <p>Describe your project and I'll get back to you within a couple of days.</p>
+        {sent ? (
+          <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, fontSize: 20, color: '#3366cc' }}>Sent. Talk soon.</div>
+        ) : (
+          <form onSubmit={submit}>
+            <div className="form-field">
+              <label className="form-label">Name</label>
+              <input className="form-input" type="text" value={form.name} onChange={set('name')} placeholder="Your name" required />
+            </div>
+            <div className="form-field">
+              <label className="form-label">Email</label>
+              <input className="form-input" type="email" value={form.email} onChange={set('email')} placeholder="you@example.com" required />
+            </div>
+            <div className="form-field">
+              <label className="form-label">Message</label>
+              <textarea className="form-input" rows="5" value={form.message} onChange={set('message')} placeholder="Tell me about your project..." required style={{ resize: 'vertical' }} />
+            </div>
+            <button type="submit" style={{
+              marginTop: 8, background: '#3366cc', color: '#fff', border: 'none', cursor: 'pointer',
+              padding: '12px 24px', borderRadius: 6, fontFamily: 'DM Sans, sans-serif', fontWeight: 600, fontSize: 14,
+              boxShadow: '0 4px 20px rgba(51,102,204,.25)', transition: 'all 150ms ease',
+            }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#2554b8'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#3366cc'; }}
+            >Send message</button>
+          </form>
+        )}
+      </div>
+    </section>
+  );
+};
+
+const WorkPage = () => {
+  const allProjects = [
+    { year: '2025', title: 'E-commerce site', desc: 'Product catalogue and checkout for a local Nordland retailer.', color: '#e6eaf5' },
+    { year: '2025', title: 'Booking app', desc: 'Mobile-first booking system with calendar sync and push notifications.', color: '#eaf5f0' },
+    { year: '2024', title: 'Portfolio site', desc: 'Fast static site for a Norwegian photographer. Sub-second load times.', color: '#f5f0e8' },
+    { year: '2024', title: 'Admin dashboard', desc: 'Internal tooling for a small logistics company.', color: '#f0eaf5' },
+    { year: '2023', title: 'SaaS landing page', desc: 'Marketing site for a B2B software product. Led to 3× conversions.', color: '#eaf0f5' },
+    { year: '2023', title: 'React Native app', desc: 'Cross-platform field inspection app used in Nordland municipalities.', color: '#f5eaee' },
+  ];
+  return (
+    <section className="work-section">
+      <div className="work-inner">
+        <h1>Work</h1>
+        <p className="sub">A selection of projects. More available on request.</p>
+        <div className="work-grid">
+          {allProjects.map((p, i) => (
+            <div key={i} className="work-card">
+              <div className="work-card-img" style={{ background: p.color }} />
+              <div className="work-card-body">
+                <div className="work-card-year">{p.year}</div>
+                <div className="work-card-title">{p.title}</div>
+                <div className="work-card-desc">{p.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const App = () => {
+  const [page, setPage] = React.useState('home');
+
+  const navigate = (p) => {
+    setPage(p);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const renderPage = () => {
+    switch (page) {
+      case 'work': return <><WorkPage /><Footer onNavigate={navigate} /></>;
+      case 'services': return <><Services onNavigate={navigate} /><Footer onNavigate={navigate} /></>;
+      case 'about': return <><AboutSection /><Footer onNavigate={navigate} /></>;
+      case 'contact': return <><ContactPage /><Footer onNavigate={navigate} /></>;
+      default: return <><Hero onNavigate={navigate} /><Services onNavigate={navigate} /><AboutSection /><Footer onNavigate={navigate} /></>;
+    }
+  };
+
+  return (
+    <>
+      <Header currentPage={page} onNavigate={navigate} />
+      <main>{renderPage()}</main>
+    </>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

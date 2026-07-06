@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: #fff; padding: 20px 24px; font-family: var(--font-body); }
+  .grid { display: flex; flex-direction: column; gap: 8px; }
+  .row { display: flex; align-items: center; gap: 12px; }
+  .bar-wrap { flex: 1; height: 20px; display: flex; align-items: center; }
+  .bar { height: 12px; background: var(--color-brand-300); border-radius: 2px; }
+  .token { font-size: 10px; font-family: var(--font-mono); font-weight: 600; color: var(--color-fg); min-width: 80px; }
+  .val { font-size: 10px; font-family: var(--font-mono); color: var(--color-fg-muted); min-width: 64px; text-align: right; }
+</style></head><body>
+<div class="grid">
+  <div class="row"><span class="token">--space-1</span><div class="bar-wrap"><div class="bar" style="width:4px"></div></div><span class="val">4px</span></div>
+  <div class="row"><span class="token">--space-2</span><div class="bar-wrap"><div class="bar" style="width:8px"></div></div><span class="val">8px</span></div>
+  <div class="row"><span class="token">--space-3</span><div class="bar-wrap"><div class="bar" style="width:12px"></div></div><span class="val">12px</span></div>
+  <div class="row"><span class="token">--space-4</span><div class="bar-wrap"><div class="bar" style="width:16px; background:var(--color-brand-400)"></div></div><span class="val">16px</span></div>
+  <div class="row"><span class="token">--space-5</span><div class="bar-wrap"><div class="bar" style="width:20px; background:var(--color-brand-400)"></div></div><span class="val">20px</span></div>
+  <div class="row"><span class="token">--space-6</span><div class="bar-wrap"><div class="bar" style="width:24px; background:var(--color-brand-500)"></div></div><span class="val">24px</span></div>
+  <div class="row"><span class="token">--space-8</span><div class="bar-wrap"><div class="bar" style="width:32px; background:var(--color-brand-500)"></div></div><span class="val">32px</span></div>
+  <div class="row"><span class="token">--space-10</span><div class="bar-wrap"><div class="bar" style="width:40px; background:var(--color-brand-600)"></div></div><span class="val">40px</span></div>
+  <div class="row"><span class="token">--space-12</span><div class="bar-wrap"><div class="bar" style="width:48px; background:var(--color-brand-600)"></div></div><span class="val">48px</span></div>
+  <div class="row"><span class="token">--space-16</span><div class="bar-wrap"><div class="bar" style="width:64px; background:var(--color-brand-700)"></div></div><span class="val">64px</span></div>
+  <div class="row"><span class="token">--space-20</span><div class="bar-wrap"><div class="bar" style="width:80px; background:var(--color-brand-700)"></div></div><span class="val">80px</span></div>
+  <div class="row"><span class="token">--space-24</span><div class="bar-wrap"><div class="bar" style="width:96px; background:var(--color-brand-800)"></div></div><span class="val">96px</span></div>
+</div>
+</body></html>

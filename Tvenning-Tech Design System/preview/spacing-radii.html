@@ -1,0 +1,66 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--color-neutral-50); padding: 20px 24px; font-family: var(--font-body); }
+  .section { margin-bottom: 16px; }
+  .section-title { font-size: 9px; font-family: var(--font-mono); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--color-fg-muted); margin-bottom: 8px; }
+  .radii-row { display: flex; gap: 10px; align-items: flex-end; }
+  .r-box { background: var(--color-brand-500); display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .r-label { font-size: 9px; font-family: var(--font-mono); color: var(--color-fg-muted); white-space: nowrap; }
+  .shadows-row { display: flex; gap: 12px; align-items: center; }
+  .s-box { width: 56px; height: 36px; background: #fff; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 9px; font-family: var(--font-mono); color: var(--color-fg-muted); }
+</style></head><body>
+<div class="section">
+  <div class="section-title">Border radius</div>
+  <div class="radii-row">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div class="r-box" style="width:32px;height:32px;border-radius:3px"></div>
+      <span class="r-label">sm · 3px</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div class="r-box" style="width:40px;height:40px;border-radius:6px"></div>
+      <span class="r-label">md · 6px</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div class="r-box" style="width:48px;height:48px;border-radius:10px"></div>
+      <span class="r-label">lg · 10px</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div class="r-box" style="width:56px;height:56px;border-radius:16px"></div>
+      <span class="r-label">xl · 16px</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div class="r-box" style="width:56px;height:28px;border-radius:999px"></div>
+      <span class="r-label">pill</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div class="r-box" style="width:48px;height:48px;border-radius:12px;background:var(--color-brand-500)"></div>
+      <span class="r-label">logo · 12px</span>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title">Elevation (shadows)</div>
+  <div class="shadows-row">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+      <div class="s-box" style="box-shadow:var(--shadow-xs)">xs</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+      <div class="s-box" style="box-shadow:var(--shadow-sm)">sm</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+      <div class="s-box" style="box-shadow:var(--shadow-md)">md</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+      <div class="s-box" style="box-shadow:var(--shadow-lg)">lg</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+      <div class="s-box" style="box-shadow:var(--shadow-xl)">xl</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+      <div class="s-box" style="box-shadow:var(--shadow-brand);border:1px solid var(--color-brand-200)">brand</div>
+    </div>
+  </div>
+</div>
+</body></html>

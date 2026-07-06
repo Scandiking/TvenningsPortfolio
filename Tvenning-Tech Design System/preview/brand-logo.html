@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--color-neutral-50); padding: 20px 24px; font-family: var(--font-body); display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .swatch { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+  .logo-wrap { display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); overflow: hidden; }
+  .caption { font-size: 9px; font-family: var(--font-mono); color: var(--color-fg-muted); text-align: center; }
+  .dont { position: relative; }
+  .dont::after { content: '✕'; position: absolute; top: 4px; right: 4px; font-size: 10px; color: #cc3344; font-weight: 700; }
+  .divider { width: 1px; background: var(--color-border); align-self: stretch; }
+</style></head><body>
+<div class="swatch">
+  <div class="logo-wrap" style="background:#3366cc;width:80px;height:70px">
+    <img src="../assets/TvenningLogo-596.png" style="width:64px;height:auto">
+  </div>
+  <span class="caption">On brand blue ✓</span>
+</div>
+<div class="swatch">
+  <div class="logo-wrap" style="background:#fff;width:80px;height:70px;border:1px solid var(--color-border)">
+    <img src="../assets/TvenningLogo-596.png" style="width:64px;height:auto">
+  </div>
+  <span class="caption">On white ✓</span>
+</div>
+<div class="swatch">
+  <div class="logo-wrap" style="background:var(--color-neutral-900);width:80px;height:70px">
+    <img src="../assets/TvenningLogo-596.png" style="width:64px;height:auto">
+  </div>
+  <span class="caption">On dark ✓</span>
+</div>
+<div class="divider"></div>
+<div class="swatch">
+  <div class="logo-wrap" style="width:48px;height:42px;background:#3366cc">
+    <img src="../assets/TvenningLogo-596.png" style="width:38px;height:auto">
+  </div>
+  <span class="caption">48px</span>
+</div>
+<div class="swatch">
+  <div class="logo-wrap" style="width:32px;height:28px;background:#3366cc">
+    <img src="../assets/TvenningLogo-596.png" style="width:26px;height:auto">
+  </div>
+  <span class="caption">32px</span>
+</div>
+<div class="swatch">
+  <div class="logo-wrap" style="width:20px;height:17px;background:#3366cc">
+    <img src="../assets/TvenningLogo-596.png" style="width:16px;height:auto">
+  </div>
+  <span class="caption">20px min</span>
+</div>
+<div class="divider"></div>
+<div class="swatch">
+  <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--color-border)">
+    <div style="background:#3366cc;border-radius:6px;width:28px;height:24px;display:flex;align-items:center;justify-content:center">
+      <img src="../assets/TvenningLogo-596.png" style="width:22px;height:auto">
+    </div>
+    <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:var(--color-fg)">Tvenning<span style="color:#3366cc">-Tech</span></span>
+  </div>
+  <span class="caption">Wordmark lockup</span>
+</div>
+</body></html>

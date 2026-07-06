@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--color-neutral-100); padding: 20px 24px; font-family: var(--font-body); display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+  .card { background: #fff; border-radius: var(--radius-lg); border: 1px solid var(--color-neutral-100); box-shadow: var(--shadow-sm); padding: 20px; transition: box-shadow var(--transition-base), transform var(--transition-base); }
+  .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .card-sm { width: 160px; }
+  .card-md { width: 220px; }
+  .card-brand { background: var(--color-brand-500); color: white; }
+  .card-brand .card-eyebrow { color: var(--color-brand-200); }
+  .card-brand .card-body { color: var(--color-brand-100); }
+  .card-eyebrow { font: var(--type-overline); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-fg-muted); margin-bottom: 6px; }
+  .card-title { font: var(--type-h3); color: var(--color-fg); margin-bottom: 6px; }
+  .card-body { font: var(--type-body-sm); color: var(--color-fg-muted); line-height: var(--leading-relaxed); }
+  .card-img { height: 80px; background: var(--color-neutral-100); border-radius: var(--radius-md); margin-bottom: 12px; }
+  .card-footer { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; }
+  .tag { font: var(--type-label-sm); background: var(--color-primary-subtle); color: var(--color-primary); padding: 2px 8px; border-radius: var(--radius-sm); }
+  .link { font: var(--type-label-sm); color: var(--color-primary); text-decoration: none; }
+</style></head><body>
+<div class="card card-sm">
+  <div class="card-eyebrow">Service</div>
+  <div class="card-title" style="font-size:var(--text-lg)">Web dev</div>
+  <div class="card-body">Clean, fast sites built with modern tooling.</div>
+</div>
+<div class="card card-md">
+  <div class="card-img"></div>
+  <div class="card-eyebrow">Project</div>
+  <div class="card-title" style="font-size:var(--text-xl)">Redesign</div>
+  <div class="card-body">Full redesign of a small business website. From wireframes to launch.</div>
+  <div class="card-footer">
+    <span class="tag">2026</span>
+    <a class="link" href="#">View →</a>
+  </div>
+</div>
+<div class="card card-md card-brand">
+  <div class="card-eyebrow">Featured</div>
+  <div class="card-title" style="font-size:var(--text-xl);color:white">App launch</div>
+  <div class="card-body">Cross-platform app delivered on time and on budget.</div>
+  <div class="card-footer" style="border-top-color:rgba(255,255,255,.2)">
+    <span style="font:var(--type-label-sm);color:var(--color-brand-200)">Case study</span>
+    <a class="link" href="#" style="color:white">View →</a>
+  </div>
+</div>
+</body></html>

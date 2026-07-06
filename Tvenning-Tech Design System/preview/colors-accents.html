@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--color-neutral-50); padding: 16px; font-family: var(--font-body); display: flex; flex-direction: column; gap: 12px; }
+  .group { display: flex; gap: 4px; align-items: stretch; }
+  .label-col { width: 80px; display: flex; align-items: center; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--color-fg-muted); }
+  .swatch { flex: 1; height: 48px; border-radius: 4px; display: flex; align-items: flex-end; padding: 5px; }
+  .hex { font-size: 9px; font-family: var(--font-mono); font-weight: 600; }
+  .name { font-size: 9px; color: var(--color-fg-subtle); }
+</style></head><body>
+<div class="group">
+  <div class="label-col">Fjord</div>
+  <div class="swatch" style="background:var(--color-fjord-300)"><span class="hex" style="color:#0f4f5a">300 · #7acad6</span></div>
+  <div class="swatch" style="background:var(--color-fjord-500)"><span class="hex" style="color:#fff">500 · #1a7a8a</span></div>
+  <div class="swatch" style="background:var(--color-fjord-700)"><span class="hex" style="color:#7acad6">700 · #0f4f5a</span></div>
+</div>
+<div class="group">
+  <div class="label-col">Midnight Sun</div>
+  <div class="swatch" style="background:var(--color-sun-300)"><span class="hex" style="color:#a05f00">300 · #f5c872</span></div>
+  <div class="swatch" style="background:var(--color-sun-500)"><span class="hex" style="color:#fff">500 · #e8901a</span></div>
+  <div class="swatch" style="background:var(--color-sun-700)"><span class="hex" style="color:#f5c872">700 · #a05f00</span></div>
+</div>
+<div class="group">
+  <div class="label-col">Status</div>
+  <div class="swatch" style="background:#2a9d5c"><span class="hex" style="color:#fff">Success</span></div>
+  <div class="swatch" style="background:#e8901a"><span class="hex" style="color:#fff">Warning</span></div>
+  <div class="swatch" style="background:#cc3344"><span class="hex" style="color:#fff">Error</span></div>
+  <div class="swatch" style="background:#3366cc"><span class="hex" style="color:#fff">Info</span></div>
+</div>
+</body></html>

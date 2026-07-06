@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: #fff; padding: 20px 24px; font-family: var(--font-body); display: flex; flex-direction: column; gap: 14px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .label { font-size: 9px; font-family: var(--font-mono); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing:.06em; min-width: 72px; }
+  .badge { display: inline-flex; align-items: center; gap: 4px; font: var(--type-label-sm); border-radius: var(--radius-sm); padding: 2px 8px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .chip { display: inline-flex; align-items: center; gap: 4px; font: var(--type-label-sm); border-radius: var(--radius-pill); padding: 4px 12px; }
+</style></head><body>
+<div class="row">
+  <span class="label">Status</span>
+  <span class="badge" style="background:#e8f5ef;color:#2a9d5c"><span class="dot" style="background:#2a9d5c"></span>Active</span>
+  <span class="badge" style="background:#fff3e0;color:#a05f00"><span class="dot" style="background:#e8901a"></span>Pending</span>
+  <span class="badge" style="background:#fce8ea;color:#cc3344"><span class="dot" style="background:#cc3344"></span>Closed</span>
+  <span class="badge" style="background:var(--color-neutral-100);color:var(--color-fg-muted)"><span class="dot" style="background:var(--color-neutral-400)"></span>Draft</span>
+</div>
+<div class="row">
+  <span class="label">Brand</span>
+  <span class="badge" style="background:var(--color-brand-500);color:#fff">New</span>
+  <span class="badge" style="background:var(--color-brand-50);color:var(--color-brand-700)">Featured</span>
+  <span class="badge" style="background:var(--color-brand-900);color:var(--color-brand-200)">Pro</span>
+  <span class="badge" style="background:transparent;color:var(--color-brand-600);border:1.5px solid var(--color-brand-300)">Beta</span>
+</div>
+<div class="row">
+  <span class="label">Chips</span>
+  <span class="chip" style="background:var(--color-bg-muted);color:var(--color-fg)">Web development</span>
+  <span class="chip" style="background:var(--color-brand-50);color:var(--color-brand-700)">React</span>
+  <span class="chip" style="background:var(--color-fjord-700);color:var(--color-fjord-300)">Norway</span>
+  <span class="chip" style="background:var(--color-sun-300);color:var(--color-sun-700)">Design</span>
+</div>
+<div class="row">
+  <span class="label">Numbers</span>
+  <span class="badge" style="background:var(--color-brand-500);color:#fff;border-radius:var(--radius-pill);min-width:20px;justify-content:center">3</span>
+  <span class="badge" style="background:#cc3344;color:#fff;border-radius:var(--radius-pill);min-width:20px;justify-content:center">12</span>
+  <span class="badge" style="background:var(--color-neutral-200);color:var(--color-fg-muted);border-radius:var(--radius-pill)">99+</span>
+</div>
+</body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--color-neutral-50); padding: 20px 24px; font-family: var(--font-body); display: flex; flex-direction: column; gap: 16px; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .label { font-size: 9px; font-family: var(--font-mono); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing:.06em; min-width: 72px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; font: var(--type-label); cursor: pointer; transition: all var(--transition-base); border: none; text-decoration: none; }
+  .btn-primary { background: var(--color-primary); color: #fff; padding: 10px 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-brand); }
+  .btn-primary:hover { background: var(--color-primary-hover); }
+  .btn-secondary { background: transparent; color: var(--color-primary); padding: 9px 19px; border-radius: var(--radius-md); border: 1.5px solid var(--color-primary); }
+  .btn-ghost { background: transparent; color: var(--color-fg); padding: 9px 19px; border-radius: var(--radius-md); border: 1.5px solid var(--color-border); }
+  .btn-ghost:hover { background: var(--color-bg-muted); }
+  .btn-danger { background: #cc3344; color: #fff; padding: 10px 20px; border-radius: var(--radius-md); }
+  .btn-sm { padding: 6px 14px; font: var(--type-label-sm); border-radius: var(--radius-sm); }
+  .btn-lg { padding: 14px 28px; font-size: var(--text-md); font-weight: var(--weight-semibold); border-radius: var(--radius-lg); }
+  .btn-disabled { opacity: .45; cursor: not-allowed; pointer-events: none; }
+  .btn-icon { width: 36px; height: 36px; padding: 0; border-radius: var(--radius-md); background: var(--color-bg-muted); color: var(--color-fg-muted); border: none; }
+  .btn-icon:hover { background: var(--color-neutral-200); color: var(--color-fg); }
+  svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+</style></head><body>
+<div class="row">
+  <span class="label">Primary</span>
+  <button class="btn btn-primary">Get in touch</button>
+  <button class="btn btn-primary btn-sm">Small</button>
+  <button class="btn btn-primary btn-lg">Large</button>
+  <button class="btn btn-primary btn-disabled">Disabled</button>
+</div>
+<div class="row">
+  <span class="label">Secondary</span>
+  <button class="btn btn-secondary">View work</button>
+  <button class="btn btn-secondary btn-sm">Small</button>
+  <button class="btn btn-secondary btn-disabled">Disabled</button>
+</div>
+<div class="row">
+  <span class="label">Ghost</span>
+  <button class="btn btn-ghost">Learn more</button>
+  <button class="btn btn-ghost btn-sm">Small</button>
+  <button class="btn btn-danger">Delete</button>
+</div>
+<div class="row">
+  <span class="label">Icon</span>
+  <button class="btn btn-icon">
+    <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </button>
+  <button class="btn btn-icon">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="btn btn-icon">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <button class="btn btn-primary" style="gap:8px">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.9a19.79 19.79 0 01-3.07-8.67A2 2 0 013.4 1h3a2 2 0 012 1.72c.13 1 .37 1.97.72 2.9a2 2 0 01-.45 2.11L7.91 8.91A16 16 0 0015.09 16.1l1.18-1.18a2 2 0 012.11-.45c.93.35 1.9.6 2.9.72A2 2 0 0122 16.92z"/></svg>
+    Call me
+  </button>
+</div>
+</body></html>
