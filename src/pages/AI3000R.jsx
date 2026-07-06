@@ -21,12 +21,19 @@ const AI3000R = () => {
         const url = `${process.env.PUBLIC_URL}/notebooks/AI3000R/NY-Housing-Prices_Machine_Learning_Model.ipynb`;
 
         fetch(url)
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) throw new Error(`Fant ikke notebook-fila (HTTP ${res.status}).`);
+                return res.json();
+            })
             .then(data => {
-                if (!data.cells) throw new Error('Invalid notebook format');
+                if (!data.cells) throw new Error('Notebook-fila har ugyldig format og kan ikke vises.');
                 setNotebook(data);
             })
-            .catch(err => setError(err.message))
+            .catch(err => setError(
+                err instanceof TypeError
+                    ? 'Fikk ikke kontakt med serveren. Sjekk nettforbindelsen og prøv igjen.'
+                    : err.message
+            ))
             .finally(() => setLoading(false));
     }, []);
 
@@ -62,11 +69,12 @@ const AI3000R = () => {
 
 
 
-                                {loading && <p>Loading notebook...</p>}
+                                {loading && <p>Laster notebook …</p>}
                                 {error && (
                                     <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                                        <p className="font-bold">Error:</p>
+                                        <p className="font-bold">Kunne ikke vise notebooken</p>
                                         <p>{error}</p>
+                                        <p className="mt-1 text-sm">Du kan se den direkte på GitHub via lenken over.</p>
                                     </div>
                                 )}
                                 {notebook && (

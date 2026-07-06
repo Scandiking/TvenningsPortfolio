@@ -14,6 +14,18 @@ export function PDFViewer({ src, title = '' }) {
     const onLoadSuccess = useCallback(({ numPages }) => setNumPages(numPages), []);
     const onLoadError   = useCallback((err) => setLoadError(err?.message || String(err)), []);
 
+    // pdf.js gives cryptic English errors; translate the common ones to something a visitor can act on.
+    const friendlyError = (msg) => {
+        if (!msg) return 'Kunne ikke laste PDF-en.';
+        if (/invalid pdf structure|missing pdf/i.test(msg))
+            return 'Dokumentet er ikke tilgjengelig ennå — fila mangler eller er ikke lastet opp.';
+        if (/failed to fetch|networkerror|load failed/i.test(msg))
+            return 'Fikk ikke kontakt med serveren. Sjekk nettforbindelsen og prøv igjen.';
+        if (/password/i.test(msg))
+            return 'PDF-en er passordbeskyttet og kan ikke vises her.';
+        return 'Kunne ikke laste PDF-en.';
+    };
+
     useEffect(() => {
         const el = containerRef.current;
         if (!el) return;
@@ -60,11 +72,16 @@ export function PDFViewer({ src, title = '' }) {
                     }
                     error={
                         <div className="p-10 text-sm text-center">
-                            <p className="text-danger mb-2">Kunne ikke laste PDF-en.</p>
-                            {loadError && <p className="text-xs text-default-400 mb-2 font-mono">{loadError}</p>}
+                            <p className="text-danger mb-2">{friendlyError(loadError)}</p>
+                            {loadError && (
+                                <details className="mb-2">
+                                    <summary className="cursor-pointer text-xs text-default-400">Teknisk detalj</summary>
+                                    <p className="text-xs text-default-400 font-mono mt-1">{loadError}</p>
+                                </details>
+                            )}
                             <a href={src} target="_blank" rel="noopener noreferrer"
                                className="text-primary hover:underline">
-                                Åpne i nytt vindu ↗
+                                Prøv å åpne i nytt vindu ↗
                             </a>
                         </div>
                     }

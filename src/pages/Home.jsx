@@ -2,9 +2,10 @@ import React from 'react';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import {Link, useNavigate} from 'react-router-dom';
-import duck from "../images/LinkedInBanner3.png"
 import {Image} from "@heroui/image";
 import { motion } from 'framer-motion';
+
+const duck = `${process.env.PUBLIC_URL}/images/LinkedInBanner3.png`;
 
 function Home() {
     const navigate = useNavigate();

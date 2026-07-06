@@ -24,6 +24,8 @@ import BID3000 from './pages/BID3000.jsx';
 import MOB3000 from './pages/MOB3000.jsx';
 import SEL3000R from './pages/SEL3000R';
 import Projects from './pages/Projects';
+import NotFound from './pages/NotFound';
+import ErrorBoundary from './components/ErrorBoundary';
 
 import {ThemeProvider} from "./context/ThemeProvider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
@@ -261,6 +263,7 @@ function AppContent() {
         </nav>
 
         <main>
+        <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -285,9 +288,10 @@ function AppContent() {
           <Route path="/emner/mob3000" element={<MOB3000 />} />
           <Route path="/emner/sel3000r" element={<SEL3000R />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<div className="container mx-auto p-8">Contact page coming soon!</div>} />
-          <Route path="*" element={<div className="container mx-auto p-8">Page not found!</div>} />
+          <Route path="/contact" element={<div className="container mx-auto p-8">Kontaktsiden kommer snart! Inntil videre: km.tvenning@pm.me</div>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
+        </ErrorBoundary>
         </main>
 
       </div>

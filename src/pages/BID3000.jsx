@@ -25,14 +25,18 @@ useEffect(() => {
 
     fetch(url)
         .then(res => {
-            console.log('Status:', res.status);
-            return res.json(); // See raw response
+            if (!res.ok) throw new Error(`Fant ikke notebook-fila på GitHub (HTTP ${res.status}).`);
+            return res.json();
         })
         .then(data => {
-            if (!data.cells) throw new Error('Invalid notebook format');
+            if (!data.cells) throw new Error('Notebook-fila har ugyldig format og kan ikke vises.');
             setNotebook(data);
         })
-        .catch(err => setError(err.message))
+        .catch(err => setError(
+            err instanceof TypeError
+                ? 'Fikk ikke kontakt med GitHub. Sjekk nettforbindelsen og prøv igjen.'
+                : err.message
+        ))
         .finally(() => setLoading(false));
 
 }, []);
@@ -880,12 +884,13 @@ conn.close()
 
                                 <div>
 
-                                    {loading && <p>Loading notebook...</p>}
+                                    {loading && <p>Laster notebook …</p>}
                                     {error && (
                                         <div
                                             className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                                            <p className="font-bold">Error:</p>
+                                            <p className="font-bold">Kunne ikke vise notebooken</p>
                                             <p>{error}</p>
+                                            <p className="mt-1 text-sm">Du kan se den direkte på GitHub via lenken over.</p>
                                         </div>
                                     )}
                                     {notebook && (

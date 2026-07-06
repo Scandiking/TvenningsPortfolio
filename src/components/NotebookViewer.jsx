@@ -65,6 +65,13 @@ const normalizeLatex = (source) => {
 
 const NotebookViewer = ({ ipynb }) => {
     if (!ipynb) return null;
+    if (!Array.isArray(ipynb.cells)) {
+        return (
+            <p className="text-sm text-danger">
+                Notebook-fila har ugyldig format og kan ikke vises.
+            </p>
+        );
+    }
 
     return (
         <div className="flex flex-col gap-4 text-foreground">
