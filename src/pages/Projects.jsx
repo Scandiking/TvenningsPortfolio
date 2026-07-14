@@ -17,27 +17,17 @@ function Projects() {
                 >
                 <div className="p-6 flex flex-col gap-4 h-full">
                     <div>
-                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Landlosen</h2>
+                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Defang</h2>
                         <p className="text-default-500 text-sm">
-                            Prosjekt utviklet som del av en praksisprosess. Landlosen er en webapplikasjon
-                            laget for å demonstrere ferdigheter innen moderne webutvikling.
+                            Android-launcher som legger inn en bevisst pause før du åpner apper som Instagram og TikTok:
+                            intensjonsspørsmål, nedtelling og øktgrense før du havner i scrollingen. Bygget i Kotlin med
+                            Jetpack Compose og AccessibilityService.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-auto">
                         <a
-                            href="https://landlosen.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                            </svg>
-                            Live preview
-                        </a>
-                        <a
-                            href="https://github.com/Scandiking/Landlosen"
+                            href="https://github.com/Scandiking/Defang"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-default-300 text-foreground text-sm font-medium hover:bg-content2 transition-colors"
@@ -59,16 +49,16 @@ function Projects() {
                 >
                 <div className="p-6 flex flex-col gap-4 h-full">
                     <div>
-                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">PKDEX</h2>
+                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Meløyvær</h2>
                         <p className="text-default-500 text-sm">
-                            En Pokémon-database bygget som en enkeltsideapplikasjon med data fra PokéAPI.
-                            Lar brukeren bla gjennom og filtrere Pokémon. Ikke tilknyttet Nintendo eller Game Freak.
+                            Stilisert vær-app med tidevannsnivåer for Meløyvær. Viser værdata og
+                            tidevann i et rent grensesnitt. Bygget i TypeScript.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-auto">
                         <a
-                            href="https://pkdex-omega.vercel.app/"
+                            href="https://meloyvar.vercel.app"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
@@ -79,7 +69,7 @@ function Projects() {
                             Live preview
                         </a>
                         <a
-                            href="https://github.com/Scandiking/Pokedex"
+                            href="https://github.com/Scandiking/Mel-yv-r"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-default-300 text-foreground text-sm font-medium hover:bg-content2 transition-colors"
@@ -143,16 +133,16 @@ function Projects() {
                 >
                 <div className="p-6 flex flex-col gap-4 h-full">
                     <div>
-                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Meløyvær</h2>
+                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">PKDEX</h2>
                         <p className="text-default-500 text-sm">
-                            Stilisert vær-app med tidevannsnivåer for Meløyvær. Viser værdata og
-                            tidevann i et rent grensesnitt. Bygget i TypeScript.
+                            En Pokémon-database bygget som en enkeltsideapplikasjon med data fra PokéAPI.
+                            Lar brukeren bla gjennom og filtrere Pokémon. Ikke tilknyttet Nintendo eller Game Freak.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-auto">
                         <a
-                            href="https://meloyvar.vercel.app"
+                            href="https://pkdex-omega.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
@@ -163,7 +153,7 @@ function Projects() {
                             Live preview
                         </a>
                         <a
-                            href="https://github.com/Scandiking/Mel-yv-r"
+                            href="https://github.com/Scandiking/Pokedex"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-default-300 text-foreground text-sm font-medium hover:bg-content2 transition-colors"
@@ -185,17 +175,27 @@ function Projects() {
                 >
                 <div className="p-6 flex flex-col gap-4 h-full">
                     <div>
-                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Defang</h2>
+                        <h2 className="text-xl font-semibold font-heading text-foreground mb-2">Landlosen</h2>
                         <p className="text-default-500 text-sm">
-                            Android-launcher som legger inn en bevisst pause før du åpner apper som Instagram og TikTok:
-                            intensjonsspørsmål, nedtelling og øktgrense før du havner i scrollingen. Bygget i Kotlin med
-                            Jetpack Compose og AccessibilityService.
+                            Prosjekt utviklet som del av en praksisprosess. Landlosen er en webapplikasjon
+                            laget for å demonstrere ferdigheter innen moderne webutvikling.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-auto">
                         <a
-                            href="https://github.com/Scandiking/Defang"
+                            href="https://landlosen.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                            </svg>
+                            Live preview
+                        </a>
+                        <a
+                            href="https://github.com/Scandiking/Landlosen"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-default-300 text-foreground text-sm font-medium hover:bg-content2 transition-colors"
