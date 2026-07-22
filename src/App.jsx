@@ -24,6 +24,7 @@ import BID3000 from './pages/BID3000.jsx';
 import MOB3000 from './pages/MOB3000.jsx';
 import SEL3000R from './pages/SEL3000R';
 import Projects from './pages/Projects';
+import Defang from './pages/Defang';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -286,6 +287,7 @@ function AppContent() {
           <Route path="/emner/mob3000" element={<MOB3000 />} />
           <Route path="/emner/sel3000r" element={<SEL3000R />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/defang" element={<Defang />} />
           <Route path="/contact" element={<div className="container mx-auto p-8">Kontaktsiden kommer snart! Inntil videre: km.tvenning@pm.me</div>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
