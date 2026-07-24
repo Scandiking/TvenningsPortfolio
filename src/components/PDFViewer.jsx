@@ -35,7 +35,11 @@ export function PDFViewer({ src, title = '' }) {
     }, []);
 
     return (
-        <div className="rounded-lg overflow-hidden border border-content3 my-2">
+        <div
+            className="rounded-lg overflow-hidden border border-content3 my-2"
+            role="group"
+            aria-label={title || 'PDF-dokument'}
+        >
 
             {/* ── Toolbar ── */}
             <div className="flex items-center justify-between bg-content2 px-3 py-2 border-b border-content3">
@@ -75,8 +79,8 @@ export function PDFViewer({ src, title = '' }) {
                             <p className="text-danger mb-2">{friendlyError(loadError)}</p>
                             {loadError && (
                                 <details className="mb-2">
-                                    <summary className="cursor-pointer text-xs text-default-400">Teknisk detalj</summary>
-                                    <p className="text-xs text-default-400 font-mono mt-1">{loadError}</p>
+                                    <summary className="cursor-pointer text-xs text-default-500">Teknisk detalj</summary>
+                                    <p className="text-xs text-default-500 font-mono mt-1">{loadError}</p>
                                 </details>
                             )}
                             <a href={src} target="_blank" rel="noopener noreferrer"

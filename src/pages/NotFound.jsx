@@ -7,7 +7,7 @@ function NotFound() {
 
     return (
         <div className="container mx-auto px-4 py-16 text-center">
-            <p className="text-6xl font-extrabold text-default-300 mb-4">404</p>
+            <p className="text-6xl font-extrabold text-default-400 mb-4">404</p>
             <h1 className="text-2xl font-bold mb-2">Fant ikke siden</h1>
             <p className="text-default-500 mb-1">
                 Adressen <code className="bg-content2 px-1 rounded text-sm">{location.pathname}</code> finnes ikke.

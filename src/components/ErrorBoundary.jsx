@@ -26,7 +26,7 @@ class ErrorBoundary extends React.Component {
                     er feilen på min side, ikke din.
                 </p>
                 <details className="mb-6 text-left max-w-xl mx-auto">
-                    <summary className="cursor-pointer text-sm text-default-400">Tekniske detaljer</summary>
+                    <summary className="cursor-pointer text-sm text-default-500">Tekniske detaljer</summary>
                     <pre className="text-xs bg-content2 p-3 rounded mt-2 overflow-auto whitespace-pre-wrap">
                         {String(this.state.error?.stack || this.state.error)}
                     </pre>

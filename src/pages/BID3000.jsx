@@ -917,7 +917,7 @@ conn.close()
                                 <Image
                                     loading="eager"
                                     radius="sm"
-                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    alt="PowerBI hoved-dashboard med KPI-kort og navigasjon"
                                     src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_dashboard_Main_Page.png"
                                     width="100%"
                                 />
@@ -933,7 +933,7 @@ conn.close()
                                 <Image
                                     loading="eager"
                                     radius="sm"
-                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    alt="PowerBI fortjenesteanalyse med oppstykking etter tid, land og produkt"
                                     src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_dashboard_Revenue.png"
                                     width="100%"
 
@@ -951,7 +951,7 @@ conn.close()
                                 <Image
                                     loading="eager"
                                     radius="sm"
-                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    alt="PowerBI kanselleringsanalyse med tapt fortjeneste og kanselleringsmønstre"
                                     src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_Dashboard_Cancellations.png"
                                     width="100%"
 
@@ -969,7 +969,7 @@ conn.close()
                                 <Image
                                     loading="eager"
                                     radius="sm"
-                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    alt="PowerBI detaljert analyse med geografisk distribusjon og interaktive filtre"
                                     src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_dashboard_Detailed_Analysis_Page.png"
                                     width="100%"
 
@@ -985,7 +985,7 @@ conn.close()
                                 <Image
                                     loading="eager"
                                     radius="sm"
-                                    alt="PowerBI main dashboard with KPI cards and column, bar and line charts"
+                                    alt="PowerBI kundesegmentering basert på RFM-analyse"
                                     src="https://github.com/Scandiking/BID3000-Business-Intelligence/raw/main/Dashboard/PowerBI_Screenshots/PowerBI_Customer_Segments.png"
                                     width="100%"
 

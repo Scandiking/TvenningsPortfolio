@@ -9,6 +9,20 @@ body {
   font-family: 'Roboto', system-ui, sans-serif;
 }
 
+/* A11y: default primary blue (#006FEE) only hits 3.58:1 on the dark #1E1E1E
+   ground — below WCAG AA 4.5:1 for body-size text. Lift links to a brighter
+   blue in dark mode (~5.8:1) without touching primary buttons. */
+.dark a.text-primary {
+  color: #4C9AFF;
+}
+
+/* A11y: nudge body text one step darker (default-500 → 600) so it clears
+   WCAG AA with headroom instead of sitting on the 4.5:1 line — light mode
+   goes 4.8→7.7, dark 6.5→11.3. */
+.text-default-500 {
+  color: hsl(var(--heroui-default-600));
+}
+
 html {
   scroll-behavior: smooth;
   background-color: hsl(var(--heroui-background));

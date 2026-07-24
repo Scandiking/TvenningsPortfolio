@@ -25,6 +25,7 @@ import MOB3000 from './pages/MOB3000.jsx';
 import SEL3000R from './pages/SEL3000R';
 import Projects from './pages/Projects';
 import Defang from './pages/Defang';
+import Personvern from './pages/Personvern';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -288,11 +289,19 @@ function AppContent() {
           <Route path="/emner/sel3000r" element={<SEL3000R />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/defang" element={<Defang />} />
+          <Route path="/personvern" element={<Personvern />} />
           <Route path="/contact" element={<div className="container mx-auto p-8">Kontaktsiden kommer snart! Inntil videre: km.tvenning@pm.me</div>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </ErrorBoundary>
         </main>
+
+        <footer className="border-t border-divider mt-8 py-6 px-4">
+          <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-default-500">
+            <span>© {new Date().getFullYear()} Kristian Martin Tvenning</span>
+            <Link to="/personvern" className="hover:text-foreground underline">Personvern</Link>
+          </div>
+        </footer>
 
       </div>
   );
