@@ -12,19 +12,17 @@ const featured = [
     {
         title: "Defang",
         to: "/projects/defang",
-        tag: "Kotlin · Jetpack Compose",
         description: "Android-launcher som legger inn en bevisst pause før du åpner apper som Instagram og TikTok — intensjonsspørsmål, nedtelling og øktgrense før scrollingen.",
     },
     {
-        title: "Maskinlæring: boligpriser",
-        to: "/emner/ai3000r",
-        tag: "Maskinlæring · Python",
-        description: "Regresjonsmodell som predikerer boligpriser fra California housing-datasettet, med datautforsking, trening og evaluering i Jupyter.",
+        title: "Maskinlæring: California housing (PySpark)",
+        to: "https://github.com/Scandiking/pyspark-california-housing",
+        external: true,
+        description: "Distribuert maskinlæringspipeline i PySpark som predikerer boligpriser fra California housing-datasettet — datavask, feature engineering, trening og evaluering.",
     },
     {
         title: "Business Intelligence & datavarehus",
         to: "/emner/bid3000",
-        tag: "Power BI · Datavarehus",
         description: "BI-dashboard bygget på et datavarehus: KPI-er, fortjeneste-, kanselerings- og RFM-basert kundesegmentanalyse.",
     },
 ];
@@ -71,24 +69,23 @@ function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="bg-content1 rounded-xl p-6 mb-8 shadow-sm"
+                    className="bg-content1 rounded-xl p-5 mb-6 shadow-sm"
                 >
 
                     <h1 className="text-3xl font-medium text-foreground mb-4">Velkommen til min portfolio</h1>
 
-                    <div>
+                    <div className="flex justify-center">
                         <Image
                             loading="eager"
                             radius="sm"
                             alt="A 3D render of a desktop with a laptop, a rubber duck, a cup of coffee and a slate that seems like a phone"
                             src={duck}
-                            width="100%"
-
+                            className="w-full max-w-3xl"
                         />
                     </div>
 
 
-                    <p className="font-body text-default-500 mb-6">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p>
+                    <p className="font-body text-default-500 mb-6 mt-4">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p>
 
                     <div className="flex flex-wrap gap-4">
                         <Button onClick={handleClick} variant="primary">Kontakt meg</Button>
@@ -108,20 +105,25 @@ function Home() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {featured.map((p) => (
-                        <Link key={p.to} to={p.to} className="group block h-full">
-                            <div className="bg-content1 rounded-xl h-full shadow-sm border-l-4 border-primary transition-shadow duration-200 hover:shadow-lg">
+                    {featured.map((p) => {
+                        const inner = (
+                            <div className="bg-content1 rounded-xl h-full shadow-sm transition-shadow duration-200 hover:shadow-lg">
                                 <div className="p-6 h-full flex flex-col gap-3">
-                                    <span className="inline-flex self-start items-center rounded-full bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 text-xs font-medium">
-                                        {p.tag}
-                                    </span>
                                     <h3 className="text-xl font-semibold text-foreground">{p.title}</h3>
                                     <p className="text-default-500 text-sm">{p.description}</p>
-                                    <span className="mt-auto pt-2 text-sm text-primary group-hover:underline">Les mer →</span>
                                 </div>
                             </div>
-                        </Link>
-                    ))}
+                        );
+                        return p.external ? (
+                            <a key={p.to} href={p.to} target="_blank" rel="noopener noreferrer" className="block h-full">
+                                {inner}
+                            </a>
+                        ) : (
+                            <Link key={p.to} to={p.to} className="block h-full">
+                                {inner}
+                            </Link>
+                        );
+                    })}
                 </div>
             </section>
 
