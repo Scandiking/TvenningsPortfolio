@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import { Tab } from "@heroui/tabs";
@@ -18,12 +19,17 @@ const SHOTS = [
 
 // Egen ramme per tema: lyse skjermbilder når siden er i lys modus, mørke
 // skjermbilder (samme skjermer, tatt i Android sitt nattmodus) i mørk modus.
-function PhoneShot({ file, title, caption }) {
+function PhoneShot({ file, title, caption, onOpen }) {
     const base = `${process.env.PUBLIC_URL}/images/Defang`;
     const darkFile = file.replace(/\.png$/, "_dark.png");
     return (
         <figure className="flex flex-col gap-3">
-            <div className="mx-auto w-full max-w-[240px] aspect-[9/20] rounded-[0.75rem] border-4 border-black bg-content2 overflow-hidden shadow-md">
+            <button
+                type="button"
+                onClick={() => onOpen({ file, title, caption })}
+                aria-label={`Vis ${title} i fullskjerm`}
+                className="mx-auto block w-full max-w-[240px] aspect-[9/20] rounded-[0.75rem] border-4 border-black bg-content2 overflow-hidden shadow-md cursor-zoom-in transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
                 <img
                     src={`${base}/${file}`}
                     alt={`Defang – ${title}`}
@@ -36,7 +42,7 @@ function PhoneShot({ file, title, caption }) {
                     loading="lazy"
                     className="hidden h-full w-full object-cover dark:block"
                 />
-            </div>
+            </button>
             <figcaption className="text-center">
                 <span className="block text-sm font-semibold text-foreground">{title}</span>
                 <span className="block text-xs text-default-500">{caption}</span>
@@ -47,6 +53,22 @@ function PhoneShot({ file, title, caption }) {
 
 const Defang = () => {
     const navigate = useNavigate();
+    const [lightbox, setLightbox] = useState(null);
+
+    // Lukk med Escape og lås scrolling mens modalen er åpen.
+    useEffect(() => {
+        if (!lightbox) return;
+        const onKey = (e) => e.key === "Escape" && setLightbox(null);
+        window.addEventListener("keydown", onKey);
+        const prevOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+            window.removeEventListener("keydown", onKey);
+            document.body.style.overflow = prevOverflow;
+        };
+    }, [lightbox]);
+
+    const shotBase = `${process.env.PUBLIC_URL}/images/Defang`;
 
     return (
         <AnimatedPage className="container mx-auto px-4 py-8">
@@ -244,7 +266,7 @@ const Defang = () => {
                             </p>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8">
                                 {SHOTS.map((s) => (
-                                    <PhoneShot key={s.file} {...s} />
+                                    <PhoneShot key={s.file} {...s} onOpen={setLightbox} />
                                 ))}
                             </div>
                         </CardBody>
@@ -282,6 +304,47 @@ const Defang = () => {
                 </Tab>
 
             </AnimatedTabs>
+
+            {/* LIGHTBOX — klikk utenfor bildet eller X for å lukke */}
+            {lightbox && (
+                <div
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label={lightbox.title}
+                    onClick={() => setLightbox(null)}
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in"
+                >
+                    <button
+                        type="button"
+                        onClick={() => setLightbox(null)}
+                        aria-label="Lukk"
+                        className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white text-2xl leading-none hover:bg-black/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-5 h-5">
+                            <path d="M6 6l12 12M18 6L6 18" />
+                        </svg>
+                    </button>
+                    <figure
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex max-h-full flex-col items-center gap-3"
+                    >
+                        <img
+                            src={`${shotBase}/${lightbox.file}`}
+                            alt={`Defang – ${lightbox.title}`}
+                            className="max-h-[80vh] w-auto rounded-lg border-4 border-black shadow-2xl dark:hidden"
+                        />
+                        <img
+                            src={`${shotBase}/${lightbox.file.replace(/\.png$/, "_dark.png")}`}
+                            alt={`Defang – ${lightbox.title}`}
+                            className="hidden max-h-[80vh] w-auto rounded-lg border-4 border-black shadow-2xl dark:block"
+                        />
+                        <figcaption className="text-center text-white max-w-md">
+                            <span className="block text-sm font-semibold">{lightbox.title}</span>
+                            <span className="block text-xs text-white/70">{lightbox.caption}</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            )}
         </AnimatedPage>
     );
 };
