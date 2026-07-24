@@ -85,7 +85,7 @@ function Home() {
                     </div>
 
 
-                    <p className="font-body text-default-500 mb-6 mt-4">Jeg studerer IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg har gjort på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p>
+                    <p className="font-body text-default-500 mb-6 mt-4">Jeg er utdannet innen IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg gjorde på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p>
 
                     <div className="flex flex-wrap gap-4">
                         <Button onClick={handleClick} variant="primary">Kontakt meg</Button>
