@@ -56,7 +56,7 @@ const courses = [
 function Home() {
     const navigate = useNavigate();
 
-    const handleClick = () => alert('E-post: <mailto:km.tvenning@pm.me> / Mob: 41 85 36 42!');
+    const goToOmMeg = () => navigate('/om-meg');
     const goToProjects = () => navigate('/projects');
 
 
@@ -88,7 +88,7 @@ function Home() {
                     <p className="font-body text-default-500 mb-6 mt-4">Jeg er utdannet innen IT og informasjonssystemer ved Universitetet i Sørøst-Norge. Denne siden fungerer som en presentasjon av det jeg gjorde på studieprogrammet, delt inn etter fag. Der det er relevant har jeg også lagt inn link til GitHub-repoer.</p>
 
                     <div className="flex flex-wrap gap-4">
-                        <Button onClick={handleClick} variant="primary">Kontakt meg</Button>
+                        <Button onClick={goToOmMeg} variant="primary">Om meg</Button>
                         <Button onClick={goToProjects} variant="secondary">Se prosjekter</Button>
                         <a href="https://github.com/Scandiking" target="_blank" rel="noopener noreferrer">
                             <Button variant="secondary">GitHub</Button>
