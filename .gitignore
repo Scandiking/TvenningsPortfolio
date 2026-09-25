@@ -23,3 +23,10 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Råbilder (for store for repo/deploy)
+/public/images/om-meg/selfies/
+/public/images/om-meg/*.zip
+
+# Privat kildemateriale (brukes som grunnlag, publiseres ikke)
+/content/
