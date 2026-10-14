@@ -5,7 +5,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import {Image} from "@heroui/image";
 import { motion } from 'framer-motion';
 
-const duck = `${process.env.PUBLIC_URL}/images/LinkedInBanner3.png`;
+const duck = `${process.env.PUBLIC_URL}/images/LinkedInBanner3.webp`;
 
 // Utvalgte prosjekter — vist først for å lede med det sterkeste arbeidet.
 const featured = [

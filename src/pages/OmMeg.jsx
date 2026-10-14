@@ -5,9 +5,9 @@ import AnimatedPage from '../components/AnimatedPage';
 
 const imgBase = `${process.env.PUBLIC_URL}/images/om-meg`;
 const portrait = `${imgBase}/portrett.jpg`;
-const banner = `${imgBase}/banner.jpg`;
+const banner = `${imgBase}/banner.webp`;
 
-// Fritidsbilder. Hver fil finnes som <file>.jpg (1600px) og <file>-thumb.jpg (600px).
+// Fritidsbilder. Hver fil finnes som <file>.webp (1600px) og <file>-thumb.jpg (600px).
 const fritid = [
     { file: "fjelltopp", caption: "På Meløytinden, 582 m.o.h." },
     { file: "padlebrett", caption: "Padlebrett på fjorden" },
@@ -328,7 +328,7 @@ function OmMeg() {
                     ))}
                     <figure onClick={(e) => e.stopPropagation()} className="flex max-h-full flex-col items-center gap-3">
                         <img
-                            src={`${imgBase}/fritid/${fritid[open].file}.jpg`}
+                            src={`${imgBase}/fritid/${fritid[open].file}.webp`}
                             alt={fritid[open].caption}
                             className="max-h-[80vh] max-w-full w-auto rounded-lg shadow-2xl"
                         />

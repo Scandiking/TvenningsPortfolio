@@ -53,7 +53,7 @@ const WEB1100 = () => {
 
                                     <img className="overflow-auto-border border-gray-200 dark:border-gray-700 rounded-lg"
                                         alt="Skjermdump av nettside"
-                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside1.png`}
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside1.webp`}
                                         width="100%"
                                     />
 
@@ -68,14 +68,14 @@ const WEB1100 = () => {
                                 <p className="mt-3">Anmeldelser-side</p>
                                     <img className="overflow-auto-border border-gray-200 dark:border-gray-700 rounded-lg"
                                         alt="Skjermdump av nettside"
-                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside3.png`}
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside3.webp`}
                                         width="100%"
                                     />
 
                                 <p className="mt-3">Kontakt-side</p>
                                     <img className="overflow-auto-border border-gray-200 dark:border-gray-700 rounded-lg"
                                         alt="Skjermdump av nettside"
-                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside4.png`}
+                                        src={`${process.env.PUBLIC_URL}/pdfs/WEB1100/Nettside4.webp`}
                                         width="100%"
                                     />
 

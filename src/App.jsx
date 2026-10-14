@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link, Navigate, useLocation } from 'react-router-dom';
 import { HashRouter as Router } from 'react-router-dom';
 import { MathJaxContext } from 'better-react-mathjax';
@@ -108,7 +108,22 @@ function AppContent() {
     },
   ]
 
-
+  // Fanetittel per rute. Emnesider hentes fra semesterData, resten fra pageTitles.
+  useEffect(() => {
+    const pageTitles = {
+      "/": null,
+      "/om-meg": "Om meg",
+      "/emner": "Emner",
+      "/projects": "Prosjekter",
+      "/projects/defang": "Defang",
+      "/personvern": "Personvern",
+    };
+    const course = semesterData.flatMap((s) => s.courses).find((c) => c.path === location.pathname);
+    const page = course
+      ? `${course.id.toUpperCase()} ${course.title}`
+      : location.pathname in pageTitles ? pageTitles[location.pathname] : "Fant ikke siden";
+    document.title = page ? `${page} | Tvennings portfolio` : "Tvennings portfolio";
+  }, [location.pathname]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
       <div className="min-h-screen text-foreground relative bg-background">

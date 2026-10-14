@@ -45,6 +45,17 @@ function Personvern() {
                     besøk på en nettside. Siden sender ingen andre opplysninger om deg
                     videre.
                 </p>
+                <p className="font-body text-default-500 mb-4">
+                    Banneret øverst på siden hentes som et skript fra{" "}
+                    <a
+                        href="https://keepandroidopen.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline"
+                    >
+                        keepandroidopen.org
+                    </a>. Også denne tjenesten ser IP-adressen din når skriptet lastes.
+                </p>
 
                 <h2 className="text-2xl font-medium text-foreground mt-6 mb-3">Kontakt</h2>
                 <p className="font-body text-default-500 mb-4">
