@@ -44,7 +44,7 @@ const MET1020 = () => {
                                     <Image
                                         radius="sm"
                                         alt="Multiple Choice Test for samfunnsvitenskapelig metode"
-                                        src={`${process.env.PUBLIC_URL}/images/MET1020/p1.png`}
+                                        src={`${process.env.PUBLIC_URL}/images/MET1020/p1.webp`}
                                         className="border-0"
                                     />
 

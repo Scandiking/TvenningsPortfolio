@@ -756,7 +756,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
                                         <div className="overflow-auto border border-gray-200 dark:border-gray-700 rounded-lg" >
                                             <img
                                                 alt="Programkart for hundekennelklubb"
-                                                src={`${process.env.PUBLIC_URL}/images/Arbeidskrav2-12.drawio.png`}
+                                                src={`${process.env.PUBLIC_URL}/images/Arbeidskrav2-12.drawio.webp`}
                                                 className="rounded-lg border border-gray-200 dark:border-gray-700"
                                                 onError={(e) => {
                                                     console.error("Bildet kunne ikke lastes");
@@ -781,7 +781,7 @@ const prg1000_oppgave5 = `def bilde_med_kommentarer():
                             <p className="py-2">Oppgave 1 (beklager bildekvaliteten, dette er en begrensning i eksamensprogrammet Wiseflow.</p>
                             <img
                                 alt="Programkart av oppgitt kode"
-                                src={`${process.env.PUBLIC_URL}/images/7036-oppgave1.png`}
+                                src={`${process.env.PUBLIC_URL}/images/7036-oppgave1.webp`}
                                 className="rounded-lg border border-gray-200 dark:border-gray-700"
                             />
 

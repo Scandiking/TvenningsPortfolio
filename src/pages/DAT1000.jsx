@@ -212,7 +212,7 @@ ON Senter.Senternavn = Hund.HundeID;`
                                 <p>Oppgave 1</p>
                                 <img
                                     alt="Oppgave 1"
-                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave1.png`}
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave1.webp`}
                                 />
 
                                 <p>Oppgave 2</p>
@@ -235,19 +235,19 @@ ON Senter.Senternavn = Hund.HundeID;`
                                 <p>Oppgave 4a</p>
                                 <img
                                     alt="Oppgave 4"
-                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave4a.png`}
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave4a.webp`}
                                 />
 
                                 <p>Oppgave 4b</p>
                                 <img
                                     alt="Oppgave 4b"
-                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave4b.png`}
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-oppgave4b.webp`}
                                 />
 
                                 <p>Oppgave 4c</p>
                                 <img
                                     alt="Oppgave 4c"
-                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-opppgave4c.png`}
+                                    src={`${process.env.PUBLIC_URL}/pdfs/DAT1000/7146-opppgave4c.webp`}
                                 />
                                 <GradeBadge grade="E" />
 

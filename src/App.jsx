@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, Link, Navigate, useLocation } from 'react-router-dom';
 import { HashRouter as Router } from 'react-router-dom';
 import { MathJaxContext } from 'better-react-mathjax';
 import Home from './pages/Home';
-import About from './pages/About';
+import OmMeg from './pages/OmMeg';
 import Emner from './pages/Emner';
 import PRG1000 from './pages/PRG1000.jsx';
 import DAT1000 from './pages/DAT1000.jsx';
@@ -108,7 +108,22 @@ function AppContent() {
     },
   ]
 
-
+  // Fanetittel per rute. Emnesider hentes fra semesterData, resten fra pageTitles.
+  useEffect(() => {
+    const pageTitles = {
+      "/": null,
+      "/om-meg": "Om meg",
+      "/emner": "Emner",
+      "/projects": "Prosjekter",
+      "/projects/defang": "Defang",
+      "/personvern": "Personvern",
+    };
+    const course = semesterData.flatMap((s) => s.courses).find((c) => c.path === location.pathname);
+    const page = course
+      ? `${course.id.toUpperCase()} ${course.title}`
+      : location.pathname in pageTitles ? pageTitles[location.pathname] : "Fant ikke siden";
+    document.title = page ? `${page} | Tvennings portfolio` : "Tvennings portfolio";
+  }, [location.pathname]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
       <div className="min-h-screen text-foreground relative bg-background">
@@ -266,7 +281,7 @@ function AppContent() {
         <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/om-meg" element={<OmMeg />} />
           <Route path="/emner" element={<Emner />} />
           <Route path="/emner/prg1000" element={<PRG1000 />}/>
           <Route path="/emner/dat1000" element={<DAT1000 />}/>
@@ -290,7 +305,8 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/defang" element={<Defang />} />
           <Route path="/personvern" element={<Personvern />} />
-          <Route path="/contact" element={<div className="container mx-auto p-8">Kontaktsiden kommer snart! Inntil videre: km.tvenning@pm.me</div>} />
+          <Route path="/contact" element={<Navigate to="/om-meg" replace />} />
+          <Route path="/about" element={<Navigate to="/om-meg" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </ErrorBoundary>
