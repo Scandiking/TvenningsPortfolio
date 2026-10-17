@@ -6,38 +6,50 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import AnimatedPage from "../components/AnimatedPage";
 import AnimatedTabs from "../components/AnimatedTabs";
 
-// Skjermbilder fra et ferskt debug-bygg (v0.1.6), kjørt i Android-emulator og
-// tatt med `adb screencap`. Filene ligger i public/images/Defang/.
+// Skjermbilder fra debug-bygg, kjørt i Android-emulator og tatt med
+// `adb screencap`. Filene ligger i public/images/Defang/screenshots/ som WebP.
+// `dark: false` = skjermen er et mørkt overlegg uten egen nattmodus-variant,
+// så samme bilde vises i begge temaer.
 const SHOTS = [
-    { file: "intent_gate.png", title: "Intent gate", caption: "Pause i fullskjerm: en opplysning, en «spor stien»-sveip og nedtelling før en overvåket app åpnes." },
-    { file: "onboarding.png", title: "Onboarding", caption: "«This is a speed bump. Not a wall.» Tonen settes direkte, uten pekefinger." },
-    { file: "cue_loop.png", title: "Cue → rutine → belønning", caption: "Onboarding forklarer vane-loopen appene har industrialisert." },
-    { file: "watched_apps.png", title: "Overvåkede apper", caption: "Sorter apper i Verktøy / Overvåket / Gjemt. Du velger hvilke som får fartsdumpen." },
-    { file: "timer_adjustment.png", title: "Tidsinnstillinger", caption: "Portforsinkelse (8 sek), øktgrense (15 min) og nedkjøling (30 min)." },
-    { file: "tidbit_library.png", title: "Tidbit-bibliotek", caption: "Kildebelagte fakta om manipulerende design — pull-to-refresh, uendelig scroll, variabel belønning." },
+    { file: "home_clock.webp", title: "Hjemskjerm", caption: "Klokke, dato og en kildebelagt opplysning. Ingen ikoner, ingen merker, ingenting som roper." },
+    { file: "home_tidbit.webp", title: "Hjemskjerm uten klokke", caption: "Bare opplysningen. Hjemskjermen kan skrus ned til det absolutt minimale." },
+    { file: "home_empty.webp", title: "Tom hjemskjerm", caption: "Helt tom. Det er ingenting å klikke seg videre til herfra." },
+    { file: "drawer.webp", title: "App-skuff", caption: "Alfabetisk liste med søk og bokstavindeks. Bare tekst, uten fargerike ikoner som frister." },
+    { file: "intent_gate.webp", title: "Intent gate", caption: "Pause i fullskjerm før en overvåket app åpnes: en opplysning, et forslag til noe annet å gjøre, og «skyv for å åpne».", dark: false },
+    { file: "gate_math_personal.webp", title: "Mattelås + personlig linje", caption: "Løs et regnestykke for å åpne. Av og til vises dine egne tall: «This is what you spend 47 minutes a day on?»", dark: false },
+    { file: "cooldown.webp", title: "Nedkjølingslås", caption: "Etter økta er appen låst en stund. Å lukke og åpne igjen med en gang hjelper ikke.", dark: false },
+    { file: "onboarding.webp", title: "Onboarding", caption: "«This is a speed bump. Not a wall.» Tonen settes direkte, uten pekefinger." },
+    { file: "cue_loop.webp", title: "Cue → rutine → belønning", caption: "Onboarding forklarer vane-loopen appene har industrialisert." },
+    { file: "watched_apps.webp", title: "Overvåkede apper", caption: "Sorter apper i Verktøy / Overvåket / Gjemt. Du velger hvilke som får fartsdumpen." },
+    { file: "timer_adjustment.webp", title: "Tidsinnstillinger", caption: "Portforsinkelse (8 sek), øktgrense (15 min) og nedkjøling (30 min)." },
+    { file: "settings.webp", title: "Innstillinger", caption: "Overvåkede nettsider, jobbprofil-apper, QR/strekkode-lås og mattelås." },
+    { file: "settings_unlock.webp", title: "Opplåsing og terskel", caption: "Vanskelighetsgrad på mattelåsen, personlige linjer og adaptiv terskel som øker ventetiden ved gjentatte åpninger." },
+    { file: "tidbit_library.webp", title: "Tidbit-bibliotek", caption: "Kildebelagte fakta om manipulerende design — pull-to-refresh, uendelig scroll, variabel belønning." },
 ];
+
+const SHOT_BASE = `${process.env.PUBLIC_URL}/images/Defang/screenshots`;
+const darkFileOf = ({ file, dark = true }) => (dark ? file.replace(/\.webp$/, "_dark.webp") : file);
 
 // Egen ramme per tema: lyse skjermbilder når siden er i lys modus, mørke
 // skjermbilder (samme skjermer, tatt i Android sitt nattmodus) i mørk modus.
-function PhoneShot({ file, title, caption, onOpen }) {
-    const base = `${process.env.PUBLIC_URL}/images/Defang`;
-    const darkFile = file.replace(/\.png$/, "_dark.png");
+function PhoneShot({ onOpen, ...shot }) {
+    const { file, title, caption } = shot;
     return (
         <figure className="flex flex-col gap-3">
             <button
                 type="button"
-                onClick={() => onOpen({ file, title, caption })}
+                onClick={() => onOpen(shot)}
                 aria-label={`Vis ${title} i fullskjerm`}
                 className="mx-auto block w-full max-w-[240px] aspect-[9/20] rounded-[0.75rem] border-4 border-black bg-content2 overflow-hidden shadow-md cursor-zoom-in transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
                 <img
-                    src={`${base}/${file}`}
+                    src={`${SHOT_BASE}/${file}`}
                     alt={`Defang – ${title}`}
                     loading="lazy"
                     className="h-full w-full object-cover dark:hidden"
                 />
                 <img
-                    src={`${base}/${darkFile}`}
+                    src={`${SHOT_BASE}/${darkFileOf(shot)}`}
                     alt={`Defang – ${title}`}
                     loading="lazy"
                     className="hidden h-full w-full object-cover dark:block"
@@ -67,8 +79,6 @@ const Defang = () => {
             document.body.style.overflow = prevOverflow;
         };
     }, [lightbox]);
-
-    const shotBase = `${process.env.PUBLIC_URL}/images/Defang`;
 
     return (
         <AnimatedPage className="container mx-auto px-4 py-8">
@@ -261,8 +271,9 @@ const Defang = () => {
                     <Card>
                         <CardBody className="gap-6">
                             <p className="text-sm text-default-500">
-                                Skjermbilder fra et ferskt debug-bygg (v0.1.6), kjørt i Android-emulator.
+                                Skjermbilder fra debug-bygg, kjørt i Android-emulator.
                                 De følger temaet på siden — bytt til lys/mørk modus for å se appens eget lyse eller mørke tema.
+                                Portene og nedkjølingslåsen er mørke overlegg i begge temaer.
                             </p>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8">
                                 {SHOTS.map((s) => (
@@ -329,12 +340,12 @@ const Defang = () => {
                         className="flex max-h-full flex-col items-center gap-3"
                     >
                         <img
-                            src={`${shotBase}/${lightbox.file}`}
+                            src={`${SHOT_BASE}/${lightbox.file}`}
                             alt={`Defang – ${lightbox.title}`}
                             className="max-h-[80vh] w-auto rounded-lg border-4 border-black shadow-2xl dark:hidden"
                         />
                         <img
-                            src={`${shotBase}/${lightbox.file.replace(/\.png$/, "_dark.png")}`}
+                            src={`${SHOT_BASE}/${darkFileOf(lightbox)}`}
                             alt={`Defang – ${lightbox.title}`}
                             className="hidden max-h-[80vh] w-auto rounded-lg border-4 border-black shadow-2xl dark:block"
                         />
