@@ -25,6 +25,7 @@ import MOB3000 from './pages/MOB3000.jsx';
 import SEL3000R from './pages/SEL3000R';
 import Projects from './pages/Projects';
 import Defang from './pages/Defang';
+import Boligpriser from './pages/Boligpriser';
 import Personvern from './pages/Personvern';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -116,6 +117,7 @@ function AppContent() {
       "/emner": "Emner",
       "/projects": "Prosjekter",
       "/projects/defang": "Defang",
+      "/projects/boligpriser": "Boligpriser i California",
       "/personvern": "Personvern",
     };
     const course = semesterData.flatMap((s) => s.courses).find((c) => c.path === location.pathname);
@@ -304,6 +306,7 @@ function AppContent() {
           <Route path="/emner/sel3000r" element={<SEL3000R />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/defang" element={<Defang />} />
+          <Route path="/projects/boligpriser" element={<Boligpriser />} />
           <Route path="/personvern" element={<Personvern />} />
           <Route path="/contact" element={<Navigate to="/om-meg" replace />} />
           <Route path="/about" element={<Navigate to="/om-meg" replace />} />

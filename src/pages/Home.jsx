@@ -15,10 +15,9 @@ const featured = [
         description: "Android-launcher som legger inn en bevisst pause før du åpner apper som Instagram og TikTok — intensjonsspørsmål, nedtelling og øktgrense før scrollingen.",
     },
     {
-        title: "Maskinlæring: California housing (PySpark)",
-        to: "https://github.com/Scandiking/pyspark-california-housing",
-        external: true,
-        description: "Distribuert maskinlæringspipeline i PySpark som predikerer boligpriser fra California housing-datasettet — datavask, feature engineering, trening og evaluering.",
+        title: "Dataanalyse: boligpriser i California (PySpark)",
+        to: "/projects/boligpriser",
+        description: "Distribuert datapipeline i PySpark som rydder i, analyserer og finner prisregioner i boligdata for 20 640 områder i California. Samme kode skalerer til millioner av rader.",
     },
     {
         title: "Business Intelligence & datavarehus",

@@ -43,7 +43,14 @@ const styrker = [
     },
     {
         title: "Data, BI og maskinlæring",
-        description: "To databaseemner, fra primærnøkler til ETL-pipelines. PySpark California Housing: fem-trinns distribuert datapipeline med 19 enhetstester i pytest og kontinuerlig integrasjon i GitHub Actions. Datavarehus- og KPI-dashboard i BID3000 med actionable business insights.",
+        description: (
+            <>
+                To databaseemner, fra primærnøkler til ETL-pipelines.{" "}
+                <Link to="/projects/boligpriser" className={linkClass}>PySpark California Housing</Link>: fem-trinns distribuert
+                datapipeline med 31 tester i pytest og kontinuerlig integrasjon i GitHub Actions. Datavarehus- og KPI-dashboard
+                i BID3000 med actionable business insights.
+            </>
+        ),
     },
     {
         title: "Analytisk og nøye, vant til å levere under krav",
